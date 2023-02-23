@@ -1,0 +1,80 @@
+﻿Term,Defintion,Examples (if applicable),Topic
+Sketch,"Arduino Code, with setup() and loop() functions. File extension is .ino",blink.ino,Fundamentals - Arduino
+Constant,"Declared similar to a variable, however the value cannot be changed in code once declared.",MAX_USERS = 5,Fundamentals - Arduino
+Serial Monitor,Tool in the Arduino IDE to send and receive serial data with the Arduino board. Can be used for input and debugging purposes.,,Fundamentals - Arduino
+Data Type,The type of information being stored in a variable. Instructs the device to allocate and structure the required memory.,"Integer, String, Character, Boolean",Variables
+Variables,,,Variables
+Type Inference,Type inference refers to the automatic detection of the type of a variable or constant.,,Variables
+Statically Typed,"The data type of a variable/constant is set at compile time, and cannot change throughout the execution of the program.","C, C++, Java, Arduino",Variables
+Dynamically Typed,"The data type of a variable/constant is set at execution time, and can be changed throughout the execution of the program.","Python, GDScript, PHP.",Variables
+NaN,"Not a Number. Value used when a variable is used in a way that is assumed to be a number, but is not.",E.g. A String value is divided by a number.,Variables
+Index,"The integer identifying the position in the array. Starts at 0 in most languages. ","0,1,2,3...","Arrays, Data Structures"
+Element,The data stored in an index in an set or collection.,Any data stored.,"Arrays, Data Structures"
+Array,An array allows you to store a group of items (usually of the same data type) together in memory as a collection. An array is a ordered set.,"""Student Scores"", ""Sensor Data""","Arrays, Data Structures"
+Key Value Pair,"An unordered set, with a key and value for each entry. Depending on the language, this may also be referred to as : hash, hashmap, associated array.",User Files (Username: Filename),"Data Structures, Key Value Pair"
+Key,Unique identifier of an entry in a dictionary,Word,"Data Structures, Key Value Pair"
+Value,The value associated with a key in a dictionary.,Definition,"Data Structures, Key Value Pair"
+Lower Camel Case,"Starts with a lowercase, every subsequent word has a capital letter. There are no spaces, or other characters separating the words.","userName, thisVariable",Naming Conventions
+Upper Camel Case,"The start of each word is capitalised. There are no spaces, or other characters separating the words.",UserName,Naming Conventions
+Snake Case (also called Python Case),"All lowercase, each word separated by an underscore (_)",list_of_user_names,Naming Conventions
+Hungarian Notation,"The data type of the variable is included in the name, as a three letter identifier at the start of the code","intScore, str",Naming Conventions
+IDE,"Integrated Development Environment. The program used to code, which typically provides the developer different tools to assist the development process - not just a text editor.","IDLE, Pycharm, Arduino IDE, Visual Studio, Visual Studio Code, Godot","Fundamentals, Fundamentals - Godot"
+Programming,Giving instructions to the computer to execute.,,Fundamentals
+Top Down Approach,,,Computational Thinking
+Bottom Up Approach,,,Computational Thinking
+Pattern Recognition ,looking for similarities among and within problems,,Computational Thinking
+Decomposition,"breaking down a complex problem or system into smaller, more manageable parts",,Computational Thinking
+Algorithms,"eveloping a step-by-step solution to the problem, or the rules to follow to solve the problem",,Computational Thinking
+Abstraction," focusing on the important information only, ignoring irrelevant detail",,Computational Thinking
+Sequence,If a set of instructions are executed in the order that they appear (from the top to the bottom),,Algorithm Design - Sequence
+Semicolon,Used to identify the end of a statement of code.,;,"Algorithm Design - Sequence, Arduino"
+Parentheses - (),"Parentheses are used in conditions, function arguments and parameters and a few other instances.",loop(),Algorithm Design - Sequence
+Curly Brackets - {},"The start and end of a code block for a decision, loop or function.","void setup() {
+pinMode(LED_BUILTIN, OUTPUT);
+}","Algorithm Design - Sequence, Arduino"
+Loop Control Variable,A variable which controls how many iterations are executed in a loop.,"counter in for (int counter=0; counter<50; counter++) ",Algorithm Design - Loops
+Condition,Statements that are created by the programmer which evaluates actions in the program and evaluates if it's true or false,counter > 10,"Algorithm Design - Decisions, Algorithm Design - Decisions - Godot"
+Module,"A small program unit that you can use with other modules to make a program. Programmers also refer to modules as subroutines, procedures, functions, and methods.",,Algorithm Design - Modularisation
+Parameter,Data that is accepted by a function sent to it externally when the function is called.,,Algorithm Design - Modularisation
+Argument,A value that is passed to a function.,"""Hello World” in Serial.println(”Hello World”);",Algorithm Design - Modularisation
+Function Call,“Running” a function at a given stage of execution.,"multiplyNumbers(4,5);",Algorithm Design - Modularisation
+Loop Condition,The “test” to evaluate whether the loop should continue iterating.,"while (x>5) 
+{
+...
+}",Algorithm Design - Loops
+Naming Convention,"How the names of variables, functions etc are structured.","lowerCamelCase, snake_case",Style Guide
+Function Header Comment,"Comment Block at the start of a function (below function declaration) which describes the purpose of the function, any parameters and the return data.",,Style Guide
+Associated Array,See “Key Value Pair”,,"Data Structures, Key Value Pair"
+Hashmap,See “Key Value Pair”,,"Data Structures, Key Value Pair"
+Dictionary,See “Key Value Pair”,,"Data Structures, Key Value Pair"
+Variable Scope,Variables and constants apply only within the module/function in which they are declared.,,Algorithm Design - Modularisation
+GDScript,The Native language for Godot,,Fundamentals - Godot
+Godot,Free and Open Source Game Engine,,Fundamentals - Godot
+Project Manager,"In Godot, this allows you to have multiple projects available to open.",,Fundamentals - Godot
+Fork,A fork is a copy of a repository that you manage.,,Github
+Repository,A repository contains all of your project's files and each file's revision history.,,Github
+Iteration,"Single instance of execution of a block of code in a loop. ",,Algorithm Design - Loops
+pass,"“Used where a statement is required syntactically but execution of code is undesired, e.g. in empty functions.” https://docs.godotengine.org/en/stable/getting_started/scripting/gdscript/gdscript_basics.html#while",,Algorithm Design - Decisions - Godot
+Delta Time,"Delta is the time since the last frame refresh (the frame rate), or more specifically, the time since the last time the _process() function was called. ",,Algorithm Design - Decisions - Godot
+Coroutine function,A function that can pause and resume execution while not impacting the execution of other functions within the game.,yield(),Algorithm Design - Loops - Godot
+Instance,"An instance is an individual implementation of a specific object. Therefore you can have multiple instances of a bullet, based on the original object.",,Algorithm Design - Modularisation - Godot
+HTML,(HyperText Markup Language) is used to create the structure and content of the web page. It is used to define what is being shown and where.,,Fundamentals - Web Dev
+CSS,"(Cascading Style Sheets) is used to tell the browser how to display the content. For instance: The font size, colour spacing, background colour and much more.",,Fundamentals - Web Dev
+Javascript,"Used to add interactivity and some dynamic content. ",,Fundamentals - Web Dev
+Front End Development,Front end development manages everything that users visually see first in their browser or application. Front end developers are responsible for the look and feel of a site. Also known as Client-side development.,,Fundamentals - Web Dev
+Back End Development,Back end development refers to the server side of an application and everything that communicates between the database and the browser.,,Fundamentals - Web Dev
+Structured Query Language.,SQL lets you access and manipulate databases,,Fundamentals - Web Dev
+Pull,Grabs any changes from the GitHub repository and merges them into your local repository.,,Github
+Commit,Process which records changes in the repository. Think of it as a snapshot of the current status of the project. Commits are done locally.,,Github
+Push,Pushing sends the recent commit history from your local repository up to GitHub.,,Github
+Karnaugh Maps,A method to minimise Boolean expressions in a simple table form.,,Mathematical & Logic Operations
+NOT Gate,"The NOT gate simply ""flips"" the input, so TRUE becomes FALSE, and FALSE becomes TRUE.",,Mathematical & Logic Operations
+AND Gate,"An AND gate takes two inputs and produces a single output. For the output to be TRUE, then both of the inputs have to be TRUE.",,Mathematical & Logic Operations
+NOR Gate,"The combination of an OR gate with a NOT gate, so it is the opposite of an OR gate. ",,Mathematical & Logic Operations
+NAND Gate,"The combination of an AND gate with a NOT gate, so it is the opposite of an AND gate.",,Mathematical & Logic Operations
+OR Gate,"For the output to be TRUE, then either one or both of the inputs have to be TRUE.",,Mathematical & Logic Operations
+XOR Gate,"The output is TRUE only if either inputs are true, not both.",,Mathematical & Logic Operations
+XNOR Gate,"The combination of an XOR Gate with a NOT gate, so the opposite of a XOR Gate",,Mathematical & Logic Operations
+Executive Summary,An executive summary should summarise the key points of the report,,Technical Reports
+Abstract,Abstracts summarise the contents of a report,,Technical Reports
+Decision,"A decision is a type of programming statement that allows a program to make decisions based on certain conditions. It is one of the most fundamental concepts in programming. A decision can be used to check if a certain condition is true or false, and then execute certain code depending on the result of the condition. For example, if a certain value is greater than another value, a certain set of instructions can be executed. ",,Algorithm Design - Decisions
