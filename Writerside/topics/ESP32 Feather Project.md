@@ -1,10 +1,10 @@
-# ESP32FeatherProject
+# ESP32 Feather Project
 
-# 2023 S2 - Hotel Monitoring System
+## 2023 S2 - Hotel Monitoring System
 
 Software installation
 
-# Jetbrains
+## Jetbrains
 
 ## Create Jetbrains Educational Account
 
@@ -40,7 +40,7 @@ This will open the project in PHPStorm.
 
 ![Untitled](Untitled1.png)
 
-# Visual Studio Code
+## Visual Studio Code
 
 If Visual Studio Code (VSCode) is not installed on your operating system, install it using the instructions here:
 
@@ -63,7 +63,7 @@ Search for **PlatformIO** and click on the Install button.
 
 PHP / MySQL Crash Course
 
-# PHP, MySQL Crash Course
+## PHP, MySQL Crash Course
 
 ## Background Information
 
@@ -128,7 +128,7 @@ Click Ok.
 ![Untitled](Untitled5.png)
 
 Once the connection has been established, click on the `1 of 3` status next to the database connection and then select
-**********************All Schemas**********************.
+*All Schemas*.
 
 ![Untitled](Untitled6.png)
 
@@ -196,63 +196,63 @@ Create a new PHP file called `template.php`. Replace the contents with this code
 
 The first line of this file loads the config.php code created earlier to establish the connection to the database.
 
-    ```php
-    <?php require_once 'config.php'; ?>
-    <html>
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-    </head>
-    <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-sm navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.php">
-                <img src="images/logo.png" alt="" width="80" height="80">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.php">Home</a>
-                    </li>
-                </ul>
-                <?php if (isset($_SESSION["name"])) {
-                    echo "<div class='alert alert-success d-flex'><span>Welcome, " . $_SESSION["name"] . "<br><a href='logout.php'>Logout</a></span></div>";
-                } else {
-                    echo "<div class='alert alert-info d-flex'><a href='index.php'>Sign In</a>";
-                }
-                ?>
-            </div>
+```php
+<?php require_once 'config.php'; ?>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.php">
+            <img src="images/logo.png" alt="" width="80" height="80">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php">Home</a>
+                </li>
+            </ul>
+            <?php if (isset($_SESSION["name"])) {
+                echo "<div class='alert alert-success d-flex'><span>Welcome, " . $_SESSION["name"] . "<br><a href='logout.php'>Logout</a></span></div>";
+            } else {
+                echo "<div class='alert alert-info d-flex'><a href='index.php'>Sign In</a>";
+            }
+            ?>
         </div>
-    </nav>
-    
-    <script src="js/bootstrap.bundle.js"></script>
-    
-    <?php
-    function sanitise_data($data)
-    {
-        $data = trim($data);
-        $data = stripslashes($data);
-        $data = htmlspecialchars($data);
-        return $data;
-    }
-    
-    function outputFooter()
-    {
-        date_default_timezone_set('Australia/Canberra');
-        echo "<footer>This page was last modified: " . date("F d Y H:i:s.", filemtime("index.php")) . "</footer>";
-    }
-    
-    ?>
-    ```
+    </div>
+</nav>
+
+<script src="js/bootstrap.bundle.js"></script>
+
+<?php
+function sanitise_data($data)
+{
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+
+function outputFooter()
+{
+    date_default_timezone_set('Australia/Canberra');
+    echo "<footer>This page was last modified: " . date("F d Y H:i:s.", filemtime("index.php")) . "</footer>";
+}
+
+?>
+```
 
 If you launch the page in the browser, you’ll see something like this.
 
@@ -367,22 +367,22 @@ form data and searching for how many users of that user name are found in the da
 
 ![Untitled](Untitled8.png)
 
-    ```php
-    <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $username = sanitise_data($_POST['username']);
-        $password = sanitise_data($_POST['password']);
-    
-        $query = $conn->query("SELECT COUNT(*) as count FROM `user` WHERE `username`='$username'");
-        $row = $query->fetch();
-        $count = $row[0];
-    
-    		if ($count > 0) {
-    
-    		}
-    
-    }
-    ```
+```php
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = sanitise_data($_POST['username']);
+    $password = sanitise_data($_POST['password']);
+
+    $query = $conn->query("SELECT COUNT(*) as count FROM `user` WHERE `username`='$username'");
+    $row = $query->fetch();
+    $count = $row[0];
+
+        if ($count > 0) {
+
+        }
+
+}
+```
 
 If a user has be found (i.e. if `$count > 0`) then the code will want to load all the details of that users record.
 
@@ -393,10 +393,10 @@ If a user has be found (i.e. if `$count > 0`) then the code will want to load al
 
     </aside>
 
-    ```php
-    $query = $conn->query("SELECT * FROM `user` WHERE `username`='$username'");
-    $row = $query->fetch();
-    ```
+```php
+$query = $conn->query("SELECT * FROM `user` WHERE `username`='$username'");
+$row = $query->fetch();
+```
 
 ![Untitled](Untitled10.png)
     
@@ -503,7 +503,7 @@ Update the link for Sign in `template.php` to link to the correct page for login
 
 Adafruit Feather Ecosystem
 
-# Adafruit Feather & Featherwings
+## Adafruit Feather & Featherwings
 
 For this project you will be using, as a foundation, the following pieces of hardware
 
@@ -528,7 +528,7 @@ You may use additional hardware for your specific implementation. This may inclu
 
 Processing Input and Output
 
-# Simple Input → Output
+## Simple Input → Output
 
 In this example, you’ll be shown how to code a simple circuit to read a button press and turn an LED on.
 
@@ -557,7 +557,7 @@ In this example, you’ll be shown how to code a simple circuit to read a button
 
 Wiring Diagram
 
-# ESP32 Feather Wiring Diagram
+## ESP32 Feather Wiring Diagram
 
 The starting wiring diagram, shown below, is included in the repository - `esp32.ckt`.
 
@@ -565,7 +565,7 @@ The starting wiring diagram, shown below, is included in the repository - `esp32
 
 Clone Project
 
-# Join Github Classroom
+## Join Github Classroom
 
 Join the classroom via the supplied link.
 
@@ -603,7 +603,7 @@ The onboard red LED will quickly flash to indicate the code and uploading is wor
 
 Network Access
 
-# Network Access
+## Network Access
 
 ## sensitiveInformation.h
 
@@ -692,12 +692,9 @@ while (!Serial) {
 
   Open `main.cpp` and add the following function near the top of the code.
 
-    <aside>
-    ‼️ It needs to be stored ******after****** the include statements and  *****prior***** to `setup()`
+  ‼️ It needs to be stored ******after****** the include statements and  *****prior***** to `setup()`
 
-  ![Untitled](Untitled26.png)
-
-    </aside>
+![Untitled](Untitled26.png)
 
     ```c++
     void logEvent(String eventData)
@@ -743,45 +740,42 @@ while (!Serial) {
     }
     ```
 
-  Add two events that are logged. The first in `setup()` to indicate the system has initialised. The second include in
-  the main `loop()` as a test post.
+Add two events that are logged. The first in `setup()` to indicate the system has initialised. The second include in
+the main `loop()` as a test post.
 
     ```c++
     logEvent("System Initalised");
     ```
 
-  ![Untitled](Untitled27.png)
+![Untitled](Untitled27.png)
 
-  Upload the code to the Adafruit ESP32 Feather and check the database to ensure that it’s being stored correctly.
+Upload the code to the Adafruit ESP32 Feather and check the database to ensure that it’s being stored correctly.
 
-  ![Untitled](Untitled28.png)
+![Untitled](Untitled28.png)
 
-  $$
-  \utilde {\color{black} \fcolorbox{darkorange}{darkorange} {Commit and Push to Github}}
-  $$
+$$
+\utilde {\color{black} \fcolorbox{darkorange}{darkorange} {Commit and Push to Github}}
+$$
 
-- Sensor Data Logging to the Database
+Sensor Data Logging to the Database
 
-  # Sensor Data Logging
+## Sensor Data Logging
 
-    <aside>
-    ‼️ This process is extremely similar to Event Logging performed previously. The difference in this process is:
-    - A different URL
-    - More dynamic data (sensor data)
-    - More security issues
-    - Formatting the data into a JSON format.
+‼️ This process is extremely similar to Event Logging performed previously. The difference in this process is:
+- A different URL
+- More dynamic data (sensor data)
+- More security issues
+- Formatting the data into a JSON format.
 
-    </aside>
+![Untitled](Untitled29.png)
 
-  ![Untitled](Untitled29.png)
+[https://www.w3schools.com/js/js_json_intro.asp](https://www.w3schools.com/js/js_json_intro.asp)
 
-  [https://www.w3schools.com/js/js_json_intro.asp](https://www.w3schools.com/js/js_json_intro.asp)
+## Temperature Sensor
 
-  ## Temperature Sensor
+Add the following to the include block of code at the very top of your `main.cpp`.
 
-  Add the following to the include block of code at the very top of your `main.cpp`.
-
-  ![Untitled](Untitled30.png)
+![Untitled](Untitled30.png)
 
     ```C++
     #include "Adafruit_ADT7410.h"
@@ -789,9 +783,9 @@ while (!Serial) {
     Adafruit_ADT7410 tempsensor = Adafruit_ADT7410();
     ```
 
-  Initialise the temperature sensor in `setup()`.
+Initialise the temperature sensor in `setup()`.
 
-  ![Untitled](Untitled31.png)
+![Untitled](Untitled31.png)
 
     ```C++
     if (!tempsensor.begin())
@@ -802,10 +796,10 @@ while (!Serial) {
       }
     ```
 
-  After the include statements at the top of the file, add this new function to get and return the temperature recorded
-  by the temperature sensor.
+After the include statements at the top of the file, add this new function to get and return the temperature recorded
+by the temperature sensor.
 
-  ![Untitled](Untitled32.png)
+![Untitled](Untitled32.png)
 
     ```C++
     float getTemperature()
@@ -816,80 +810,81 @@ while (!Serial) {
       return temperatureValue;
     }
     ```
+
     
-  ---
+---
 
-  To complete this process, the code needs to be updated to include a new function - `dataTransfer()` - which will take
-  sensor data from any source (temperature, button etc) and upload it to the server.
+To complete this process, the code needs to be updated to include a new function - `dataTransfer()` - which will take
+sensor data from any source (temperature, button etc) and upload it to the server.
 
-  Copy the function into your code, placing it **********above********** `setup()`.
+Copy the function into your code, placing it **********above********** `setup()`.
 
-  This code appears to be similar to previous code, however the major difference is the following
+This code appears to be similar to previous code, however the major difference is the following
 
     ```C++
     http.addHeader("Content-Type", "application/json");
     String postJSONString = "{\"api_key\":\""+apiKeyValue+"\",\"userName\":\""+userName+"\",\"moduleName\":\""+moduleName+"\",\"moduleData\":\""+dataToPost+"\"}";
     ```
 
-  This formats the data into a JSON structure, which essentially is a dictionary or key-value pair.
+This formats the data into a JSON structure, which essentially is a dictionary or key-value pair.
 
-  Why do this?
+Why do this?
 
-  This allows the text to be uploaded in a single structure, and will eventually enable the server to respond in kind,
-  by returning a JSON structure with information for the Arduino.
+This allows the text to be uploaded in a single structure, and will eventually enable the server to respond in kind,
+by returning a JSON structure with information for the Arduino.
 
-  ![Untitled](Untitled33.png)
+![Untitled](Untitled33.png)
 
-    ```C++
-    String dataTransfer(String apiKeyValue, String userName, String moduleName, String dataToPost)
+```C++
+String dataTransfer(String apiKeyValue, String userName, String moduleName, String dataToPost)
+{
+  String serverResponse;
+  if (WiFi.status() == WL_CONNECTED)
+  {
+    WiFiClient client;
+    HTTPClient http;
+
+    // Your Domain name with URL path or IP address with path
+    http.begin(client, serverURL);
+
+    // Specify content-type header
+    http.addHeader("Content-Type", "application/x-www-form-urlencoded");
+
+    // Send HTTP POST request, and store response code
+    http.addHeader("Content-Type", "application/json");
+    String postJSONString = "{\"api_key\":\""+apiKeyValue+"\",\"userName\":\""+userName+"\",\"moduleName\":\""+moduleName+"\",\"moduleData\":\""+dataToPost+"\"}";
+    Serial.print("Debug JSON String: ");
+    Serial.println(postJSONString);
+    int httpResponseCode = http.POST(postJSONString);
+
+    // Get the HTML response from the server.
+    serverResponse = http.getString();
+ 
+    if (httpResponseCode > 0)
     {
-      String serverResponse;
-      if (WiFi.status() == WL_CONNECTED)
-      {
-        WiFiClient client;
-        HTTPClient http;
-    
-        // Your Domain name with URL path or IP address with path
-        http.begin(client, serverURL);
-    
-        // Specify content-type header
-        http.addHeader("Content-Type", "application/x-www-form-urlencoded");
-    
-        // Send HTTP POST request, and store response code
-        http.addHeader("Content-Type", "application/json");
-        String postJSONString = "{\"api_key\":\""+apiKeyValue+"\",\"userName\":\""+userName+"\",\"moduleName\":\""+moduleName+"\",\"moduleData\":\""+dataToPost+"\"}";
-        Serial.print("Debug JSON String: ");
-        Serial.println(postJSONString);
-        int httpResponseCode = http.POST(postJSONString);
-    
-        // Get the HTML response from the server.
-        serverResponse = http.getString();
-     
-        if (httpResponseCode > 0)
-        {
-          Serial.print("HTTP Response code: ");
-          Serial.println(httpResponseCode);
-        }
-        else
-        {
-          Serial.print("Error code: ");
-          Serial.println(httpResponseCode);
-        }
-        // Free resources
-        http.end();
-      }
-      else
-      {
-        Serial.println("WiFi Disconnected");
-      }
-      // Send an HTTP POST request every 30 seconds
-      return serverResponse;
+      Serial.print("HTTP Response code: ");
+      Serial.println(httpResponseCode);
     }
-    ```
+    else
+    {
+      Serial.print("Error code: ");
+      Serial.println(httpResponseCode);
+    }
+    // Free resources
+    http.end();
+  }
+  else
+  {
+    Serial.println("WiFi Disconnected");
+  }
+  // Send an HTTP POST request every 30 seconds
+  return serverResponse;
+}
+```
 
-  Call `dataTransfer()` with the results from the getTemperature function.
+Call `dataTransfer()` with the results from the getTemperature function.
 
-  ![Untitled](Untitled34.png)
+![Untitled](Untitled34.png)
 
     ```C++
     dataTransfer(apiKeyValue, userName, "Temperature", String(getTemperature()));
@@ -1265,51 +1260,44 @@ while (!Serial) {
   Add a short delay into `loop()`. This will give the ESP32 a regular amount of time where it is idle, allowing new code
   to be uploaded to it.
 
-    <aside>
-    ‼️ A rule of thumb is to always add a short delay in the loop function. Otherwise the Arduino/ESP may be too ‘busy’ to allow the IDE to upload new code.
+  ‼️ A rule of thumb is to always add a short delay in the loop function. Otherwise the Arduino/ESP may be too ‘busy’ to
+  allow the IDE to upload new code.
 
-    </aside>
+![Untitled](Untitled46.png)
 
-  ![Untitled](Untitled46.png)
+## Adding New Functionality
 
-- Adding New Functionality
+## Video Demonstration
 
-  # Adding New Functionality
-
-  ## Video Demonstration
-
-    <aside>
     ‼️ The exact process and code you’ll need to implement will depend on your specific requirements.
 
-    </aside>
+[https://youtu.be/rPDmzrNgSn4](https://youtu.be/rPDmzrNgSn4)
 
-  [https://youtu.be/rPDmzrNgSn4](https://youtu.be/rPDmzrNgSn4)
+## Step 1: Define function
 
-  ## Step 1: Define function
+Create a new function for the new functionality.
 
-  Create a new function for the new functionality.
+In this example, the status of a button will be uploaded to the server, and the response will determine whether the
+fan will be turned on or not.
 
-  In this example, the status of a button will be uploaded to the server, and the response will determine whether the
-  fan will be turned on or not.
+Decide the input sensor and the output actuator.
 
-  Decide the input sensor and the output actuator.
+![Untitled](Untitled47.png)
 
-  ![Untitled](Untitled47.png)
+## Step 2: Libraries
 
-  ## Step 2: Libraries
+Import the necessary libraries for your sensor and actuator. This will require researching the sensor and module you
+are attempting to use.
 
-  Import the necessary libraries for your sensor and actuator. This will require researching the sensor and module you
-  are attempting to use.
+Import the library/ies required using the Library option in the Platform IO home.
 
-  Import the library/ies required using the Library option in the Platform IO home.
+![Untitled](Untitled48.png)
 
-  ![Untitled](Untitled48.png)
+### Alternatively…
 
-  ### Alternatively…
+Open `platformio.ini` and add the following libraries to the end of the list.
 
-  Open `platformio.ini` and add the following libraries to the end of the list.
-
-  ![Untitled](Untitled49.png)
+![Untitled](Untitled49.png)
 
     ```C++
     
@@ -1320,16 +1308,16 @@ while (!Serial) {
     adafruit/Adafruit Motor Shield V2 Library@^1.1.1
     ```
 
-  Step 3: Collect Input
+Step 3: Collect Input
 
-  ## Step 4: Send Data to the Server and Receive Response
+## Step 4: Send Data to the Server and Receive Response
 
-  Reuse (copy) the code from `temperatureAndLED()` to upload the sensor data to the server and receive a response.
+Reuse (copy) the code from `temperatureAndLED()` to upload the sensor data to the server and receive a response.
 
-  ## Step 5: Affect Actuator
+## Step 5: Affect Actuator
 
-  ## Step 6: Test and test again
+## Step 6: Test and test again
 
-  # Add new Local Functionality
+## Add new Local Functionality
 
-  Repeat the process above, however skip the step to upload the sensor data to the server and wait for a response.
+Repeat the process above, however skip the step to upload the sensor data to the server and wait for a response.
