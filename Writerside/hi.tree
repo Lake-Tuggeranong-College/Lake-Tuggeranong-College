@@ -10,7 +10,7 @@
     <toc-element topic="Subjects.topic"/>
     <toc-element topic="Common.topic"/>
     <toc-element topic="Robotics.topic">
-        <toc-element topic="ESP32 Feather Project.md"/>
+        <toc-element topic="ESP32-Feather-Project.md"/>
         <toc-element topic="Building-Programming-Circuits.topic"/>
         <toc-element topic="Robotics-and-Mechatronics.topic"/>
         <toc-element topic="Application-of-Robotics.topic"/>
