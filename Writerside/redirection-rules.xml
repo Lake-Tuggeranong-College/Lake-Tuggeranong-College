@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rules SYSTEM "https://resources.jetbrains.com/writerside/1.0/redirection-rules.dtd">
+<rules>
+    <!-- format is as follows
+    <rule id="<unique id>">
+        <accepts>page.html</accepts>
+    </rule>
+    -->
+    <rule id="3b1c5deb">
+        <description>Created after removal of "Robotics" from Help Instance</description>
+        <accepts>Robotics.html</accepts>
+    </rule>
+    <rule id="f7a1b5b">
+        <description><![CDATA[Created after removal of "Robotics & Mechatronics" from Help Instance]]></description>
+        <accepts>Robotics-Mechatronics.html</accepts>
+    </rule>
+    <rule id="38085baa">
+        <description>Created after removal of "Application of Robotics" from Help Instance</description>
+        <accepts>Application-of-Robotics.html</accepts>
+    </rule>
+    <rule id="2ec5e1b2">
+        <description>Created after removal of "Independent Project" from Help Instance</description>
+        <accepts>Independent-Project.html</accepts>
+    </rule>
+</rules>

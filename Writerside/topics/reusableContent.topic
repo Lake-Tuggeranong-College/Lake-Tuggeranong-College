@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="reusableContent" id="reusableContent">
+
+
+    <snippet id="version_warning">
+        <warning>This version support ended on January 14, 2022.
+            Download the latest version.</warning>
+    </snippet>
+
+
+
+
+    <snippet id="contact details">
+
+        <table>
+            <tr>
+                <td>![IMG_4971.PNG](Common%2094d8be62d6a5430eb9f20dd48cfb15d1/IMG_4971.png)</td>
+                <td>$\utilde {\color{black} \fcolorbox{chocolate}{chocolate} {Ryan Cather}}$</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>**Email** [ryan.cather@ed.act.edu.au](mailto:ryan.cather@ed.act.edu.au)</td>
+                <td>**Discord**: [https://discord.gg/R9a6msU](https://discord.gg/R9a6msU)</td>
+                <td>`CTRL+SHIFT+L` - view this page in dark mode.</td>
+            </tr>
+
+        </table>
+
+
+
+
+    </snippet>
+
+</topic>
+

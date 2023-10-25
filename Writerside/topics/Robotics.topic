@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="Robotics" id="Robotics">
+
+
+
+    <section-starting-page>
+        <title>Robotics and Mechatronics</title>
+        <description>
+            These are the Units available in this course.
+        </description>
+        <!--    Add up to 2 topics that you want to promote. Use the "type" attribute to select an icon.    -->
+        <spotlight>
+            <a href="Robotics-and-Mechatronics.topic" type="key" summary="Topics shared across units">Year 11 Unit</a>
+            <a href="Independent-Project.topic" type="lock" summary="Topics shared across units">Year 12 Unit</a>
+
+        </spotlight>
+
+        <!--    Add several topics that are most important for this section.    -->
+        <primary>
+            <title>Year 11 Subjects</title>
+            <a href="Building-Programming-Circuits.topic" type="start" summary="Unit 1.">Building and Programming Circuits</a>
+            <a href="Robotics-and-Mechatronics.topic" type="idea" summary="Unit 2.">Robotics Mechatronics</a>
+
+
+        </primary>
+
+        <secondary>
+            <title>Year 12 Subjects</title>
+
+            <a href="Application-of-Robotics.topic" type="bug" summary="Unit 3.">Application of Robotics</a>
+            <a href="Independent-Project.topic" type="presentation" summary="Unit 4.">Independent Project</a>
+
+        </secondary>
+    </section-starting-page>
+
+</topic>
