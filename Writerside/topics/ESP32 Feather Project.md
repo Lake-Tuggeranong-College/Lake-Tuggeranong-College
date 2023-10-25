@@ -1,25 +1,25 @@
-# ESP32 Feather Project
+# ESP32FeatherProject
 
 # 2023 S2 - Hotel Monitoring System
 
-- Software installation
+Software installation
 
-  # Jetbrains
+# Jetbrains
 
-  ## Create Jetbrains Educational Account
+## Create Jetbrains Educational Account
 
-  Go to the following site and create a Jetbrains account **using your school Google Account.**
+Go to the following site and create a Jetbrains account **using your school Google Account.**
 
-  [](https://account.jetbrains.com/)
+[](https://account.jetbrains.com/)
 
-  Once done, visit the following page and apply for a free educational account.
+Once done, visit the following page and apply for a free educational account.
 
-  [Free Educational Licenses - Community Support](https://www.jetbrains.com/community/education/#students)
+[Free Educational Licenses - Community Support](https://www.jetbrains.com/community/education/#students)
 
-  ## Install Jetbrains Toolbox
+## Install Jetbrains Toolbox
 
-  After creating the Jetbrains account, download and install the Toolbox App. This tool manages the installation and
-  configuration of the Jetbrains tool.
+After creating the Jetbrains account, download and install the Toolbox App. This tool manages the installation and
+configuration of the Jetbrains tool.
 
 ![Untitled](Untitled.png)
 
@@ -619,7 +619,7 @@ The Host, SSID and password should be configured for the classroom’s RoboRange
 </code-block>
 
 The serverURL variable should be set to the subject specific URL.
-    
+
 ```C++
 String serverURL = "http://10.177.200.71/JEDI2023/dataTransfer.php";
 ```
@@ -645,7 +645,7 @@ At this end of the process, your `sensitiveInformation.h` file should appear sim
 ![Untitled](Untitled23.png)
 
 $$
-\utilde {\color{black} \fcolorbox{darkorange}{darkorange}  {Commit and Push to Github}}
+\utilde {\color{black} \fcolorbox{darkorange}{darkorange} {Commit and Push to Github}}
 $$
 
 ## Connecting to the network
@@ -661,7 +661,8 @@ Add the following additional include statements at the top of your code, *****af
 
 Add the following block of code to the `setup()` function.
 
-This code will attempt to connect to the Wifi network with the credentials defined in `sensitiveInformation.h`. IT will then output the IP address to the Serial Monitor.
+This code will attempt to connect to the Wifi network with the credentials defined in `sensitiveInformation.h`. IT will
+then output the IP address to the Serial Monitor.
 
 ```C++
 while (!Serial) {

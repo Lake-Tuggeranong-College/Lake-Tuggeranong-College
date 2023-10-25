@@ -13,6 +13,6 @@
     <include from="reusableContent.topic" element-id="version_warning"/>
 
 
-    <include from="reusableContent.topic" element-id="contact details"/>
+    <include from="reusableContent.topic" element-id="contactdetails"/>
 
 </topic>
