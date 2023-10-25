@@ -122,7 +122,1454 @@
 
 
     <chapter title="Topics" id="topics">
+        <title>
+            ESP32 Feather Project
+        </title>
+        <chapter title="2023 S2 - Hotel Monitoring System" id="2023-s2-hotel-monitoring-system">
+            <p>Software installation</p>
+        </chapter>
+        <chapter title="Jetbrains" id="jetbrains">
+        </chapter>
+        <chapter title="Create Jetbrains Educational Account" id="create-jetbrains-educational-account">
+            <p>Go to the following site and create a Jetbrains account
+                <control>using your school Google Account.</control>
+            </p>
+            <p><a href="https://account.jetbrains.com/"></a></p>
+            <p>Once done, visit the following page and apply for a free educational account.</p>
+            <p><a href="https://www.jetbrains.com/community/education/#students">Free Educational Licenses - Community
+                Support</a></p>
+        </chapter>
+        <chapter title="Install Jetbrains Toolbox" id="install-jetbrains-toolbox">
+            <p>After creating the Jetbrains account, download and install the Toolbox App. This tool manages the
+                installation and
+                configuration of the Jetbrains tool.</p>
+            <img src="Untitled.png" alt="Untitled"/>
+        </chapter>
+        <chapter title="Install PHPStorm" id="install-phpstorm">
+            <p>Using the Jetbrains toolbox, Install PHPStorm.</p>
+            <p>You can follow the video, here, but install PHPStorm instead.</p>
+            <p><a href="https://drive.google.com/file/d/1-2Z0MS-TXCvL807bcc8l4oCGx6GzIKd6/view?usp=drivesdk">2020 07 19
+                - Install Pycharm Final.mp4</a></p>
+        </chapter>
+        <chapter title="Clone Project" id="clone-project">
+            <p>Open PHPStorm, and click the open for Version Control (or VCS). You will be required to sign into Github,
+                then choose
+                your repository from the list and press
+
+                <control>Clone</control>
+
+                .
+            </p>
+            <p>This will open the project in PHPStorm.</p>
+            <img src="Untitled1.png" alt="Untitled"/>
+        </chapter>
+        <chapter title="Visual Studio Code" id="visual-studio-code">
+            <p>If Visual Studio Code (VSCode) is not installed on your operating system, install it using the
+                instructions here:</p>
+            <p>Window</p>
+            <p><a href="https://code.visualstudio.com/download"></a></p>
+            <p>Installing it on Linux may be more complicated and particular to the specific installation of Linux. Some
+                instructions can be found here</p>
+            <p><a href="https://code.visualstudio.com/docs/setup/linux"></a></p>
+        </chapter>
+        <chapter title="Install Extensions" id="install-extensions">
+            <p>Open VSCode and open the Extensions tab.</p>
+            <img src="Untitled2.png" alt="Untitled"/>
+            <p>Search for
+                <control>PlatformIO</control>
+                and click on the Install button.
+            </p>
+            <p>PHP / MySQL Crash Course</p>
+        </chapter>
+        <chapter title="PHP, MySQL Crash Course" id="php-mysql-crash-course">
+        </chapter>
+        <chapter title="Background Information" id="background-information">
+            <chapter title="PHP" id="php">
+                <p>PHP stands for
+                    <control>P</control>
+                    HP
+                    <control>H</control>
+                    ypertext
+                    <control>P</control>
+                    reProcessor and is an open-source, server-side scripting language. It is
+                    used to develop dynamic web applications, as well as create interactive and responsive websites. Due
+                    to its
+                    versatility, it has become one of the most widely-used programming languages on the web. It is
+                    well-known for its easy
+                    syntax, allowing both novice and experienced coders to write web applications quickly and
+                    effectively. In essence, PHP
+                    is an invaluable tool for web developers, providing them with the power to create robust, dynamic
+                    and interactive web
+                    applications.
+                </p>
+                <p>In this project, you will be developing PHP page/s to interface between the Adafruit Feather and the
+                    MySQL database.</p>
+            </chapter>
+            <chapter title="MySQL" id="mysql">
+                <p>MySQL is a powerful and widely used
+                    <control>database management system</control>
+                    , designed to store and manage large amounts of data
+                    in an efficient and secure manner. It provides a range of features and tools that allows users to
+                    create, manage and
+                    maintain databases with ease, making it an ideal choice for businesses and organisations of all
+                    sizes. As it is
+                    open-source, it is highly customisable, allowing users to tailor the system to their specific needs
+                    and requirements.
+                    With its robust security and scalability, MySQL is an excellent choice for managing large-scale
+                    databases.
+                </p>
+                <p>You will be given a login to the database on the server.</p>
+                <p>This login is shared by all users of the system, so be careful if you change anything!!</p>
+            </chapter>
+            <chapter title="CRUD" id="crud">
+                <img src="CRUD.jpeg" alt="https://www.atatus.com/glossary/crud/"/>
+                <p><a href="https://www.atatus.com/glossary/crud/">https://www.atatus.com/glossary/crud/</a></p>
+                <p>
+                    <control>Create</control>
+                    ,
+                    <control>Read</control>
+                    ,
+                    <control>Update</control> &amp;
+                    <control>Delete</control>
+                    (CRUD) are the standard operations for use with databases, especially
+                    with SQL statements using a relational data system such as SQLite or MySQL.
+                </p>
+                <p>You can read more on CRUD by accessing <a href="https://www.humio.com/glossary/crud/">this page</a>.
+                </p>
+            </chapter>
+        </chapter>
+        <chapter title="System Overview" id="system-overview">
+            <p>
+                <a href="https://docs.google.com/drawings/d/e/2PACX-1vQghkYq2rMikuPfnL4HrByHcnjMhT4yYoMRNa9HB2P7C-2QKNloAkr7s8ITbW-b6ZSIfvbpKvVkrOaT/pub?w=1440&amp;h=1080">https://docs.google.com/drawings/d/e/2PACX-1vQghkYq2rMikuPfnL4HrByHcnjMhT4yYoMRNa9HB2P7C-2QKNloAkr7s8ITbW-b6ZSIfvbpKvVkrOaT/pub?w=1440&amp;h=1080</a>
+            </p>
+        </chapter>
+        <chapter title="Connect PHPStorm to the database" id="connect-phpstorm-to-the-database">
+            <p>Open the project in PHPStorm and open the database tab.</p>
+            <img src="Untitled3.png" alt="Untitled"/>
+            <p>Click the + icon to add a new database source. Select MariaDB from the dropdown list.</p>
+            <img src="Untitled4.png" alt="Untitled"/>
+            <p>Enter the IP Address of the database server in the Host text box.</p>
+            <p>Enter the Username and password.</p>
+            <p>If the message appears to Download or upgrade drivers, Click that.</p>
+            <p>Click Test Connection.</p>
+            <p>Click Ok.</p>
+            <img src="Untitled5.png" alt="Untitled"/>
+            <p>Once the connection has been established, click on the <code>1 of 3</code> status next to the database
+                connection and then select
+                <emphasis>All Schemas</emphasis>
+                .
+            </p>
+            <img src="Untitled6.png" alt="Untitled"/>
+            <p>You should then be able to view the databases associated with your logon.</p>
+        </chapter>
+        <chapter title="config.php" id="config-php">
+            <p>In order to manage the connection to the MySQL database, it makes sense to keep the details in one single
+                location
+                rather than in various files across the system.</p>
+            <p>Create a new PHP file called <code>config.php</code> in the root of the project.</p>
+            <img src="SCR-20221128-taa.png" alt="SCR-20221128-taa.png"/>
+            <p>Copy this code into config.php.</p>
+            <p>You will need to change the values of the following variables:</p>
+            <p><code>servername</code></p>
+            <p><code>username</code></p>
+            <p><code>password</code></p>
+            <p><code>dbname</code></p>
+            <p>You will be given these details in class.</p>
+            <img src="SCR-20221128-uvo-2.png" alt="SCR-20221128-uvo-2.png"/>
+
+            <code-block>```php
+                &lt;?php
+                session_start();
+
+                $servername = &quot;10.76.43.63&quot;;
+                $username = &quot;RC&quot;;
+                $password = &quot;RC&quot;;
+                $dbname = &quot;RC&quot;;
+                $errorCaught = false;
+
+                try {
+                $conn = new PDO(&quot;mysql:host=$servername;dbname=$dbname&quot;, $username, $password);
+                $conn-&gt;setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                } catch (PDOException $e) {
+                $errorCaught = true;
+                echo &quot;Error: &quot; . $e-&gt;getMessage();
+                }
+
+                if (!$errorCaught) {
+                echo &quot;Database connection configured correctly, and database connection good.&quot;;
+                }
+
+                $conn = null;
+                ?&gt;
+                ```
+            </code-block>
+        </chapter>
+        <chapter title="template.php" id="template-php">
+            <p><code>template.php</code> is the file that contains the HTML, PHP and any other information that is
+                required for all pages
+                throughout the site.</p>
+            <p>This page will contain the code for the loading of <code>config.php</code>, the navigation bar, bootstrap
+                etc.</p>
+            <p>Create a new PHP file called <code>template.php</code>. Replace the contents with this code.</p>
+            <p>The first line of this file loads the config.php code created earlier to establish the connection to the
+                database.</p>
+
+            <code-block lang="php">
+                &lt;?php require_once 'config.php'; ?&gt;
+                &lt;html&gt;
+                &lt;head&gt;
+                &lt;!-- Required meta tags --&gt;
+                &lt;meta charset=&quot;utf-8&quot;&gt;
+                &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot;&gt;
+
+                &lt;!-- Bootstrap CSS --&gt;
+                &lt;link rel=&quot;stylesheet&quot; href=&quot;css/bootstrap.min.css&quot;&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                &lt;!-- Navigation Bar --&gt;
+                &lt;nav class=&quot;navbar navbar-expand-sm navbar-light bg-light&quot;&gt;
+                &lt;div class=&quot;container-fluid&quot;&gt;
+                &lt;a class=&quot;navbar-brand&quot; href=&quot;index.php&quot;&gt;
+                &lt;img src=&quot;images/logo.png&quot; alt=&quot;&quot; width=&quot;80&quot; height=&quot;80&quot;&gt;
+                &lt;/a&gt;
+                &lt;button class=&quot;navbar-toggler&quot; type=&quot;button&quot; data-bs-toggle=&quot;collapse&quot;
+                data-bs-target=&quot;#navbarNav&quot;
+                aria-controls=&quot;navbarNav&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt;
+                &lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;
+                &lt;/button&gt;
+                &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbarNav&quot;&gt;
+                &lt;ul class=&quot;navbar-nav&quot;&gt;
+                &lt;li class=&quot;nav-item&quot;&gt;
+                &lt;a class=&quot;nav-link&quot; href=&quot;index.php&quot;&gt;Home&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;?php if (isset($_SESSION[&quot;name&quot;])) {
+                echo &quot;&lt;div class='alert alert-success d-flex'&gt;&lt;span&gt;Welcome, &quot; . $_SESSION[&quot;name&quot;]
+                . &quot;&lt;br&gt;&lt;a href='logout.php'&gt;Logout&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;&quot;;
+                } else {
+                echo &quot;&lt;div class='alert alert-info d-flex'&gt;&lt;a href='index.php'&gt;Sign In&lt;/a&gt;&quot;;
+                }
+                ?&gt;
+                &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;/nav&gt;
+
+                &lt;script src=&quot;js/bootstrap.bundle.js&quot;&gt;&lt;/script&gt;
+
+                &lt;?php
+                function sanitise_data($data)
+                {
+                $data = trim($data);
+                $data = stripslashes($data);
+                $data = htmlspecialchars($data);
+                return $data;
+                }
+
+                function outputFooter()
+                {
+                date_default_timezone_set('Australia/Canberra');
+                echo &quot;&lt;footer&gt;This page was last modified: &quot; . date(&quot;F d Y H:i:s.&quot;, filemtime(&quot;index.php&quot;))
+                . &quot;&lt;/footer&gt;&quot;;
+                }
+
+                ?&gt;
+            </code-block>
+            <p>If you launch the page in the browser, you’ll see something like this.</p>
+            <img src="SCR-20221128-tjf.png" alt="SCR-20221128-tjf.png"/>
+            <chapter title="Explanation" id="explanation">
+                <p>The template page is complex because it covers a number of base tasks.</p>
+                <table>
+                    <tr>
+                        <td>1</td>
+                        <td>Loads and executes code in config.php</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Loads and enables access to the bootstrap CSS library (more later)</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Bootstrap Navbar code. Currently only showing the link to the homepage.</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Dynamic content in the navbar - if the user is not logged in the navbar shows a link to log
+                            in. If already logged in, the navbar welcomes that user.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Loads and enables access to the bootstrap javascript library. Primarily used for the
+                            automatic dropdown link for small screens.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Site-wide function to sanitise data. More later.</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Site-wide function to output a standardised footer across pages.</td>
+                    </tr>
+                </table>
+                <img src="SCR-20221128-tl2-2.png" alt="SCR-20221128-tl2-2.png"/>
+            </chapter>
+        </chapter>
+        <chapter title="index.php" id="index-php">
+            <p>The Index page will be the homepage that the users see when they first access your section of the
+                site.</p>
+            <p>Create a new PHP file called <code>index.php</code>. Replace the contents with this.</p>
+
+            <code-block>```php
+                &lt;?php include &quot;template.php&quot;; ?&gt;
+                &lt;title&gt;Cyber City&lt;/title&gt;
+
+                &lt;h1 class='text-primary'&gt;Welcome to our The Cyber City&lt;/h1&gt;
+                ```
+            </code-block>
+            <p>Launch the page and you should see something similar to this:</p>
+            <img src="SCR-20221128-ts2.png" alt="SCR-20221128-ts2.png"/>
+        </chapter>
+        <chapter title="registration.php" id="registration-php">
+            <p>The form code</p>
+
+            <code-block>```php
+                &lt;form action=&quot;&lt;?php echo htmlspecialchars($_SERVER[&quot;PHP_SELF&quot;]); ?&gt;&quot;
+                method=&quot;post&quot; enctype=&quot;multipart/form-data&quot;&gt;
+                &lt;div class=&quot;container-fluid&quot;&gt;
+                &lt;div class=&quot;row&quot;&gt;
+                &lt;!--Customer Details--&gt;
+
+                &lt;div class=&quot;col-md-12&quot;&gt;
+                &lt;h2&gt;Account Details&lt;/h2&gt;
+                &lt;p&gt;Please enter wanted username and password:&lt;/p&gt;
+                &lt;p&gt;User Name&lt;input type=&quot;text&quot; name=&quot;username&quot; class=&quot;form-control&quot;
+                required=&quot;required&quot;&gt;&lt;/p&gt;
+                &lt;p&gt;Password&lt;input type=&quot;password&quot; name=&quot;password&quot; class=&quot;form-control&quot;
+                required=&quot;required&quot;&gt;&lt;/p&gt;
+
+                &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;input type=&quot;submit&quot; name=&quot;formSubmit&quot; value=&quot;Submit&quot;&gt;
+                &lt;/form&gt;
+                ```
+
+                ```php
+                &lt;?php
+                if ($_SERVER[&quot;REQUEST_METHOD&quot;] == &quot;POST&quot;) {
+                $username = sanitise_data($_POST['username']);
+                $password = sanitise_data($_POST['password']);
+                $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+                //echo $username;
+                //echo $hashed_password;
+
+                $sql = &quot;INSERT INTO user (username, hashed_password, access_level) VALUES (:newUsername,
+                :newPassword, 1)&quot;;
+                $stmt = $conn-&gt;prepare($sql);
+                $stmt-&gt;bindValue(':newUsername', $username);
+                $stmt-&gt;bindValue(':newPassword', $hashed_password);
+                $stmt-&gt;execute();
+                }
+                ?&gt;
+                ```
+            </code-block>
+        </chapter>
+        <chapter title="login.php" id="login-php">
+            <p>The login page will visually be very similar to the registration page, at this stage. The first part of
+                the page can
+                just be duplicated from <code>registration.php</code>.</p>
+            <img src="Untitled7.png" alt="Untitled"/>
+
+            <code-block>```php
+                &lt;?php include &quot;template.php&quot;; ?&gt;
+                &lt;title&gt;Cyber City - Login&lt;/title&gt;
+
+                &lt;h1 class='text-primary'&gt;Login&lt;/h1&gt;
+
+                &lt;form action=&quot;&lt;?php echo htmlspecialchars($_SERVER[&quot;PHP_SELF&quot;]); ?&gt;&quot;
+                method=&quot;post&quot; enctype=&quot;multipart/form-data&quot;&gt;
+                &lt;div class=&quot;container-fluid&quot;&gt;
+                &lt;div class=&quot;row&quot;&gt;
+                &lt;!--Customer Details--&gt;
+
+                &lt;div class=&quot;col-md-12&quot;&gt;
+                &lt;h2&gt;Account Details&lt;/h2&gt;
+                &lt;p&gt;Please enter wanted username and password:&lt;/p&gt;
+                &lt;p&gt;User Name&lt;input type=&quot;text&quot; name=&quot;username&quot; class=&quot;form-control&quot;
+                required=&quot;required&quot;&gt;&lt;/p&gt;
+                &lt;p&gt;Password&lt;input type=&quot;password&quot; name=&quot;password&quot; class=&quot;form-control&quot;
+                required=&quot;required&quot;&gt;&lt;/p&gt;
+
+                &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;input type=&quot;submit&quot; name=&quot;formSubmit&quot; value=&quot;Submit&quot;&gt;
+                &lt;/form&gt;
+                ```
+            </code-block>
+            <p>And again, the first part of the PHP code from registration will be the same, namely collecting and
+                sanitising the
+                form data and searching for how many users of that user name are found in the database.</p>
+            <img src="Untitled8.png" alt="Untitled"/>
+
+            <code-block lang="php">
+                &lt;?php
+                if ($_SERVER[&quot;REQUEST_METHOD&quot;] == &quot;POST&quot;) {
+                $username = sanitise_data($_POST['username']);
+                $password = sanitise_data($_POST['password']);
+
+                $query = $conn-&gt;query(&quot;SELECT COUNT(*) as count FROM `user` WHERE `username`='$username'&quot;);
+                $row = $query-&gt;fetch();
+                $count = $row[0];
+
+                if ($count &gt; 0) {
+
+                }
+
+                }
+            </code-block>
+            <p>If a user has be found (i.e. if <code>$count &gt; 0</code>) then the code will want to load all the
+                details of that users record.</p>
+
+            <code-block>&lt;aside&gt;
+                ‼️ A **record** in a database is a collection of data which is organised into fields and is stored
+                within a table. Each record contains values which correspond to the fields in the table. These records
+                are used to store and retrieve information, such as a user's name, address, and other personal data.
+                Records are usually identified by a unique key or identifier, such as an ID number.
+            </code-block>
+            <img src="Untitled9.png" alt="Untitled"/>
+
+            <code-block>&lt;/aside&gt;
+            </code-block>
+
+            <code-block lang="php">
+                $query = $conn-&gt;query(&quot;SELECT * FROM `user` WHERE `username`='$username'&quot;);
+                $row = $query-&gt;fetch();
+            </code-block>
+            <img src="Untitled10.png" alt="Untitled"/>
+
+            <p>When this code is executed, <code>$row</code> will contain the record as an array and each field (or
+                column) will be stored in
+                the different elements in order.</p>
+            <p>So, in this specific case, the fields will equate to these
+                <emphasis>
+                    <control>
+                        <control>
+                            <control>indexes</control>
+                        </control>
+                    </control>
+                </emphasis>
+                .
+            </p>
+            <img src="Untitled11.png" alt="Untitled"/>
+
+            <p>At this stage, the username is correct and valid, but the system still needs to confirm the password,
+                which is hashed
+                in the database. Luckily PHP has a helper function to compare a password in plain text with the hashed
+                password. This
+                function - <code>password_verify()</code> - will return <code>true</code> if the passwords match and
+                <code>false</code> if not.</p>
+
+            <code-block>&lt;aside&gt;
+                ‼️ Note that the clear text password is being compared to `row[2]` which is the hashed_password field
+                from the database.
+
+                &lt;/aside&gt;
+            </code-block>
+            <img src="Untitled12.png" alt="Untitled"/>
+
+            <code-block>```php
+                if (password_verify($password, $row[2])) {
+                }
+                ```
+            </code-block>
+            <p>If <code>password_verify()</code> returns true then the user has successfully logged on. Before
+                proceeding with any other part of
+                the process, you need to set some
+                <control>
+                    <control>
+                        <control>
+                            <control>
+                                <control>
+                                    <control>
+                                        <control>session</control>
+                                    </control>
+                                </control>
+                            </control>
+                        </control>
+                    </control>
+                </control>
+                variables.
+            </p>
+
+            <code-block>&lt;aside&gt;
+                ‼️ Session variables in PHP are variables that store user information for a specific session. They are
+                stored in the server's memory for a certain amount of time and are used to track user activities during
+                that session. Session variables can be used to store user-specific data, such as their name,
+                preferences, or cart contents. They allow a website to remember user-specific data across multiple pages
+                and even after a user has left the website and returned.
+
+                &lt;/aside&gt;
+            </code-block>
+            <p>For the purposes of this project, the only sessions variables needed (at this stage) are the <code>user_id</code>,
+                <code>username</code>
+                and <code>access_level</code>.</p>
+            <img src="Untitled13.png" alt="Untitled"/>
+
+            <code-block>```php
+                $_SESSION[&quot;user_id&quot;] = $row[0];
+                $_SESSION[&quot;username&quot;] = $row[1];
+                $_SESSION['access_level'] = $row[3];
+                ```
+            </code-block>
+            <p>Finally, add a catch for if the logon was unsuccessful.</p>
+            <img src="Untitled14.png" alt="Untitled"/>
+
+            <code-block>```php
+                else {
+                // unsuccessful log on.
+                echo &quot;&lt;div class='alert alert-danger'&gt;Invalid username or password&lt;/div&gt;&quot;;
+                }
+                ```
+            </code-block>
+            <p>Try it out!</p>
+            <p>$* \normalsize \mathcal {\color \colorbox {Save, Commit and
+                Push Changes to Github!}}$</p>
+        </chapter>
+        <chapter title="logout.php" id="logout-php">
+            <p>Create a new page named <code>logout.php</code>. All this page needs to do at this stage is to clear all
+                session variables from
+                memory so that the user is now no longer logged in.</p>
+            <img src="Untitled15.png" alt="Untitled"/>
+
+            <code-block>```php
+                &lt;?php
+                session_start();
+                session_destroy();
+                ?&gt;
+                ```
+            </code-block>
+            <p>The final line of code for the log out process should be to redirect the browser to another page.</p>
+            <img src="Untitled16.png" alt="Untitled"/>
+
+            <code-block>```php
+                header(&quot;Location:index.php&quot;);
+                ```
+            </code-block>
+        </chapter>
+        <chapter title="Template Update" id="template-update">
+            <p>Open <code>template.php</code> as a few changes need to be made due to a change in the project.</p>
+            <p>In the nav bar, there are references to the session variable name, however this has not been set in the
+                project so
+                far. Change both instances of <code>name</code> to <code>username</code>.</p>
+            <img src="Untitled17.png" alt="Untitled"/>
+            <p>Save and reload the login page in the browser and the navbar should now display the successfully logged
+                in users
+                username.</p>
+            <img src="Untitled18.png" alt="Untitled"/>
+            <p>Update the link for Sign in <code>template.php</code> to link to the correct page for login.</p>
+            <img src="Untitled19.png" alt="Untitled"/>
+            <p>Adafruit Feather Ecosystem</p>
+        </chapter>
+        <chapter title="Adafruit Feather &amp; Featherwings" id="adafruit-feather-featherwings">
+            <p>For this project you will be using, as a foundation, the following pieces of hardware</p>
+            <p>At the end of the process, you should have the following pieces of hardware</p>
+            <list>
+                <li>Adafruit ESP32 Feather</li>
+                <li>Digi-Key Temperatuire &amp; Motion Wing</li>
+                <li>Adalogger Featherwing</li>
+                <li>DC Motor Featherwing</li>
+                <li>MiniTFT Featherwing</li>
+                <li>Battery Pack</li>
+            </list>
+            <p>You may use additional hardware for your specific implementation. This may include</p>
+
+            <code-block>- DC Motor / Pump
+                - Servo Motor
+                - LED Traffic Lights
+                - RGB LEDs
+                - etc.
+            </code-block>
+            <img src="modules.jpg" alt="Modules"/>
+            <p>Processing Input and Output</p>
+        </chapter>
+        <chapter title="Simple Input → Output" id="simple-input-output">
+            <p>In this example, you’ll be shown how to code a simple circuit to read a button press and turn an LED
+                on.</p>
+
+            <code-block>&lt;aside&gt;
+                ‼️ Your project requirements may be different, however the process of collecting the input and causing
+                an output will be similar. You will need to research your input and output devices and how they are
+                wired on the ESP32 Feather.
+
+                &lt;/aside&gt;
+            </code-block>
+        </chapter>
+        <chapter title="Button Press → LED" id="button-press-led">
+            <chapter title="Reading Button Press" id="reading-button-press">
+            </chapter>
+            <chapter title="Turning the LED on and off" id="turning-the-led-on-and-off">
+            </chapter>
+        </chapter>
+        <chapter title="Additional Modules" id="additional-modules">
+            <chapter title="Temperature" id="temperature">
+            </chapter>
+            <chapter title="DC Motor/s" id="dc-motor-s">
+            </chapter>
+            <chapter title="Real Time Clock (RTC)" id="real-time-clock-rtc">
+            </chapter>
+            <chapter title="LCD Screen" id="lcd-screen">
+            </chapter>
+            <chapter title="E-Paper / E-Ink Display" id="e-paper-e-ink-display">
+                <p>Wiring Diagram</p>
+            </chapter>
+        </chapter>
+        <chapter title="ESP32 Feather Wiring Diagram" id="esp32-feather-wiring-diagram">
+            <p>The starting wiring diagram, shown below, is included in the repository - <code>esp32.ckt</code>.</p>
+            <img src="esp32.png" alt="esp32.png"/>
+            <p>Clone Project</p>
+        </chapter>
+        <chapter title="Join Github Classroom" id="join-github-classroom">
+            <p>Join the classroom via the supplied link.</p>
+            <p>Clone and Open the project.</p>
+            <p>Open PIO Home. Click on Libraries.</p>
+            <img src="Untitled20.png" alt="Untitled"/>
+            <p>Search for and install the following libraries:</p>
+            <list>
+                <li>
+                    <control>
+                        <control>Adafruit BusIO</control>
+                    </control>
+                    by Adafruit
+                </li>
+                <li>
+                    <control>
+                        <control>Adafruit ST7735 and ST7789 Library</control>
+                    </control>
+                    by Adafruit
+                </li>
+                <li>
+                    <control>
+                        <control>
+                            <control>
+                                <control>
+                                    <control>
+                                        <control>RTCLib</control>
+                                    </control>
+                                </control>
+                            </control>
+                        </control>
+                    </control>
+                    by Adafruit
+                </li>
+                <li>
+                    <control>
+                        <control>Adafruit Motor Shield V2 Library</control>
+                    </control>
+                    by Adafruit
+                </li>
+                <li>
+                    <control>
+                        <control>Adafruit ADT7410 Library</control>
+                    </control>
+                    by Adafruit
+                </li>
+            </list>
+            <p>For each library, choose the project and click Add.</p>
+            <img src="Untitled21.png" alt="Untitled"/><img src="Untitled22.png" alt="Untitled"/>
+            <p>Connect the Adafruit board to the computer via USB and upload the code to the board.</p>
+            <p>‼️ You may need to change the function to “upload” instead of build.</p>
+            <img src="upload.gif" alt="upload.gif"/>
+            <p>In the terminal window, you will see the code compiling and then uploading to the board.</p>
+            <img src="uploading.gif" alt="uploading.gif"/>
+            <p>The onboard red LED will quickly flash to indicate the code and uploading is working.</p>
+            <p>Network Access</p>
+        </chapter>
+        <chapter title="Network Access" id="network-access">
+        </chapter>
+        <chapter title="sensitiveInformation.h" id="sensitiveinformation-h">
+            <p>First, open <code>sensitiveInformation.h</code> and confirm that the Settings are correct.</p>
+            <p>The Host, SSID and password should be configured for the classroom’s RoboRange network.</p>
+            <code-block lang="c++" collapsible="true" collapsed-title="sensitiveinformation.c">
+                const char* host = "RMS";
+                const char* ssid = "RoboRange"; // Wifi Network Name
+                const char* password = "Password01"; // Wifi Password
+            </code-block>
+            <p>The serverURL variable should be set to the subject specific URL.</p>
+
+            <code-block lang="C++">
+                String serverURL = &quot;http://10.177.200.71/JEDI2023/dataTransfer.php&quot;;
+            </code-block>
+            <p>Add a new URL called <code>eventLogURL</code> to direct the code to the url to store event data, such as
+                “Door Open” etc.</p>
+
+            <code-block lang="C++">
+                String eventLogURL = &quot;http://10.177.200.71/JEDI2023/eventLog.php&quot;;
+            </code-block>
+            <p>The last block of code should change to be specific to your module.</p>
+            <p>At this stage, leave the <code>apiKeyValue</code> and <code>moduleName</code> as is. Set the
+                <code>user</code> variable to be your name.</p>
+
+            <code-block lang="C++">
+                String apiKeyValue = &quot;api&quot;;
+                String moduleName = &quot;Temperature&quot;;
+                String user = &quot;Ryan Cather&quot;;
+            </code-block>
+            <p>At this end of the process, your <code>sensitiveInformation.h</code> file should appear similar to this.
+            </p>
+            <img src="Untitled23.png" alt="Untitled"/>
+            <p>$$
+                \utilde {\color\fcolorbox Commit="" and="" Push="" to="" Github="" }
+                $$</p>
+        </chapter>
+        <chapter title="Connecting to the network" id="connecting-to-the-network">
+            <p>Add the following additional include statements at the top of your code,
+                <emphasis>
+                    <control>
+                        <control>after</control>
+                    </control>
+                </emphasis>
+                <code>#include &lt;Arduino.h&gt;</code></p>
+
+            <code-block lang="C++">
+                #include &quot;WiFi.h&quot;
+                #include &lt;HTTPClient.h&gt;
+            </code-block>
+            <img src="Untitled24.png" alt="Untitled"/>
+            <p>Add the following block of code to the <code>setup()</code> function.</p>
+            <p>This code will attempt to connect to the Wifi network with the credentials defined in <code>sensitiveInformation.h</code>.
+                IT will
+                then output the IP address to the Serial Monitor.</p>
+
+            <code-block lang="C++">
+                while (!Serial) {
+                delay(10);
+                }
+                delay(1000);
+                WiFi.begin(ssid, password);
+
+                while (WiFi.status() != WL_CONNECTED) {
+                delay(1000);
+                Serial.println(&quot;Connecting to WiFi..&quot;);
+                }
+                Serial.println();
+                Serial.print(&quot;Connected to the Internet&quot;);
+                Serial.print(&quot;IP address: &quot;);
+                Serial.println(WiFi.localIP());
+            </code-block>
+            <img src="Untitled25.png" alt="Untitled"/>
+            <p>Event Logging to the Database</p>
+            <chapter title="Event Logging to the Database" id="event-logging-to-the-database">
+                <p>Instead of logging events locally (to a SD card or similar), the Arduino can log events to a
+                    remote server through the
+                    PHP server.</p>
+                <p>Open <code>main.cpp</code> and add the following function near the top of the code.</p>
+                <p>‼️ It needs to be stored
+                    <control>
+                        <control>
+                            <control>after</control>
+                        </control>
+                    </control>
+                    the include statements and
+                    <emphasis>
+                        <control>
+                            <control>prior</control>
+                        </control>
+                    </emphasis>
+                    to <code>setup()</code></p>
+            </chapter>
+
+            <img src="Untitled26.png" alt="Untitled"/>
+
+            <code-block>```c++
+                void logEvent(String eventData)
+                {
+                if (WiFi.status() == WL_CONNECTED)
+                {
+                WiFiClient client;
+                HTTPClient http;
+                Serial.println(&quot;Before&quot;);
+                // Your Domain name with URL path or IP address with path
+                http.begin(client, eventLogURL);
+
+                // Specify content-type header
+                http.addHeader(&quot;Content-Type&quot;, &quot;application/x-www-form-urlencoded&quot;);
+
+                // Send HTTP POST request, and store response code
+                http.addHeader(&quot;Content-Type&quot;, &quot;application/json&quot;);
+                String postJSONString = &quot;{\&quot;userName\&quot;:\&quot;&quot; + userName + &quot;\&quot;,\&quot;eventData\&quot;:\&quot;&quot;
+                + eventData + &quot;\&quot;}&quot;;
+
+                Serial.print(&quot;Debug JSON String: &quot;);
+                Serial.println(postJSONString);
+                int httpResponseCode = http.POST(postJSONString);
+
+                if (httpResponseCode &gt; 0)
+                {
+                Serial.print(&quot;HTTP Response code: &quot;);
+                Serial.print(httpResponseCode);
+                Serial.println(&quot;.&quot;);
+                }
+                else
+                {
+                Serial.print(&quot;Error code: &quot;);
+                Serial.println(httpResponseCode);
+                }
+
+                // Free resources
+                http.end();
+                }
+                else
+                {
+                Serial.println(&quot;WiFi Disconnected&quot;);
+                }
+                }
+                ```
+            </code-block>
+            <p>Add two events that are logged. The first in <code>setup()</code> to indicate the system has initialised.
+                The second include in
+                the main <code>loop()</code> as a test post.</p>
+
+            <code-block>```c++
+                logEvent(&quot;System Initalised&quot;);
+                ```
+            </code-block>
+            <img src="Untitled27.png" alt="Untitled"/>
+            <p>Upload the code to the Adafruit ESP32 Feather and check the database to ensure that it’s being stored
+                correctly.</p>
+            <img src="Untitled28.png" alt="Untitled"/>
+            <p>$$
+                \utilde {\color \fcolorbox Commit="" and="" Push="" to="" Github="" }
+                $$</p>
+            <p>Sensor Data Logging to the Database</p>
+        </chapter>
+        <chapter title="Sensor Data Logging" id="sensor-data-logging">
+            <p>‼️ This process is extremely similar to Event Logging performed previously. The difference in this
+                process is:</p>
+            <list>
+                <li>A different URL</li>
+                <li>More dynamic data (sensor data)</li>
+                <li>More security issues</li>
+                <li>Formatting the data into a JSON format.</li>
+            </list>
+            <img src="Untitled29.png" alt="Untitled"/>
+            <p>
+                <a href="https://www.w3schools.com/js/js_json_intro.asp">https://www.w3schools.com/js/js_json_intro.asp</a>
+            </p>
+        </chapter>
+        <chapter title="Temperature Sensor" id="temperature-sensor">
+            <p>Add the following to the include block of code at the very top of your <code>main.cpp</code>.</p>
+            <img src="Untitled30.png" alt="Untitled"/>
+
+            <code-block>```C++
+                #include &quot;Adafruit_ADT7410.h&quot;
+                // Create the ADT7410 temperature sensor object
+                Adafruit_ADT7410 tempsensor = Adafruit_ADT7410();
+                ```
+            </code-block>
+            <p>Initialise the temperature sensor in <code>setup()</code>.</p>
+            <img src="Untitled31.png" alt="Untitled"/>
+
+            <code-block>```C++
+                if (!tempsensor.begin())
+                {
+                Serial.println(&quot;Couldn't find ADT7410!&quot;);
+                while (1)
+                ;
+                }
+                ```
+            </code-block>
+            <p>After the include statements at the top of the file, add this new function to get and return the
+                temperature recorded
+                by the temperature sensor.</p>
+            <img src="Untitled32.png" alt="Untitled"/>
+
+            <code-block>```C++
+                float getTemperature()
+                {
+                float temperatureValue;
+                temperatureValue = tempsensor.readTempC();
+
+                return temperatureValue;
+                }
+                ```
+            </code-block>
+            <p>To complete this process, the code needs to be updated to include a new function -
+                <code>dataTransfer()</code> - which will take
+                sensor data from any source (temperature, button etc) and upload it to the server.</p>
+            <p>Copy the function into your code, placing it
+                <control>
+                    <control>
+                        <control>
+                            <control>
+                                <control>above</control>
+                            </control>
+                        </control>
+                    </control>
+                </control>
+                <code>setup()</code>.
+            </p>
+            <p>This code appears to be similar to previous code, however the major difference is the following</p>
+
+            <code-block>```C++
+                http.addHeader(&quot;Content-Type&quot;, &quot;application/json&quot;);
+                String postJSONString = &quot;{\&quot;api_key\&quot;:\&quot;&quot;+apiKeyValue+&quot;\&quot;,\&quot;userName\&quot;:\&quot;&quot;+userName+&quot;\&quot;,\&quot;moduleName\&quot;:\&quot;&quot;+moduleName+&quot;\&quot;,\&quot;moduleData\&quot;:\&quot;&quot;+dataToPost+&quot;\&quot;}&quot;;
+                ```
+            </code-block>
+            <p>This formats the data into a JSON structure, which essentially is a dictionary or key-value pair.</p>
+            <p>Why do this?</p>
+            <p>This allows the text to be uploaded in a single structure, and will eventually enable the server to
+                respond in kind,
+                by returning a JSON structure with information for the Arduino.</p>
+            <img src="Untitled33.png" alt="Untitled"/>
+
+            <code-block lang="C++">
+                String dataTransfer(String apiKeyValue, String userName, String moduleName, String dataToPost)
+                {
+                String serverResponse;
+                if (WiFi.status() == WL_CONNECTED)
+                {
+                WiFiClient client;
+                HTTPClient http;
+
+                // Your Domain name with URL path or IP address with path
+                http.begin(client, serverURL);
+
+                // Specify content-type header
+                http.addHeader(&quot;Content-Type&quot;, &quot;application/x-www-form-urlencoded&quot;);
+
+                // Send HTTP POST request, and store response code
+                http.addHeader(&quot;Content-Type&quot;, &quot;application/json&quot;);
+                String postJSONString = &quot;{\&quot;api_key\&quot;:\&quot;&quot;+apiKeyValue+&quot;\&quot;,\&quot;userName\&quot;:\&quot;&quot;+userName+&quot;\&quot;,\&quot;moduleName\&quot;:\&quot;&quot;+moduleName+&quot;\&quot;,\&quot;moduleData\&quot;:\&quot;&quot;+dataToPost+&quot;\&quot;}&quot;;
+                Serial.print(&quot;Debug JSON String: &quot;);
+                Serial.println(postJSONString);
+                int httpResponseCode = http.POST(postJSONString);
+
+                // Get the HTML response from the server.
+                serverResponse = http.getString();
+
+                if (httpResponseCode &gt; 0)
+                {
+                Serial.print(&quot;HTTP Response code: &quot;);
+                Serial.println(httpResponseCode);
+                }
+                else
+                {
+                Serial.print(&quot;Error code: &quot;);
+                Serial.println(httpResponseCode);
+                }
+                // Free resources
+                http.end();
+                }
+                else
+                {
+                Serial.println(&quot;WiFi Disconnected&quot;);
+                }
+                // Send an HTTP POST request every 30 seconds
+                return serverResponse;
+                }
+            </code-block>
+            <p>Call <code>dataTransfer()</code> with the results from the getTemperature function.</p>
+            <img src="Untitled34.png" alt="Untitled"/>
+
+            <code-block>```C++
+                dataTransfer(apiKeyValue, userName, &quot;Temperature&quot;, String(getTemperature()));
+                ```
+            </code-block>
+
+            <p>Reading Data from the Server</p>
+            <chapter title="Reading Data From The Server" id="reading-data-from-the-server">
+            </chapter>
+            <chapter title="Database Information" id="database-information">
+                <p>The project up to this point involves uploading data from the ESP32 to the PHP server and
+                    then stored in the database.</p>
+                <p>The database tables are shown here for the project so far.</p>
+                <img src="eventLog.png" alt="eventLog.png"/>
+                <p>A new table needs to be added which will store a command (LED on, LED off etc) as well as the
+                    module information.</p>
+                <p>This table needs to be created so that the ESP32’s can connect to the server to retrieve the
+                    correct data, with the
+                    PHP page confirming that the ESP32 is attempting to access the correct data.</p>
+                <p>Each ESP32 should only be able to access the specific command, and be denied access to
+                    another other ESP32’s data.</p>
+                <p>The new table - <code>moduleCommands</code> - will contain the fields to store data, so that
+                    ESPs must submit the correct
+                    actuator name and associated password before receiving the command. The PHP files will
+                    handle the logic of the
+                    process, the database tables simply stores the data.</p>
+                <p>The password is stored in <code>hashedPassword</code> . Passwords should never be stored in
+                    plain text in a database in case
+                    unauthorised users (bad actors) get access to the database. Hashing passwords involves
+                    encrypting the password prior
+                    to storing the password in the database.</p>
+                <img src="moduleCommands.png" alt="moduleCommands.png"/>
+            </chapter>
+            <chapter title="PHP Site" id="php-site">
+                <p>PHP is a
+                    <control>server side</control>
+                    scripting language. This means that PHP code runs on the server (not the client/browser) and
+                    delivers the necessary code to the client to display.
+                </p>
+                <p>For example, the server loads user information from the database and checks the username and
+                    password. If the password
+                    is correct, the browser is to display a message “login successful”.</p>
+                <p>PHP co-exists with HTML and other Web Technologies. Unlike standard HTML, PHP requires a
+                    server to be running to
+                    process the PHP code.</p>
+                <p>PHP was created in 1994, so in terms of Programming Languages it is quite old, but it is very
+                    powerful and widespread.</p>
+                <p>PHP is used by itself but is also the main language in many other frameworks available, such
+                    as Wordpress and Laravel.</p>
+            </chapter>
+            <chapter title="Bootstrap" id="bootstrap">
+                <p><a href="https://getbootstrap.com/docs/5.3/getting-started/download/">Download Bootstrap</a>
+                    and unzip the folder.</p>
+                <p>Copy the CSS and JS folder into the project.</p>
+                <img src="Untitled35.png" alt="Untitled"/>
+            </chapter>
+            <chapter title="Site Configuration" id="site-configuration">
+                <p>Create a new php file in the project, named <code>config.php</code>.</p>
+                <img src="Untitled36.png" alt="Untitled"/><img src="Untitled37.png" alt="Untitled"/>
+                <p>Replace the contents with the code shown.</p>
+                <p>This page will not be shown to the user at any stage, however contains all the details that
+                    are required to connect to
+                    the database.</p>
+
+                <code-block lang="php">
+                    &lt;?php
+                    session_start();
+                    $servername = &quot;10.177.200.71&quot;;
+                    $username = &quot;JEDI2023&quot;;
+                    $password = &quot;JEDI2023&quot;;
+                    $dbname = &quot;JEDI2023&quot;;
+                    $errorCaught = false;
+
+                    try {
+                    $conn = new PDO(&quot;mysql:host=$servername;dbname=$dbname&quot;, $username, $password);
+                    $conn-&gt;setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                    } catch (PDOException $e) {
+                    $errorCaught = true;
+                    $_SESSION['flash_message'] = &quot;&lt;div class='bg-danger'&gt;The Database cannot be
+                    found: &quot; . $servername . &quot;. &quot;.$e.&quot;&lt;/div&gt;&quot;;
+                    }
+                    if (!$errorCaught) {
+                    //echo &quot;Database connection configured correctly, and database connection good.&quot;;
+                    }
+
+                    //$conn = null;
+                    ?&gt;
+                </code-block>
+            </chapter>
+            <chapter title="Site Template" id="site-template">
+                <p>Create a new file <code>template.php</code>.</p>
+                <p>This php page will be used by all other PHP pages that are created for the website to offer a
+                    similar interface.</p>
+                <img src="Untitled38.png" alt="Untitled"/>
+
+                <code-block lang="php">
+                    &lt;?php require_once 'config.php'; ?&gt;
+                    &lt;html&gt;
+
+                    &lt;head&gt;
+                    &lt;!-- Required meta tags --&gt;
+                    &lt;meta charset=&quot;utf-8&quot;&gt;
+                    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1,
+                    shrink-to-fit=no&quot;&gt;
+                    &lt;!-- Bootstrap CSS --&gt;
+                    &lt;link rel=&quot;stylesheet&quot; href=&quot;css/bootstrap.min.css&quot;&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                    &lt;!-- Navigation Bar --&gt;
+                    &lt;nav class=&quot;navbar navbar-expand-sm navbar-light bg-light&quot;&gt;
+                    &lt;div class=&quot;container-fluid&quot;&gt;
+                    &lt;button class=&quot;navbar-toggler&quot; type=&quot;button&quot; data-bs-toggle=&quot;collapse&quot;
+                    data-bs-target=&quot;#navbarNav&quot;
+                    aria-controls=&quot;navbarNav&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Toggle
+                    navigation&quot;&gt;
+                    &lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;
+                    &lt;/button&gt;
+                    &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbarNav&quot;&gt;
+                    &lt;ul class=&quot;navbar-nav&quot;&gt;
+                    &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;index.php&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;moduleRegister.php&quot;&gt;Register&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;moduleData.php&quot;&gt;Module
+                    Data&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                    &lt;/div&gt;
+                    &lt;?php
+                    if (isset($_SESSION[&quot;username&quot;])) {
+                    echo &quot;&lt;div class='alert alert-success d-flex'&gt;&lt;span&gt;Welcome, &quot; .
+                    $_SESSION[&quot;username&quot;] . &quot;&lt;br&gt;&lt;a href='logout.php'&gt;Logout&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;&quot;;
+                    }
+                    ?&gt;
+                    &lt;/div&gt;
+                    &lt;/nav&gt;
+                    &lt;?php
+                    if (isset($_SESSION['flash_message'])) {
+                    $message = $_SESSION['flash_message'];
+                    unset($_SESSION['flash_message']);
+                    ?&gt;
+                    &lt;div class=&quot;position-absolute bottom-0 end-0&quot;&gt;
+                    &lt;?= $message ?&gt;
+
+                    &lt;/div&gt;
+
+                    &lt;?php
+                    }
+                    ?&gt;
+                    &lt;script src=&quot;js/bootstrap.bundle.js&quot;&gt;&lt;/script&gt;
+                    &lt;?php
+                    function sanitise_data($data)
+                    {
+                    $data = trim($data);
+                    $data = stripslashes($data);
+                    $data = htmlspecialchars($data);
+                    return $data;
+                    }
+
+                    ?&gt;
+                </code-block>
+            </chapter>
+            <chapter title="Registering Modules" id="registering-modules">
+                <p>Create a new PHP file - <code>moduleRegister.php</code> - and replace the contents with the
+                    code shown.</p>
+                <p>The code will create a new entry in the database table</p>
+
+                <code-block lang="php">
+                    &lt;?php include &quot;template.php&quot;;
+                    /** @var $conn */
+
+                    ?&gt;
+
+                    &lt;title&gt;Module Register&lt;/title&gt;
+
+                    &lt;h1 class='text-primary'&gt;Please register a module&lt;/h1&gt;
+                    &lt;form action=&quot;&lt;?php echo htmlspecialchars($_SERVER[&quot;PHP_SELF&quot;]); ?&gt;&quot;
+                    method=&quot;post&quot; enctype=&quot;multipart/form-data&quot;&gt;
+                    &lt;div class=&quot;container-fluid&quot;&gt;
+
+                    &lt;form&gt;
+
+                    &lt;div class=&quot;form-group&quot;&gt;
+                    &lt;label for=&quot;inputActuator&quot;&gt;Actuator&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; class=&quot;form-control&quot; name=&quot;inputActuator&quot;
+                    id=&quot;inputActuator&quot; aria-describedby=&quot;actuatorHelp&quot; placeholder=&quot;Enter
+                    your module actuator.&quot;&gt;
+                    &lt;small id=&quot;actuatorHelp&quot; class=&quot;form-text text-muted&quot;&gt;This will be
+                    the output device (LED etc).&lt;/small&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;form-group&quot;&gt;
+                    &lt;label for=&quot;inputCommand&quot;&gt;Command&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; class=&quot;form-control&quot; name=&quot;inputCommand&quot;
+                    id=&quot;inputCommand&quot; aria-describedby=&quot;commandHelp&quot; placeholder=&quot;Enter
+                    starting command&quot;&gt;
+                    &lt;small id=&quot;commandHelp&quot; class=&quot;form-text text-muted&quot;&gt;This will be
+                    sent to the ESP32. Start simple, such as 0 or 1. &lt;/small&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;form-group&quot;&gt;
+                    &lt;label for=&quot;inputPassword&quot;&gt;Password&lt;/label&gt;
+                    &lt;input type=&quot;password&quot; class=&quot;form-control&quot; name=&quot;inputPassword&quot;
+                    id=&quot;inputPassword&quot; placeholder=&quot;Password&quot;&gt;
+                    &lt;/div&gt;
+
+                    &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Submit&lt;/button&gt;
+                    &lt;/form&gt;
+                    &lt;/div&gt;
+                    &lt;/form&gt;
+
+                    &lt;?php
+
+                    if ($_SERVER[&quot;REQUEST_METHOD&quot;] == &quot;POST&quot;) {
+                    $password = sanitise_data($_POST['inputPassword']);
+                    $actuator = sanitise_data($_POST['inputActuator']);
+                    $command = sanitise_data($_POST['inputCommand']);
+                    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+                    // check username in database
+                    $query = $conn-&gt;query(&quot;SELECT COUNT(*) FROM moduleCommands WHERE
+                    actuator='$actuator'&quot;);
+                    $data = $query-&gt;fetch();
+                    $numberOfActuatorsWithThatName = (int)$data[0];
+
+                    if ($numberOfActuatorsWithThatName &gt; 0) {
+                    $_SESSION['flash_message'] = &quot;This actuator name has already been taken.&quot;;
+                    } else {
+                    $sql = &quot;INSERT INTO moduleCommands (actuator, command, hashedPassword) VALUES
+                    (:newActuator, :newCommand, :newPassword)&quot;;
+                    $stmt = $conn-&gt;prepare($sql);
+                    $stmt-&gt;bindValue(':newActuator', $actuator);
+                    $stmt-&gt;bindValue(':newCommand', $command);
+                    $stmt-&gt;bindValue(':newPassword', $hashed_password);
+                    $stmt-&gt;execute();
+                    $_SESSION[&quot;flash_message&quot;] = &quot;Module Created&quot;;
+                    header(&quot;Location:index.php&quot;);
+
+                    }
+
+                    }
+                    ?&gt;
+                </code-block>
+            </chapter>
+            <chapter title="Testing" id="testing">
+                <p>Load the page in the browser and it should appear similar to the one shown. Enter some data
+                    and press submit.</p>
+                <img src="Untitled39.png" alt="Untitled"/>
+                <p>Open the database table view in PHPstorm by opening the database tab and then double-clicking
+                    on <code>moduleCommands</code>.</p>
+                <p>Ideally, if the files are all programmed correctly, the new module data should appear.</p>
+                <img src="Untitled40.png" alt="Untitled"/>
+            </chapter>
+            <chapter title="JSON" id="json">
+                <p>JSON is a data format that is similar to a dictionary or key-value pair structure.</p>
+                <img src="Untitled41.png" alt="Untitled"/>
+                <p>JSON, which stands for &quot;JavaScript Object Notation,&quot; is like a special language
+                    that helps you organise and describe
+                    this data in a way that computers can easily understand.</p>
+                <p>Think of JSON as a recipe for computers. Just like a recipe lists ingredients and
+                    instructions for making a yummy
+                    dish, JSON lists pieces of information and how they relate to each other. These pieces of
+                    information are called &quot;
+                    objects.&quot; Each object is like a container that holds different types of data, like
+                    text, numbers, or even more
+                    objects.</p>
+                <p>JSON is simple and easy to read, both for humans and computers. It's kind of like writing a
+                    story with different
+                    characters and their attributes. For example, if you're describing a person, you might use
+                    JSON like this:</p>
+
+                <code-block lang="json">
+                    {
+                    &quot;name&quot;: &quot;Alice&quot;,
+                    &quot;age&quot;: 16,
+                    &quot;city&quot;: &quot;New York&quot;,
+                    &quot;hobbies&quot;: [&quot;reading&quot;, &quot;painting&quot;, &quot;playing guitar&quot;]
+                    }
+
+                </code-block>
+                <p>Here, we have an object that describes Alice. It includes her name, age, city, and hobbies.
+                    Her hobbies are stored as
+                    a list of activities.</p>
+                <p>This JSON &quot;recipe&quot; can be shared with other programs or even other people, and they
+                    can understand how the data is
+                    structured and use it for different purposes. It's like passing around the recipe for a cake
+                    so that anyone can bake
+                    the same delicious cake!</p>
+                <p>So, JSON is a way for computers to organise and talk about different pieces of information,
+                    just like you would when
+                    telling a story or following a recipe.</p>
+                <chapter title="Update the Arduino Code to use ArduinoJSON Library."
+                         id="update-the-arduino-code-to-use-arduinojson-library">
+                    <p>In your project, open the <code>platformio.ini</code> file and add the following to the
+                        bottom of the list of
+                        libraries - <code>bblanchon/ArduinoJson@^6.21.3</code></p>
+                    <p>This will allow the PHP site to return a JSON object to the ESP32 and have it extract the
+                        data.</p>
+                    <p>Save the file. The project may have to load the library, which may take a minute or
+                        two.</p>
+                    <img src="Untitled42.png" alt="Untitled"/>
+                    <p>Open <code>main.cpp</code>. Add the following include directive to load the library.</p>
+
+                    <code-block lang="C++">
+                        #include &quot;ArduinoJson.h&quot;
+                    </code-block>
+                    <img src="Untitled43.png" alt="Untitled"/>
+                    <p>The <code>dataTransfer()</code> function currently uploads data and receives a response,
+                        however the code doesn’t use that
+                        response at this stage. To change this, go do the <code>loop()</code> function and add
+                        <code>String payload</code> to the start of the
+                        dataTransfer function call.</p>
+                    <img src="Untitled44.png" alt="Untitled"/>
+                    <p>Add the code shown to the end of <code>loop()</code> to extract and output the command
+                        data. This command variable will be sent
+                        back by the PHP server in JSON format, extracted from the database table.</p>
+
+                    <code-block lang="C++">
+                        Serial.print(&quot;Payload from server:&quot;);
+                        Serial.println(payload);
+                        DynamicJsonDocument doc(1024);
+                        // Serial.println(deserializeJson(doc, payload));
+                        DeserializationError error = deserializeJson(doc, payload);
+                        if (error)
+                        {
+                        Serial.print(F(&quot;deserializeJson() failed: &quot;));
+                        Serial.println(error.f_str());
+                        return;
+                        }
+                        const char *command = doc[&quot;command&quot;];
+                        Serial.print(&quot;Command: &quot;);
+                        Serial.print(command);
+                    </code-block>
+                    <p>$$
+                        \utilde {\color \fcolorbox Commit="" and="" Push="" to=""
+                        Github="" }
+                        $$</p>
+                </chapter>
+            </chapter>
 
 
-    </chapter>
-</topic>
+            <p>Code Refactoring</p>
+            <chapter title="Code Refactoring" id="code-refactoring">
+
+                <p>*
+                    <control>
+                        <control>
+                            <control>
+                                <control>
+                                    <control>
+                                        <control>
+                                            <control>
+                                                <control>
+                                                    <control>
+                                                        <control>
+                                                            <control>
+                                                                <control>
+                                                                    <control>
+                                                                        <control>
+                                                                            <control>
+                                                                                <control>
+                                                                                    <control>
+                                                                                        <control>
+                                                                                            <control>
+                                                                                                <control>
+                                                                                                    <control>
+                                                                                                        <control>
+                                                                                                            <control>
+                                                                                                                What
+                                                                                                                is
+                                                                                                                code
+                                                                                                                refactoring?
+                                                                                                            </control>
+                                                                                                        </control>
+                                                                                                    </control>
+                                                                                                </control>
+                                                                                            </control>
+                                                                                        </control>
+                                                                                    </control>
+                                                                                </control>
+                                                                            </control>
+                                                                        </control>
+                                                                    </control>
+                                                                </control>
+                                                            </control>
+                                                        </control>
+                                                    </control>
+                                                </control>
+                                            </control>
+                                        </control>
+                                    </control>
+                                </control>
+                            </control>
+                        </control>
+                    </control>
+                </p>
+
+                <p>Refactoring is making changes to the internal structure of code without changing its external
+                    behavior. This can make
+                    the code easier to read, understand, maintain, and extend.</p>
+                <p>Here are some examples of refactoring:</p>
+                <list>
+                    <li>Rename a variable to make its meaning clearer.</li>
+                    <li>Move a block of code to a separate method so that it can be reused.</li>
+                    <li>Split a large method into smaller methods so that it is easier to understand.</li>
+                    <li>Replace a complex expression with a simpler one.</li>
+                </list>
+                <p>Refactoring is a good practice to follow when you are developing code. It can help to improve
+                    the quality of your code
+                    and make it easier to work with in the future.</p>
+                <p>Here are some tips for refactoring code:</p>
+                <list>
+                    <li>Start small. Don't try to refactor too much code at once.</li>
+                    <li>Test your code after each change.</li>
+                    <li>Get feedback from other developers.</li>
+                </list>
+                <p>Refactoring is an ongoing process. As your code changes, you should periodically refactor it
+                    to keep it up to date.</p>
+                <p>
+                    <emphasis>
+                        <control>
+                            <control>
+                                <control>
+                                    <control>
+                                        <control>Generated by Google Bard.</control>
+                                    </control>
+                                </control>
+                            </control>
+                        </control>
+                    </emphasis>
+                </p>
+
+                <p>To allow the project to scale up, and add functionality easily, it’s time to move the
+                    temperature and LED
+                    functionality into it’s own function and have the loop() call it.</p>
+                <p>To easily do this, rename the loop function to <code>temperatureAndLED()</code> and then
+                    create a new <code>loop()</code> that calls it.</p>
+                <img src="Untitled45.png" alt="Untitled"/>
+                <p>Add a short delay into <code>loop()</code>. This will give the ESP32 a regular amount of time
+                    where it is idle, allowing new code
+                    to be uploaded to it.</p>
+                <p>‼️ A rule of thumb is to always add a short delay in the loop function. Otherwise the
+                    Arduino/ESP may be too ‘busy’ to
+                    allow the IDE to upload new code.</p>
+            </chapter>
+        </li>
+    </lisst>
+    <img src="Untitled46.png" alt="Untitled"/>
+</chapter>
+<chapter title="Adding New Functionality" id="adding-new-functionality">
+asd
+</chapter>
+<chapter title="Video Demonstration" id="video-demonstration">
+
+<code-block>‼️ The exact process and code you’ll need to implement will depend on your specific
+    requirements.
+</code-block>
+<p><a href="https://youtu.be/rPDmzrNgSn4">https://youtu.be/rPDmzrNgSn4</a></p>
+</chapter>
+<chapter title="Step 1: Define function" id="step-1-define-function">
+<p>Create a new function for the new functionality.</p>
+<p>In this example, the status of a button will be uploaded to the server, and the response will determine
+    whether the
+    fan will be turned on or not.</p>
+<p>Decide the input sensor and the output actuator.</p>
+<img src="Untitled47.png" alt="Untitled"/>
+</chapter>
+<chapter title="Step 2: Libraries" id="step-2-libraries">
+<p>Import the necessary libraries for your sensor and actuator. This will require researching the sensor and
+    module you
+    are attempting to use.</p>
+<p>Import the library/ies required using the Library option in the Platform IO home.</p>
+<img src="Untitled48.png" alt="Untitled"/>
+<chapter title="Alternatively…" id="alternatively">
+    <p>Open <code>platformio.ini</code> and add the following libraries to the end of the list.</p>
+    <img src="Untitled49.png" alt="Untitled"/>
+
+    <code-block>```C++
+
+        adafruit/Adafruit ST7735 and ST7789 Library@^1.10.3
+        adafruit/Adafruit seesaw Library@^1.7.3
+        adafruit/Adafruit GFX Library@^1.11.7
+        adafruit/Adafruit SSD1306@^2.5.7
+        adafruit/Adafruit Motor Shield V2 Library@^1.1.1
+        ```
+    </code-block>
+    <p>Step 3: Collect Input</p>
+</chapter>
+</chapter>
+<chapter title="Step 4: Send Data to the Server and Receive Response"
+         id="step-4-send-data-to-the-server-and-receive-response">
+<p>Reuse (copy) the code from <code>temperatureAndLED()</code> to upload the sensor data to the server and
+    receive a response.</p>
+</chapter>
+<chapter title="Step 5: Affect Actuator" id="step-5-affect-actuator">
+</chapter>
+<chapter title="Step 6: Test and test again" id="step-6-test-and-test-again">
+</chapter>
+<chapter title="Add new Local Functionality" id="add-new-local-functionality">
+<p>Repeat the process above, however skip the step to upload the sensor data to the server and wait for a
+    response.</p>
+</chapter>
+
+
+        </chapter>
+        </topic>
