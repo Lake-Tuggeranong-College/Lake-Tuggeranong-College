@@ -1,6 +1,6 @@
 # Robotics &amp; Mechatronics
 
-# Schedule
+## Schedule
 
 [//]: # (Done in HTML to allow for a header column)
 <table style="both">
@@ -114,9 +114,6 @@
     </tr>
 </table>
 
-___
-
-# Topics
 
 ## Software installation {id="softwareInstallation"}
 
@@ -160,7 +157,7 @@ This will open the project in PHPStorm.
 
 If Visual Studio Code (VSCode) is not installed on your operating system, install it using the instructions here:
 
-Window
+Windows
 
 [](https://code.visualstudio.com/download)
 
@@ -226,6 +223,9 @@ Notice how the Arduino / ESP32 Feather **does not** interact directly with the d
 
 The reason for this is that the PHP webserver acts as a gateway to provide security and additional functionality. Ultimately this is to protect the data in the database.
 
+
+
+
 ## PHPStorm Configuration
 
 > The exact interface may be different due to changes in the UI of the software.
@@ -258,7 +258,9 @@ Once the connection has been established, click on the `1 of 3` status next to t
 
 You should then be able to view the databases associated with your logon.
 
-### `config.php`
+## Project Foundations
+
+### Configuration file - config.php
 
 In order to manage the connection to the MySQL database, it makes sense to keep the details in one single location
 rather than in various files across the system.
@@ -277,9 +279,7 @@ username
 password
 dbname
 ```
-
-
-You will be given these details in class.
+> > You will be given these details in class.
 
 ![SCR-20221128-uvo-2.png](SCR-20221128-uvo-2.png)
 
@@ -309,7 +309,7 @@ $conn = null;
 ?>
 ```
 
-## `template.php`
+### `template.php`
 
 `template.php` is the file that contains the HTML, PHP and any other information that is required for all pages
 throughout the site.
@@ -382,7 +382,7 @@ If you launch the page in the browser, you’ll see something like this.
 
 ![SCR-20221128-tjf.png](SCR-20221128-tjf.png)
 
-### Explanation
+#### Explanation
 
 The template page is complex because it covers a number of base tasks.
 
@@ -397,7 +397,7 @@ The template page is complex because it covers a number of base tasks.
 
 ![SCR-20221128-tl2-2.png](SCR-20221128-tl2-2.png)
 
-## `index.php`
+### `index.php`
 
 The Index page will be the homepage that the users see when they first access your section of the site.
 
@@ -414,7 +414,7 @@ Launch the page and you should see something similar to this:
 
 ![SCR-20221128-ts2.png](SCR-20221128-ts2.png)
 
-## `registration.php`
+### `registration.php`
 
 The form code
 
@@ -455,7 +455,7 @@ The form code
     ?>
     ```
 
-## `login.php`
+### `login.php`
 
 The login page will visually be very similar to the registration page, at this stage. The first part of the page can
 just be duplicated from `registration.php`.
@@ -510,12 +510,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 If a user has be found (i.e. if `$count > 0`) then the code will want to load all the details of that users record.
 
-    <aside>
-    ‼️ A **record** in a database is a collection of data which is organised into fields and is stored within a table. Each record contains values which correspond to the fields in the table. These records are used to store and retrieve information, such as a user's name, address, and other personal data. Records are usually identified by a unique key or identifier, such as an ID number.
+
+> A **record** in a database is a collection of data which is organised into fields and is stored within a table. Each record contains values which correspond to the fields in the table. These records are used to store and retrieve information, such as a user's name, address, and other personal data. Records are usually identified by a unique key or identifier, such as an ID number.
 
 ![Untitled](Untitled9.png)
 
-    </aside>
+
 
 ```php
 $query = $conn->query("SELECT * FROM `user` WHERE `username`='$username'");
@@ -529,7 +529,7 @@ $row = $query->fetch();
 When this code is executed, `$row` will contain the record as an array and each field (or column) will be stored in
 the different elements in order.
 
-So, in this specific case, the fields will equate to these *******indexes*******.
+So, in this specific case, the fields will equate to these **indexes**.
 
 ![Untitled](Untitled11.png)
     
@@ -539,73 +539,73 @@ At this stage, the username is correct and valid, but the system still needs to 
 in the database. Luckily PHP has a helper function to compare a password in plain text with the hashed password. This
 function - `password_verify()` - will return `true` if the passwords match and `false` if not.
 
-    <aside>
-    ‼️ Note that the clear text password is being compared to `row[2]` which is the hashed_password field from the database.
 
-    </aside>
+> Note that the clear text password is being compared to `row[2]` which is the `hashed_password` field from the database.
+>
+{style="note"}
 
 ![Untitled](Untitled12.png)
 
-    ```php
-    if (password_verify($password, $row[2])) {
-    }
-    ```
+```php
+if (password_verify($password, $row[2])) {
+}
+```
 
 If `password_verify()` returns true then the user has successfully logged on. Before proceeding with any other part of
 the process, you need to set some **************session************** variables.
 
-    <aside>
-    ‼️ Session variables in PHP are variables that store user information for a specific session. They are stored in the server's memory for a certain amount of time and are used to track user activities during that session. Session variables can be used to store user-specific data, such as their name, preferences, or cart contents. They allow a website to remember user-specific data across multiple pages and even after a user has left the website and returned.
-
-    </aside>
+> Session variables in PHP are variables that store user information for a specific session. They are stored in the server's memory for a certain amount of time and are used to track user activities during that session. Session variables can be used to store user-specific data, such as their name, preferences, or cart contents. They allow a website to remember user-specific data across multiple pages and even after a user has left the website and returned.
+>
+{style="note"}
 
 For the purposes of this project, the only sessions variables needed (at this stage) are the `user_id`, `username`
 and `access_level`.
 
 ![Untitled](Untitled13.png)
 
-    ```php
-    $_SESSION["user_id"] = $row[0];
-    $_SESSION["username"] = $row[1];
-    $_SESSION['access_level'] = $row[3];
-    ```
+```php
+$_SESSION["user_id"] = $row[0];
+$_SESSION["username"] = $row[1];
+$_SESSION['access_level'] = $row[3];
+```
 
 Finally, add a catch for if the logon was unsuccessful.
 
 ![Untitled](Untitled14.png)
 
-    ```php
-    else {
-        // unsuccessful log on.
-        echo "<div class='alert alert-danger'>Invalid username or password</div>";
-    }
-    ```
+```php
+else {
+    // unsuccessful log on.
+    echo "<div class='alert alert-danger'>Invalid username or password</div>";
+}
+```
 
 Try it out!
 
-$* \normalsize \mathcal {\color{black} \colorbox {orange} {Save, Commit and Push Changes to Github!}}$
+<include from="reusableContent.topic" element-id="commitPush"/>
 
-## `logout.php`
+
+### `logout.php`
 
 Create a new page named `logout.php`. All this page needs to do at this stage is to clear all session variables from
 memory so that the user is now no longer logged in.
 
 ![Untitled](Untitled15.png)
 
-    ```php
-    <?php
-    session_start();
-    session_destroy();
-    ?>
-    ```
+```php
+<?php
+session_start();
+session_destroy();
+?>
+```
 
 The final line of code for the log out process should be to redirect the browser to another page.
 
 ![Untitled](Untitled16.png)
 
-    ```php
-    header("Location:index.php");
-    ```
+```php
+header("Location:index.php");
+```
 
 ## Template Update
 
