@@ -620,13 +620,13 @@ The Host, SSID and password should be configured for the classroom’s RoboRange
 
 The serverURL variable should be set to the subject specific URL.
     
-```arduino
+```C++
 String serverURL = "http://10.177.200.71/JEDI2023/dataTransfer.php";
 ```
 
 Add a new URL called `eventLogURL` to direct the code to the url to store event data, such as “Door Open” etc.
 
-```arduino
+```C++
 String eventLogURL = "http://10.177.200.71/JEDI2023/eventLog.php";
 ```
 
@@ -634,7 +634,7 @@ The last block of code should change to be specific to your module.
 
 At this stage, leave the `apiKeyValue` and `moduleName` as is. Set the `user` variable to be your name.
 
-```arduino
+```C++
 String apiKeyValue = "api";
 String moduleName = "Temperature";
 String user = "Ryan Cather";
@@ -652,7 +652,7 @@ $$
 
 Add the following additional include statements at the top of your code, *****after***** `#include <Arduino.h>`
 
-```arduino
+```C++
 #include "WiFi.h"
 #include <HTTPClient.h>
 ```
@@ -663,7 +663,7 @@ Add the following block of code to the `setup()` function.
 
 This code will attempt to connect to the Wifi network with the credentials defined in `sensitiveInformation.h`. IT will then output the IP address to the Serial Monitor.
 
-```arduino
+```C++
 while (!Serial) {
     delay(10);
   }
