@@ -6,7 +6,6 @@
                  name="Help Instance"
                  start-page="Subjects.topic">
 
-    <toc-element topic="Default-topic.md"/>
     <toc-element topic="Subjects.topic"/>
     <toc-element topic="Common.topic"/>
     <toc-element topic="Robotics.topic">

@@ -22,4 +22,8 @@
         <description>Created after removal of "Independent Project" from Help Instance</description>
         <accepts>Independent-Project.html</accepts>
     </rule>
+    <rule id="4954c42">
+        <description>Created after removal of "This is the first topic" from Help Instance</description>
+        <accepts>Default-topic.html</accepts>
+    </rule>
 </rules>
