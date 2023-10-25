@@ -127,6 +127,7 @@
 
     <chapter title="Topics" id="topics">
 
+        <include from="reusableContent.topic" element-id="contactdetails"/>
 
     </chapter>
 </topic>

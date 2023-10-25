@@ -6,34 +6,100 @@
        title="reusableContent" id="reusableContent">
 
 
-    <snippet id="version_warning">
-        <warning>This version support ended on January 14, 2022.
-            Download the latest version.</warning>
-    </snippet>
-
-
-
-
     <snippet id="contactdetails">
 
-        <table>
+        <table style="none">
             <tr>
-                <td>![IMG_4971.PNG](Common%2094d8be62d6a5430eb9f20dd48cfb15d1/IMG_4971.png)</td>
-                <td>$\utilde {\color{black} \fcolorbox{chocolate}{chocolate} {Ryan Cather}}$</td>
-                <td></td>
+                <td><img src="avatar.png" alt="Avatar"></img></td>
+                <td>Ryan Cather</td>
             </tr>
             <tr>
-                <td>**Email** [ryan.cather@ed.act.edu.au](mailto:ryan.cather@ed.act.edu.au)</td>
-                <td>**Discord**: [https://discord.gg/R9a6msU](https://discord.gg/R9a6msU)</td>
-                <td>`CTRL+SHIFT+L` - view this page in dark mode.</td>
+                <td>
+                    <format style="bold">Email</format>
+                    <a href="mailto:ryan.cather@ed.act.edu.au">ryan.cather@ed.act.edu.au</a></td>
+                <td>
+                    <format style="bold">Discord</format>
+                    : <a href="https://discord.gg/R9a6msU">https://discord.gg/R9a6msU</a></td>
             </tr>
 
         </table>
+    </snippet>
 
 
+    <snippet id="assessmentFinalisation">
+        <chapter title="Assessment Rubric" id="Assessment-Rubric">
+            <p>Read the Assessment Sheet &amp; Rubric</p>
+            <p>
+                Re-read the assessment sheet and Rubric available to you through Google Classroom. Make sure you’ve
+                got something to submit for each of the topics listed in the rubric.
+
+            </p>
+            <tip>
+                The Rubric is the most important document. This indicates what (and only what) you can get marks
+                for.
+            </tip>
+            <chapter title="Complete Submission" id="Complete-Submission">
+                <p>In whatever format the assessment has to be in (Document, Presentation, Code, Video etc), work on
+                    covering all the topics required.</p>
+                <p>Read the information on how to earn the different Grade levels.</p>
+                <p>As a General Rule they are:</p>
+                <table style="both">
+                    <tr>
+                        <td>Grade</td>
+                        <td>Required Standard</td>
+                    </tr>
+                    <tr>
+                        <td> E</td>
+                        <td> The submission barely covers the base requirements of the topic. |</td>
+                    </tr>
+                    <tr>
+                        <td> D</td>
+                        <td> The submission doesn’t cover all of the base requirements of the topic. |</td>
+                    </tr>
+                    <tr>
+                        <td> C</td>
+                        <td> The submission covers the base requirements of the topic. For example, submits the
+                            in-class tasks. |
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> B</td>
+                        <td> The submission includes the base requirements and also includes an analysis of the
+                            topic.
+                            This analysis could include an in-depth explanation of how the topic functions,
+                            including
+                            correct technical terminology. |
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> A</td>
+                        <td> All of the above, and a critical analysis - evaluating the approach taken, offering
+                            other
+                            potential solutions, using research, and weighing the pros and cons of each approach. |
+                        </td>
+                    </tr>
+                </table>
+            </chapter>
+            <chapter title="Proof Read / Sanity Check" id="proofRead">
+                <p>Review your submission, check for spelling and grammar mistakes.</p>
+
+                <tip>
+                    Grammarly is a very useful (and free) plugin for your browser which offers additional writing
+                    support beyond the usual offerings in Word, Google Docs etc. Search for Grammarly in your
+                    extension store.
+                </tip>
+
+            </chapter>
+            <chapter title="Submit" id="submit">
+                <p>Attach all the required files to the Assessment on Google Classroom and press Hand In.</p>
+
+
+            </chapter>
+        </chapter>
 
 
     </snippet>
+
 
 </topic>
 
