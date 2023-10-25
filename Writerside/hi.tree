@@ -7,7 +7,6 @@
                  start-page="Subjects.topic">
 
     <toc-element topic="Subjects.topic"/>
-    <toc-element topic="Common.topic"/>
     <toc-element topic="Robotics.topic">
         <toc-element topic="ESP32-Feather-Project.md"/>
         <toc-element topic="Building-Programming-Circuits.topic"/>
@@ -27,6 +26,9 @@
         <toc-element topic="Flask-Semester-1.topic"/>
         <toc-element topic="Flask-Semester-2.topic"/>
     </toc-element>
-    <toc-element topic="reusableContent.topic"/>
-    <toc-element topic="reusableExample.topic"/>
+    <toc-element topic="Reference.topic">
+        <toc-element topic="reusableExample.topic"/>
+        <toc-element topic="reusableContent.topic"/>
+        <toc-element topic="Common.topic"/>
+    </toc-element>
 </instance-profile>
