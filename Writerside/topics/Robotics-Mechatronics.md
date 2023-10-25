@@ -11,7 +11,7 @@
     </tr>
     <tr>
         <td>1</td>
-        <td></td>
+        <td><p><a href="#softwareInstallation"></a></p><p><a href="#phpMySQLCrashCourse"></a></p></td>
         <td></td>
     </tr>
     <tr>
@@ -52,7 +52,7 @@
     <tr>
         <td>9</td>
         <td></td>
-        <td></td>
+        <td><strong>Exam 'Week'</strong></td>
     </tr>
     <tr>
         <td>10</td>
@@ -114,17 +114,15 @@
     </tr>
 </table>
 
+___
+
 # Topics
 
-# ESP32 Feather Project
+## Software installation {id="softwareInstallation"}
 
-## 2023 S2 - Hotel Monitoring System
+### Jetbrains
 
-Software installation
-
-## Jetbrains
-
-## Create Jetbrains Educational Account
+#### Create Jetbrains Educational Account
 
 Go to the following site and create a Jetbrains account **using your school Google Account.**
 
@@ -134,14 +132,14 @@ Once done, visit the following page and apply for a free educational account.
 
 [Free Educational Licenses - Community Support](https://www.jetbrains.com/community/education/#students)
 
-## Install Jetbrains Toolbox
+#### Install Jetbrains Toolbox
 
 After creating the Jetbrains account, download and install the Toolbox App. This tool manages the installation and
 configuration of the Jetbrains tool.
 
 ![Untitled](Untitled.png)
 
-## Install PHPStorm
+#### Install PHPStorm
 
 Using the Jetbrains toolbox, Install PHPStorm.
 
@@ -149,7 +147,7 @@ You can follow the video, here, but install PHPStorm instead.
 
 [2020 07 19 - Install Pycharm Final.mp4](https://drive.google.com/file/d/1-2Z0MS-TXCvL807bcc8l4oCGx6GzIKd6/view?usp=drivesdk)
 
-## Clone Project
+#### Clone Project
 
 Open PHPStorm, and click the open for Version Control (or VCS). You will be required to sign into Github, then choose
 your repository from the list and press **********Clone**********.
@@ -158,7 +156,7 @@ This will open the project in PHPStorm.
 
 ![Untitled](Untitled1.png)
 
-## Visual Studio Code
+### Visual Studio Code
 
 If Visual Studio Code (VSCode) is not installed on your operating system, install it using the instructions here:
 
@@ -171,7 +169,7 @@ instructions can be found here
 
 [](https://code.visualstudio.com/docs/setup/linux)
 
-## Install Extensions
+#### Install Extensions
 
 Open VSCode and open the Extensions tab.
 
@@ -179,13 +177,12 @@ Open VSCode and open the Extensions tab.
 
 Search for **PlatformIO** and click on the Install button.
 
-PHP / MySQL Crash Course
 
-## PHP, MySQL Crash Course
+## PHP, MySQL Crash Course {id="phpMySQLCrashCourse"}
 
-## Background Information
+### Background Information
 
-### PHP
+#### PHP
 
 PHP stands for **P**HP **H**ypertext **P**reProcessor and is an open-source, server-side scripting language. It is
 used to develop dynamic web applications, as well as create interactive and responsive websites. Due to its
@@ -196,7 +193,7 @@ applications.
 
 In this project, you will be developing PHP page/s to interface between the Adafruit Feather and the MySQL database.
 
-### MySQL
+#### MySQL
 
 MySQL is a powerful and widely used **database management system**, designed to store and manage large amounts of data
 in an efficient and secure manner. It provides a range of features and tools that allows users to create, manage and
@@ -208,7 +205,7 @@ You will be given a login to the database on the server.
 
 This login is shared by all users of the system, so be careful if you change anything!!
 
-### CRUD
+#### CRUD
 
 ![[https://www.atatus.com/glossary/crud/](https://www.atatus.com/glossary/crud/)](CRUD.jpeg)
 
@@ -221,9 +218,18 @@ You can read more on CRUD by accessing [this page](https://www.humio.com/glossar
 
 ## System Overview
 
-[https://docs.google.com/drawings/d/e/2PACX-1vQghkYq2rMikuPfnL4HrByHcnjMhT4yYoMRNa9HB2P7C-2QKNloAkr7s8ITbW-b6ZSIfvbpKvVkrOaT/pub?w=1440&amp;h=1080](https://docs.google.com/drawings/d/e/2PACX-1vQghkYq2rMikuPfnL4HrByHcnjMhT4yYoMRNa9HB2P7C-2QKNloAkr7s8ITbW-b6ZSIfvbpKvVkrOaT/pub?w=1440&amp;h=1080)
+This shows how the 3 major components of the project interact with each other.
 
-## Connect PHPStorm to the database
+![](featherProjectOverview.png)
+
+Notice how the Arduino / ESP32 Feather **does not** interact directly with the database. This is by design.
+
+The reason for this is that the PHP webserver acts as a gateway to provide security and additional functionality. Ultimately this is to protect the data in the database.
+
+## PHPStorm Configuration
+
+> The exact interface may be different due to changes in the UI of the software.
+>
 
 Open the project in PHPStorm and open the database tab.
 
@@ -252,7 +258,7 @@ Once the connection has been established, click on the `1 of 3` status next to t
 
 You should then be able to view the databases associated with your logon.
 
-## `config.php`
+### `config.php`
 
 In order to manage the connection to the MySQL database, it makes sense to keep the details in one single location
 rather than in various files across the system.
@@ -265,43 +271,43 @@ Copy this code into config.php.
 
 You will need to change the values of the following variables:
 
-`servername`
+```php
+servername
+username
+password
+dbname
+```
 
-`username`
-
-`password`
-
-`dbname`
 
 You will be given these details in class.
 
 ![SCR-20221128-uvo-2.png](SCR-20221128-uvo-2.png)
 
-    ```php
-    <?php
-    session_start();
-    
-    $servername = "10.76.43.63";
-    $username = "RC";
-    $password = "RC";
-    $dbname = "RC";
-    $errorCaught = false;
-    
-    try {
-        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    } catch (PDOException $e) {
-        $errorCaught = true;
-        echo "Error: " . $e->getMessage();
-    }
-    
-    if (!$errorCaught) {
-        echo "Database connection configured correctly, and database connection good.";
-    }
-    
-    $conn = null;
-    ?>
-    ```
+```php
+<?php
+session_start();
+
+$servername = "10.76.43.63";
+$username = "RC";
+$password = "RC";
+$dbname = "RC";
+$errorCaught = false;
+
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    $errorCaught = true;
+    echo "Error: " . $e->getMessage();
+}
+
+if (!$errorCaught) {
+    echo "Database connection configured correctly, and database connection good.";
+}
+
+$conn = null;
+?>
+```
 
 ## `template.php`
 
