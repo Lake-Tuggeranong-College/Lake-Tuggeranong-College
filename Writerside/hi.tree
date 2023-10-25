@@ -15,8 +15,18 @@
         <toc-element topic="Application-of-Robotics.topic"/>
         <toc-element topic="Independent-Project.topic"/>
     </toc-element>
-    <toc-element topic="ISD.topic"/>
-    <toc-element topic="WebsiteDevelopment.topic"/>
+    <toc-element topic="ISD.topic">
+        <toc-element topic="Digital-Assets.topic"/>
+        <toc-element topic="Dig.topic"/>
+        <toc-element topic="Digital-Solutions.topic"/>
+        <toc-element topic="Independent-Project-ISD.topic"/>
+    </toc-element>
+    <toc-element topic="WebsiteDevelopment.topic">
+        <toc-element topic="PHP-Semester-1.topic"/>
+        <toc-element topic="PHP-Semester-2.topic"/>
+        <toc-element topic="Flask-Semester-1.topic"/>
+        <toc-element topic="Flask-Semester-2.topic"/>
+    </toc-element>
     <toc-element topic="reusableContent.topic"/>
     <toc-element topic="reusableExample.topic"/>
 </instance-profile>
