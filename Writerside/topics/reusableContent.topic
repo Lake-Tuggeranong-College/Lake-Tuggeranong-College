@@ -102,12 +102,8 @@
 
     <snippet id="commitPush">
 
-        <chapter title="CommitPush" id="commitPushChapter">
-            <note>Commit and push to Github!</note>
 
-        </chapter>
-
-
+        <note>Commit and push to Github!</note>
 
 
     </snippet>
