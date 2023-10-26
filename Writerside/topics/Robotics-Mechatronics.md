@@ -114,7 +114,6 @@
     </tr>
 </table>
 
-
 ## Software installation {id="softwareInstallation"}
 
 ### Jetbrains
@@ -174,7 +173,6 @@ Open VSCode and open the Extensions tab.
 
 Search for **PlatformIO** and click on the Install button.
 
-
 ## PHP, MySQL Crash Course {id="phpMySQLCrashCourse"}
 
 ### Background Information
@@ -221,10 +219,8 @@ This shows how the 3 major components of the project interact with each other.
 
 Notice how the Arduino / ESP32 Feather **does not** interact directly with the database. This is by design.
 
-The reason for this is that the PHP webserver acts as a gateway to provide security and additional functionality. Ultimately this is to protect the data in the database.
-
-
-
+The reason for this is that the PHP webserver acts as a gateway to provide security and additional functionality.
+Ultimately this is to protect the data in the database.
 
 ## PHPStorm Configuration
 
@@ -279,6 +275,7 @@ username
 password
 dbname
 ```
+
 > > You will be given these details in class.
 
 ![SCR-20221128-uvo-2.png](SCR-20221128-uvo-2.png)
@@ -511,11 +508,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 If a user has be found (i.e. if `$count > 0`) then the code will want to load all the details of that users record.
 
 
-> A **record** in a database is a collection of data which is organised into fields and is stored within a table. Each record contains values which correspond to the fields in the table. These records are used to store and retrieve information, such as a user's name, address, and other personal data. Records are usually identified by a unique key or identifier, such as an ID number.
+> A **record** in a database is a collection of data which is organised into fields and is stored within a table. Each
+> record contains values which correspond to the fields in the table. These records are used to store and retrieve
+> information, such as a user's name, address, and other personal data. Records are usually identified by a unique key
+> or
+> identifier, such as an ID number.
 
 ![Untitled](Untitled9.png)
-
-
 
 ```php
 $query = $conn->query("SELECT * FROM `user` WHERE `username`='$username'");
@@ -540,7 +539,8 @@ in the database. Luckily PHP has a helper function to compare a password in plai
 function - `password_verify()` - will return `true` if the passwords match and `false` if not.
 
 
-> Note that the clear text password is being compared to `row[2]` which is the `hashed_password` field from the database.
+> Note that the clear text password is being compared to `row[2]` which is the `hashed_password` field from the
+> database.
 >
 {style="note"}
 
@@ -554,7 +554,10 @@ if (password_verify($password, $row[2])) {
 If `password_verify()` returns true then the user has successfully logged on. Before proceeding with any other part of
 the process, you need to set some **************session************** variables.
 
-> Session variables in PHP are variables that store user information for a specific session. They are stored in the server's memory for a certain amount of time and are used to track user activities during that session. Session variables can be used to store user-specific data, such as their name, preferences, or cart contents. They allow a website to remember user-specific data across multiple pages and even after a user has left the website and returned.
+> Session variables in PHP are variables that store user information for a specific session. They are stored in the
+> server's memory for a certain amount of time and are used to track user activities during that session. Session
+> variables can be used to store user-specific data, such as their name, preferences, or cart contents. They allow a
+> website to remember user-specific data across multiple pages and even after a user has left the website and returned.
 >
 {style="note"}
 
@@ -583,7 +586,6 @@ else {
 Try it out!
 
 <include from="reusableContent.topic" element-id="commitPush"/>
-
 
 ### `logout.php`
 
@@ -1015,330 +1017,332 @@ Call `dataTransfer()` with the results from the getTemperature function.
     dataTransfer(apiKeyValue, userName, "Temperature", String(getTemperature()));
     ```
 
-- Reading Data from the Server
+# Reading Data From The Server
 
-  # Reading Data From The Server
+## Database Information
 
-  ## Database Information
+The project up to this point involves uploading data from the ESP32 to the PHP server and then stored in the database.
 
-  The project up to this point involves uploading data from the ESP32 to the PHP server and then stored in the database.
+The database tables are shown here for the project so far.
 
-  The database tables are shown here for the project so far.
+![eventLog.png](eventLog.png)
 
-  ![eventLog.png](eventLog.png)
+A new table needs to be added which will store a command (LED on, LED off etc) as well as the module information.
 
-  A new table needs to be added which will store a command (LED on, LED off etc) as well as the module information.
+This table needs to be created so that the ESP32’s can connect to the server to retrieve the correct data, with the
+PHP page confirming that the ESP32 is attempting to access the correct data.
 
-  This table needs to be created so that the ESP32’s can connect to the server to retrieve the correct data, with the
-  PHP page confirming that the ESP32 is attempting to access the correct data.
+Each ESP32 should only be able to access the specific command, and be denied access to another other ESP32’s data.
 
-  Each ESP32 should only be able to access the specific command, and be denied access to another other ESP32’s data.
+The new table - `moduleCommands` - will contain the fields to store data, so that ESPs must submit the correct
+actuator name and associated password before receiving the command. The PHP files will handle the logic of the
+process, the database tables simply stores the data.
 
-  The new table - `moduleCommands` - will contain the fields to store data, so that ESPs must submit the correct
-  actuator name and associated password before receiving the command. The PHP files will handle the logic of the
-  process, the database tables simply stores the data.
+The password is stored in `hashedPassword` . Passwords should never be stored in plain text in a database in case
+unauthorised users (bad actors) get access to the database. Hashing passwords involves encrypting the password prior
+to storing the password in the database.
 
-  The password is stored in `hashedPassword` . Passwords should never be stored in plain text in a database in case
-  unauthorised users (bad actors) get access to the database. Hashing passwords involves encrypting the password prior
-  to storing the password in the database.
+![moduleCommands.png](moduleCommands.png)
 
-  ![moduleCommands.png](moduleCommands.png)
+# PHP Site
 
-  # PHP Site
+PHP is a **server side** scripting language. This means that PHP code runs on the server (not the client/browser) and
+delivers the necessary code to the client to display.
 
-  PHP is a **server side** scripting language. This means that PHP code runs on the server (not the client/browser) and
-  delivers the necessary code to the client to display.
+For example, the server loads user information from the database and checks the username and password. If the password
+is correct, the browser is to display a message “login successful”.
 
-  For example, the server loads user information from the database and checks the username and password. If the password
-  is correct, the browser is to display a message “login successful”.
+PHP co-exists with HTML and other Web Technologies. Unlike standard HTML, PHP requires a server to be running to
+process the PHP code.
 
-  PHP co-exists with HTML and other Web Technologies. Unlike standard HTML, PHP requires a server to be running to
-  process the PHP code.
+PHP was created in 1994, so in terms of Programming Languages it is quite old, but it is very powerful and widespread.
 
-  PHP was created in 1994, so in terms of Programming Languages it is quite old, but it is very powerful and widespread.
+PHP is used by itself but is also the main language in many other frameworks available, such as Wordpress and Laravel.
 
-  PHP is used by itself but is also the main language in many other frameworks available, such as Wordpress and Laravel.
+## Bootstrap
 
-  ## Bootstrap
+[Download Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/download/) and unzip the folder.
 
-  [Download Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/download/) and unzip the folder.
+Copy the CSS and JS folder into the project.
 
-  Copy the CSS and JS folder into the project.
+![Untitled](Untitled35.png)
 
-  ![Untitled](Untitled35.png)
+## Site Configuration
 
-  ## Site Configuration
+Create a new php file in the project, named `config.php`.
 
-  Create a new php file in the project, named `config.php`.
+![Untitled](Untitled36.png)
 
-  ![Untitled](Untitled36.png)
+![Untitled](Untitled37.png)
 
-  ![Untitled](Untitled37.png)
+Replace the contents with the code shown.
 
-  Replace the contents with the code shown.
+This page will not be shown to the user at any stage, however contains all the details that are required to connect to
+the database.
 
-  This page will not be shown to the user at any stage, however contains all the details that are required to connect to
-  the database.
+```php
+<?php
+session_start();
+$servername = "10.177.200.71";
+$username = "JEDI2023";
+$password = "JEDI2023";
+$dbname = "JEDI2023";
+$errorCaught = false;
 
-    ```php
-    <?php
-    session_start();
-    $servername = "10.177.200.71";
-    $username = "JEDI2023";
-    $password = "JEDI2023";
-    $dbname = "JEDI2023";
-    $errorCaught = false;
-    
-    try {
-        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    } catch (PDOException $e) {
-        $errorCaught = true;
-        $_SESSION['flash_message'] = "<div class='bg-danger'>The Database cannot be found: " . $servername . ". ".$e."</div>";
-    }
-    if (!$errorCaught) {
-        //echo "Database connection configured correctly, and database connection good.";
-    }
-    
-    //$conn = null;
-    ?>
-    ```
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    $errorCaught = true;
+    $_SESSION['flash_message'] = "<div class='bg-danger'>The Database cannot be found: " . $servername . ". ".$e."</div>";
+}
+if (!$errorCaught) {
+    //echo "Database connection configured correctly, and database connection good.";
+}
 
-  ## Site Template
+//$conn = null;
+?>
+```
 
-  Create a new file `template.php`.
+## Site Template
 
-  This php page will be used by all other PHP pages that are created for the website to offer a similar interface.
+Create a new file `template.php`.
 
-  ![Untitled](Untitled38.png)
+This php page will be used by all other PHP pages that are created for the website to offer a similar interface.
 
-    ```php
-    <?php require_once 'config.php'; ?>
-    <html>
-    
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-    </head>
-    <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-sm navbar-light bg-light">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="moduleRegister.php">Register</a></li>
-                    <li class="nav-item"><a class="nav-link" href="moduleData.php">Module Data</a></li>
-                </ul>
-            </div>
-            <?php
-            if (isset($_SESSION["username"])) {
-                echo "<div class='alert alert-success d-flex'><span>Welcome, " . $_SESSION["username"] . "<br><a href='logout.php'>Logout</a></span></div>";
-            }
-            ?>
+![Untitled](Untitled38.png)
+
+```php
+<?php require_once 'config.php'; ?>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="moduleRegister.php">Register</a></li>
+                <li class="nav-item"><a class="nav-link" href="moduleData.php">Module Data</a></li>
+            </ul>
         </div>
-    </nav>
-    <?php
-    if (isset($_SESSION['flash_message'])) {
-        $message = $_SESSION['flash_message'];
-        unset($_SESSION['flash_message']);
-        ?>
-        <div class="position-absolute bottom-0 end-0">
-            <?= $message ?>
-    
-        </div>
-    
         <?php
-    }
-    ?>
-    <script src="js/bootstrap.bundle.js"></script>
-    <?php
-    function sanitise_data($data)
-    {
-        $data = trim($data);
-        $data = stripslashes($data);
-        $data = htmlspecialchars($data);
-        return $data;
-    }
-    
-    ?>
-    ```
-
-  ## Registering Modules
-
-  Create a new PHP file - `moduleRegister.php` - and replace the contents with the code shown.
-
-  The code will create a new entry in the database table
-
-    ```php
-    <?php include "template.php";
-    /** @var $conn */
-    
-    ?>
-    
-    <title>Module Register</title>
-    
-    <h1 class='text-primary'>Please register a module</h1>
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" enctype="multipart/form-data">
-        <div class="container-fluid">
-    
-                <form>
-    
-                    <div class="form-group">
-                        <label for="inputActuator">Actuator</label>
-                        <input type="text" class="form-control" name="inputActuator" id="inputActuator" aria-describedby="actuatorHelp" placeholder="Enter your module actuator.">
-                        <small id="actuatorHelp" class="form-text text-muted">This will be the output device (LED etc).</small>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputCommand">Command</label>
-                        <input type="text" class="form-control" name="inputCommand" id="inputCommand" aria-describedby="commandHelp" placeholder="Enter starting command">
-                        <small id="commandHelp" class="form-text text-muted">This will be sent to the ESP32. Start simple, such as 0 or 1. </small>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputPassword">Password</label>
-                        <input type="password" class="form-control" name="inputPassword" id="inputPassword" placeholder="Password">
-                    </div>
-    
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-        </div>
-    </form>
-    
-    <?php
-    
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $password = sanitise_data($_POST['inputPassword']);
-        $actuator = sanitise_data($_POST['inputActuator']);
-        $command = sanitise_data($_POST['inputCommand']);
-        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-    
-    // check username in database
-        $query = $conn->query("SELECT COUNT(*) FROM moduleCommands WHERE actuator='$actuator'");
-        $data = $query->fetch();
-        $numberOfActuatorsWithThatName = (int)$data[0];
-    
-        if ($numberOfActuatorsWithThatName > 0) {
-            $_SESSION['flash_message'] = "This actuator name has already been taken.";
-        } else {
-            $sql = "INSERT INTO moduleCommands (actuator, command, hashedPassword) VALUES (:newActuator, :newCommand, :newPassword)";
-            $stmt = $conn->prepare($sql);
-            $stmt->bindValue(':newActuator', $actuator);
-            $stmt->bindValue(':newCommand', $command);
-            $stmt->bindValue(':newPassword', $hashed_password);
-            $stmt->execute();
-            $_SESSION["flash_message"] = "Module Created";
-            header("Location:index.php");
-    
+        if (isset($_SESSION["username"])) {
+            echo "<div class='alert alert-success d-flex'><span>Welcome, " . $_SESSION["username"] . "<br><a href='logout.php'>Logout</a></span></div>";
         }
-    
-    }
+        ?>
+    </div>
+</nav>
+<?php
+if (isset($_SESSION['flash_message'])) {
+    $message = $_SESSION['flash_message'];
+    unset($_SESSION['flash_message']);
     ?>
-    ```
+    <div class="position-absolute bottom-0 end-0">
+        <?= $message ?>
 
-  ## Testing
+    </div>
 
-  Load the page in the browser and it should appear similar to the one shown. Enter some data and press submit.
+    <?php
+}
+?>
+<script src="js/bootstrap.bundle.js"></script>
+<?php
+function sanitise_data($data)
+{
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
 
-  ![Untitled](Untitled39.png)
+?>
+```
 
-  Open the database table view in PHPstorm by opening the database tab and then double-clicking on `moduleCommands`.
+## Registering Modules
 
-  Ideally, if the files are all programmed correctly, the new module data should appear.
+Create a new PHP file - `moduleRegister.php` - and replace the contents with the code shown.
 
-  ![Untitled](Untitled40.png)
+The code will create a new entry in the database table
 
-  ## JSON
+```php
+<?php include "template.php";
+/** @var $conn */
 
-  JSON is a data format that is similar to a dictionary or key-value pair structure.
+?>
 
-  ![Untitled](Untitled41.png)
+<title>Module Register</title>
 
-  JSON, which stands for "JavaScript Object Notation," is like a special language that helps you organise and describe
-  this data in a way that computers can easily understand.
+<h1 class='text-primary'>Please register a module</h1>
+<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" enctype="multipart/form-data">
+    <div class="container-fluid">
 
-  Think of JSON as a recipe for computers. Just like a recipe lists ingredients and instructions for making a yummy
-  dish, JSON lists pieces of information and how they relate to each other. These pieces of information are called "
-  objects." Each object is like a container that holds different types of data, like text, numbers, or even more
-  objects.
+            <form>
 
-  JSON is simple and easy to read, both for humans and computers. It's kind of like writing a story with different
-  characters and their attributes. For example, if you're describing a person, you might use JSON like this:
+                <div class="form-group">
+                    <label for="inputActuator">Actuator</label>
+                    <input type="text" class="form-control" name="inputActuator" id="inputActuator" aria-describedby="actuatorHelp" placeholder="Enter your module actuator.">
+                    <small id="actuatorHelp" class="form-text text-muted">This will be the output device (LED etc).</small>
+                </div>
+                <div class="form-group">
+                    <label for="inputCommand">Command</label>
+                    <input type="text" class="form-control" name="inputCommand" id="inputCommand" aria-describedby="commandHelp" placeholder="Enter starting command">
+                    <small id="commandHelp" class="form-text text-muted">This will be sent to the ESP32. Start simple, such as 0 or 1. </small>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword">Password</label>
+                    <input type="password" class="form-control" name="inputPassword" id="inputPassword" placeholder="Password">
+                </div>
 
-    ```json
-    {
-      "name": "Alice",
-      "age": 16,
-      "city": "New York",
-      "hobbies": ["reading", "painting", "playing guitar"]
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+    </div>
+</form>
+
+<?php
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $password = sanitise_data($_POST['inputPassword']);
+    $actuator = sanitise_data($_POST['inputActuator']);
+    $command = sanitise_data($_POST['inputCommand']);
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+// check username in database
+    $query = $conn->query("SELECT COUNT(*) FROM moduleCommands WHERE actuator='$actuator'");
+    $data = $query->fetch();
+    $numberOfActuatorsWithThatName = (int)$data[0];
+
+    if ($numberOfActuatorsWithThatName > 0) {
+        $_SESSION['flash_message'] = "This actuator name has already been taken.";
+    } else {
+        $sql = "INSERT INTO moduleCommands (actuator, command, hashedPassword) VALUES (:newActuator, :newCommand, :newPassword)";
+        $stmt = $conn->prepare($sql);
+        $stmt->bindValue(':newActuator', $actuator);
+        $stmt->bindValue(':newCommand', $command);
+        $stmt->bindValue(':newPassword', $hashed_password);
+        $stmt->execute();
+        $_SESSION["flash_message"] = "Module Created";
+        header("Location:index.php");
+
     }
-    
-    ```
 
-  Here, we have an object that describes Alice. It includes her name, age, city, and hobbies. Her hobbies are stored as
-  a list of activities.
+}
+?>
+```
 
-  This JSON "recipe" can be shared with other programs or even other people, and they can understand how the data is
-  structured and use it for different purposes. It's like passing around the recipe for a cake so that anyone can bake
-  the same delicious cake!
+## Testing
 
-  So, JSON is a way for computers to organise and talk about different pieces of information, just like you would when
-  telling a story or following a recipe.
+Load the page in the browser and it should appear similar to the one shown. Enter some data and press submit.
 
-  ### Update the Arduino Code to use `ArduinoJSON` Library.
+![Untitled](Untitled39.png)
 
-  In your project, open the `platformio.ini` file and add the following to the bottom of the list of
-  libraries - `bblanchon/ArduinoJson@^6.21.3`
+Open the database table view in PHPstorm by opening the database tab and then double-clicking on `moduleCommands`.
 
-  This will allow the PHP site to return a JSON object to the ESP32 and have it extract the data.
+Ideally, if the files are all programmed correctly, the new module data should appear.
 
-  Save the file. The project may have to load the library, which may take a minute or two.
+![Untitled](Untitled40.png)
 
-  ![Untitled](Untitled42.png)
+## JSON
 
-  Open `main.cpp`. Add the following include directive to load the library.
+JSON is a data format that is similar to a dictionary or key-value pair structure.
+
+![Untitled](Untitled41.png)
+
+JSON, which stands for "JavaScript Object Notation," is like a special language that helps you organise and describe
+this data in a way that computers can easily understand.
+
+Think of JSON as a recipe for computers. Just like a recipe lists ingredients and instructions for making a yummy
+dish, JSON lists pieces of information and how they relate to each other. These pieces of information are called "
+objects." Each object is like a container that holds different types of data, like text, numbers, or even more
+objects.
+
+JSON is simple and easy to read, both for humans and computers. It's kind of like writing a story with different
+characters and their attributes. For example, if you're describing a person, you might use JSON like this:
+
+```json
+{
+  "name": "Alice",
+  "age": 16,
+  "city": "New York",
+  "hobbies": [
+    "reading",
+    "painting",
+    "playing guitar"
+  ]
+}
+
+```
+
+Here, we have an object that describes Alice. It includes her name, age, city, and hobbies. Her hobbies are stored as
+a list of activities.
+
+This JSON "recipe" can be shared with other programs or even other people, and they can understand how the data is
+structured and use it for different purposes. It's like passing around the recipe for a cake so that anyone can bake
+the same delicious cake!
+
+So, JSON is a way for computers to organise and talk about different pieces of information, just like you would when
+telling a story or following a recipe.
+
+### Update the Arduino Code to use `ArduinoJSON` Library.
+
+In your project, open the `platformio.ini` file and add the following to the bottom of the list of
+libraries - `bblanchon/ArduinoJson@^6.21.3`
+
+This will allow the PHP site to return a JSON object to the ESP32 and have it extract the data.
+
+Save the file. The project may have to load the library, which may take a minute or two.
+
+![Untitled](Untitled42.png)
+
+Open `main.cpp`. Add the following include directive to load the library.
 
     ```C++
     #include "ArduinoJson.h"
     ```
 
-  ![Untitled](Untitled43.png)
+![Untitled](Untitled43.png)
 
-  The `dataTransfer()` function currently uploads data and receives a response, however the code doesn’t use that
-  response at this stage. To change this, go do the `loop()` function and add `String payload` to the start of the
-  dataTransfer function call.
+The `dataTransfer()` function currently uploads data and receives a response, however the code doesn’t use that
+response at this stage. To change this, go do the `loop()` function and add `String payload` to the start of the
+dataTransfer function call.
 
-  ![Untitled](Untitled44.png)
+![Untitled](Untitled44.png)
 
-  Add the code shown to the end of `loop()` to extract and output the command data. This command variable will be sent
-  back by the PHP server in JSON format, extracted from the database table.
+Add the code shown to the end of `loop()` to extract and output the command data. This command variable will be sent
+back by the PHP server in JSON format, extracted from the database table.
 
-    ```C++
-    Serial.print("Payload from server:");
-    Serial.println(payload);
-    DynamicJsonDocument doc(1024);
-    //  Serial.println(deserializeJson(doc, payload));
-    DeserializationError error = deserializeJson(doc, payload);
-    if (error)
-    {
-      Serial.print(F("deserializeJson() failed: "));
-      Serial.println(error.f_str());
-      return;
-    }
-    const char *command = doc["command"];
-    Serial.print("Command: ");
-    Serial.print(command);
-    ```
+```C++
+Serial.print("Payload from server:");
+Serial.println(payload);
+DynamicJsonDocument doc(1024);
+//  Serial.println(deserializeJson(doc, payload));
+DeserializationError error = deserializeJson(doc, payload);
+if (error)
+{
+  Serial.print(F("deserializeJson() failed: "));
+  Serial.println(error.f_str());
+  return;
+}
+const char *command = doc["command"];
+Serial.print("Command: ");
+Serial.print(command);
+```
 
-  $$
-  \utilde {\color{black} \fcolorbox{darkorange}{darkorange} {Commit and Push to Github}}
-  $$
+$$
+\utilde {\color{black} \fcolorbox{darkorange}{darkorange} {Commit and Push to Github}}
+$$
 
 - Code Refactoring
 
@@ -1392,13 +1396,15 @@ Call `dataTransfer()` with the results from the getTemperature function.
 
 ## Adding New Functionality
 
-## Video Demonstration
+### Video Demonstration
 
-    ‼️ The exact process and code you’ll need to implement will depend on your specific requirements.
+> The exact process and code you’ll need to implement will depend on your specific requirements.
+>
+{style="note"}
 
 [https://youtu.be/rPDmzrNgSn4](https://youtu.be/rPDmzrNgSn4)
 
-## Step 1: Define function
+### Step 1: Define function
 
 Create a new function for the new functionality.
 
@@ -1409,7 +1415,7 @@ Decide the input sensor and the output actuator.
 
 ![Untitled](Untitled47.png)
 
-## Step 2: Libraries
+### Step 2: Libraries
 
 Import the necessary libraries for your sensor and actuator. This will require researching the sensor and module you
 are attempting to use.
@@ -1418,31 +1424,31 @@ Import the library/ies required using the Library option in the Platform IO home
 
 ![Untitled](Untitled48.png)
 
-### Alternatively…
+#### Alternatively…
 
 Open `platformio.ini` and add the following libraries to the end of the list.
 
 ![Untitled](Untitled49.png)
 
-    ```C++
-    
-    adafruit/Adafruit ST7735 and ST7789 Library@^1.10.3
-    adafruit/Adafruit seesaw Library@^1.7.3
-    adafruit/Adafruit GFX Library@^1.11.7
-    adafruit/Adafruit SSD1306@^2.5.7
-    adafruit/Adafruit Motor Shield V2 Library@^1.1.1
-    ```
+```C++
+
+adafruit/Adafruit ST7735 and ST7789 Library@^1.10.3
+adafruit/Adafruit seesaw Library@^1.7.3
+adafruit/Adafruit GFX Library@^1.11.7
+adafruit/Adafruit SSD1306@^2.5.7
+adafruit/Adafruit Motor Shield V2 Library@^1.1.1
+```
 
 Step 3: Collect Input
 
-## Step 4: Send Data to the Server and Receive Response
+### Step 4: Send Data to the Server and Receive Response
 
 Reuse (copy) the code from `temperatureAndLED()` to upload the sensor data to the server and receive a response.
 
-## Step 5: Affect Actuator
+### Step 5: Affect Actuator
 
-## Step 6: Test and test again
+### Step 6: Test and test again
 
-## Add new Local Functionality
+### Add new Local Functionality
 
 Repeat the process above, however skip the step to upload the sensor data to the server and wait for a response.
