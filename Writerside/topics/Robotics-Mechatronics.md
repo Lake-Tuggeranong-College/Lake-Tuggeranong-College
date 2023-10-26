@@ -400,12 +400,12 @@ The Index page will be the homepage that the users see when they first access yo
 
 Create a new PHP file called `index.php`. Replace the contents with this.
 
-    ```php
-    <?php include "template.php"; ?>
-    <title>Cyber City</title>
-    
-    <h1 class='text-primary'>Welcome to our The Cyber City</h1>
-    ```
+```php
+<?php include "template.php"; ?>
+<title>Cyber City</title>
+
+<h1 class='text-primary'>Welcome to our The Cyber City</h1>
+```
 
 Launch the page and you should see something similar to this:
 
@@ -415,42 +415,42 @@ Launch the page and you should see something similar to this:
 
 The form code
 
-    ```php
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" enctype="multipart/form-data">
-        <div class="container-fluid">
-            <div class="row">
-                <!--Customer Details-->
-    
-                <div class="col-md-12">
-                    <h2>Account Details</h2>
-                    <p>Please enter wanted username and password:</p>
-                    <p>User Name<input type="text" name="username" class="form-control" required="required"></p>
-                    <p>Password<input type="password" name="password" class="form-control" required="required"></p>
-    
-                </div>
+```php
+<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" enctype="multipart/form-data">
+    <div class="container-fluid">
+        <div class="row">
+            <!--Customer Details-->
+
+            <div class="col-md-12">
+                <h2>Account Details</h2>
+                <p>Please enter wanted username and password:</p>
+                <p>User Name<input type="text" name="username" class="form-control" required="required"></p>
+                <p>Password<input type="password" name="password" class="form-control" required="required"></p>
+
             </div>
         </div>
-        <input type="submit" name="formSubmit" value="Submit">
-    </form>
-    ```
+    </div>
+    <input type="submit" name="formSubmit" value="Submit">
+</form>
+```
 
-    ```php
-    <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    	$username = sanitise_data($_POST['username']);
-        $password = sanitise_data($_POST['password']);
-        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-        //echo $username;
-        //echo $hashed_password;
-    
-    $sql = "INSERT INTO user (username, hashed_password, access_level) VALUES (:newUsername, :newPassword, 1)";
-        $stmt = $conn->prepare($sql);
-        $stmt->bindValue(':newUsername', $username);
-        $stmt->bindValue(':newPassword', $hashed_password);
-        $stmt->execute();
-    }
-    ?>
-    ```
+```php
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = sanitise_data($_POST['username']);
+    $password = sanitise_data($_POST['password']);
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+    //echo $username;
+    //echo $hashed_password;
+
+$sql = "INSERT INTO user (username, hashed_password, access_level) VALUES (:newUsername, :newPassword, 1)";
+    $stmt = $conn->prepare($sql);
+    $stmt->bindValue(':newUsername', $username);
+    $stmt->bindValue(':newPassword', $hashed_password);
+    $stmt->execute();
+}
+?>
+```
 
 ### `login.php`
 
@@ -459,29 +459,29 @@ just be duplicated from `registration.php`.
 
 ![Untitled](Untitled7.png)
 
-    ```php
-    <?php include "template.php"; ?>
-    <title>Cyber City - Login</title>
-    
-    <h1 class='text-primary'>Login</h1>
-    
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" enctype="multipart/form-data">
-        <div class="container-fluid">
-            <div class="row">
-                <!--Customer Details-->
-    
-                <div class="col-md-12">
-                    <h2>Account Details</h2>
-                    <p>Please enter wanted username and password:</p>
-                    <p>User Name<input type="text" name="username" class="form-control" required="required"></p>
-                    <p>Password<input type="password" name="password" class="form-control" required="required"></p>
-    
-                </div>
+```php
+<?php include "template.php"; ?>
+<title>Cyber City - Login</title>
+
+<h1 class='text-primary'>Login</h1>
+
+<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" enctype="multipart/form-data">
+    <div class="container-fluid">
+        <div class="row">
+            <!--Customer Details-->
+
+            <div class="col-md-12">
+                <h2>Account Details</h2>
+                <p>Please enter wanted username and password:</p>
+                <p>User Name<input type="text" name="username" class="form-control" required="required"></p>
+                <p>Password<input type="password" name="password" class="form-control" required="required"></p>
+
             </div>
         </div>
-        <input type="submit" name="formSubmit" value="Submit">
-    </form>
-    ```
+    </div>
+    <input type="submit" name="formSubmit" value="Submit">
+</form>
+```
 
 And again, the first part of the PHP code from registration will be the same, namely collecting and sanitising the
 form data and searching for how many users of that user name are found in the database.
@@ -809,69 +809,69 @@ while (!Serial) {
 
 ![Untitled](Untitled25.png)
 
-- Event Logging to the Database
+## Event Logging to the Database
 
-  # Event Logging to the Database
+Instead of logging events locally (to a SD card or similar), the Arduino can log events to a remote server through the
+PHP server.
 
-  Instead of logging events locally (to a SD card or similar), the Arduino can log events to a remote server through the
-  PHP server.
+Open `main.cpp` and add the following function near the top of the code.
 
-  Open `main.cpp` and add the following function near the top of the code.
-
-  ‼️ It needs to be stored ******after****** the include statements and  *****prior***** to `setup()`
+> It needs to be stored ******after****** the include statements and  *****prior***** to `setup()`
+>
+{style="tip"}
 
 ![Untitled](Untitled26.png)
 
-    ```c++
-    void logEvent(String eventData)
+```c++
+void logEvent(String eventData)
+{
+  if (WiFi.status() == WL_CONNECTED)
+  {
+    WiFiClient client;
+    HTTPClient http;
+    Serial.println("Before");
+    // Your Domain name with URL path or IP address with path
+    http.begin(client, eventLogURL);
+
+    // Specify content-type header
+    http.addHeader("Content-Type", "application/x-www-form-urlencoded");
+
+    // Send HTTP POST request, and store response code
+    http.addHeader("Content-Type", "application/json");
+    String postJSONString = "{\"userName\":\"" + userName + "\",\"eventData\":\"" + eventData + "\"}";
+
+    Serial.print("Debug JSON String: ");
+    Serial.println(postJSONString);
+    int httpResponseCode = http.POST(postJSONString);
+
+    if (httpResponseCode > 0)
     {
-      if (WiFi.status() == WL_CONNECTED)
-      {
-        WiFiClient client;
-        HTTPClient http;
-        Serial.println("Before");
-        // Your Domain name with URL path or IP address with path
-        http.begin(client, eventLogURL);
-    
-        // Specify content-type header
-        http.addHeader("Content-Type", "application/x-www-form-urlencoded");
-    
-        // Send HTTP POST request, and store response code
-        http.addHeader("Content-Type", "application/json");
-        String postJSONString = "{\"userName\":\"" + userName + "\",\"eventData\":\"" + eventData + "\"}";
-    
-        Serial.print("Debug JSON String: ");
-        Serial.println(postJSONString);
-        int httpResponseCode = http.POST(postJSONString);
-    
-        if (httpResponseCode > 0)
-        {
-          Serial.print("HTTP Response code: ");
-          Serial.print(httpResponseCode);
-          Serial.println(".");
-        }
-        else
-        {
-          Serial.print("Error code: ");
-          Serial.println(httpResponseCode);
-        }
-    
-        // Free resources
-        http.end();
-      }
-      else
-      {
-        Serial.println("WiFi Disconnected");
-      }
+      Serial.print("HTTP Response code: ");
+      Serial.print(httpResponseCode);
+      Serial.println(".");
     }
-    ```
+    else
+    {
+      Serial.print("Error code: ");
+      Serial.println(httpResponseCode);
+    }
+
+    // Free resources
+    http.end();
+  }
+  else
+  {
+    Serial.println("WiFi Disconnected");
+  }
+}
+```
 
 Add two events that are logged. The first in `setup()` to indicate the system has initialised. The second include in
 the main `loop()` as a test post.
 
-    ```c++
-    logEvent("System Initalised");
-    ```
+```c++
+logEvent("System Initalised");
+```
 
 ![Untitled](Untitled27.png)
 
@@ -904,54 +904,53 @@ Add the following to the include block of code at the very top of your `main.cpp
 
 ![Untitled](Untitled30.png)
 
-    ```C++
-    #include "Adafruit_ADT7410.h"
-    // Create the ADT7410 temperature sensor object
-    Adafruit_ADT7410 tempsensor = Adafruit_ADT7410();
-    ```
+```C++
+#include "Adafruit_ADT7410.h"
+// Create the ADT7410 temperature sensor object
+Adafruit_ADT7410 tempsensor = Adafruit_ADT7410();
+```
 
 Initialise the temperature sensor in `setup()`.
 
 ![Untitled](Untitled31.png)
 
-    ```C++
-    if (!tempsensor.begin())
-      {
-        Serial.println("Couldn't find ADT7410!");
-        while (1)
-          ;
-      }
-    ```
+```C++
+if (!tempsensor.begin())
+  {
+    Serial.println("Couldn't find ADT7410!");
+    while (1)
+      ;
+  }
+```
 
 After the include statements at the top of the file, add this new function to get and return the temperature recorded
 by the temperature sensor.
 
 ![Untitled](Untitled32.png)
 
-    ```C++
-    float getTemperature()
-    {
-      float temperatureValue;
-      temperatureValue = tempsensor.readTempC();
-    
-      return temperatureValue;
-    }
-    ```
+```C++
+float getTemperature()
+{
+  float temperatureValue;
+  temperatureValue = tempsensor.readTempC();
 
-    
----
+  return temperatureValue;
+}
+```
+
+   
 
 To complete this process, the code needs to be updated to include a new function - `dataTransfer()` - which will take
 sensor data from any source (temperature, button etc) and upload it to the server.
 
-Copy the function into your code, placing it **********above********** `setup()`.
+Copy the function into your code, placing it **above** `setup()`.
 
 This code appears to be similar to previous code, however the major difference is the following
 
-    ```C++
-    http.addHeader("Content-Type", "application/json");
-    String postJSONString = "{\"api_key\":\""+apiKeyValue+"\",\"userName\":\""+userName+"\",\"moduleName\":\""+moduleName+"\",\"moduleData\":\""+dataToPost+"\"}";
-    ```
+```C++
+http.addHeader("Content-Type", "application/json");
+String postJSONString = "{\"api_key\":\""+apiKeyValue+"\",\"userName\":\""+userName+"\",\"moduleName\":\""+moduleName+"\",\"moduleData\":\""+dataToPost+"\"}";
+```
 
 This formats the data into a JSON structure, which essentially is a dictionary or key-value pair.
 
@@ -1013,9 +1012,9 @@ Call `dataTransfer()` with the results from the getTemperature function.
 
 ![Untitled](Untitled34.png)
 
-    ```C++
-    dataTransfer(apiKeyValue, userName, "Temperature", String(getTemperature()));
-    ```
+```C++
+dataTransfer(apiKeyValue, userName, "Temperature", String(getTemperature()));
+```
 
 # Reading Data From The Server
 
@@ -1308,9 +1307,9 @@ Save the file. The project may have to load the library, which may take a minute
 
 Open `main.cpp`. Add the following include directive to load the library.
 
-    ```C++
-    #include "ArduinoJson.h"
-    ```
+```C++
+#include "ArduinoJson.h"
+```
 
 ![Untitled](Untitled43.png)
 
