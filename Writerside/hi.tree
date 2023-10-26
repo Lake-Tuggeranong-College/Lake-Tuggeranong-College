@@ -9,7 +9,6 @@
     <toc-element topic="Subjects.topic"/>
     <toc-element topic="Robotics.topic">
         <toc-element topic="Building-Programming-Circuits.topic"/>
-        <toc-element topic="Robotics-and-Mechatronics.topic"/>
         <toc-element topic="Robotics-Mechatronics.md"/>
         <toc-element topic="Application-of-Robotics.topic"/>
         <toc-element topic="Independent-Project.topic"/>

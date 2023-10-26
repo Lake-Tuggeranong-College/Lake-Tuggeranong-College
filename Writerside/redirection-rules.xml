@@ -30,4 +30,8 @@
         <description>Created after removal of "ESP32 Feather Project" from Help Instance</description>
         <accepts>ESP32-Feather-Project.html</accepts>
     </rule>
+    <rule id="67db9556">
+        <description>Created after removal of "Robotics and Mechatronics" from Help Instance</description>
+        <accepts>Robotics-and-Mechatronics.html</accepts>
+    </rule>
 </rules>
