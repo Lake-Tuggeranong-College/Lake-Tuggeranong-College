@@ -1,4 +1,4 @@
-# Robotics &amp; Mechatronics
+# Robotics Mechatronics
 
 ## Schedule
 
