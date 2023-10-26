@@ -222,6 +222,44 @@ Notice how the Arduino / ESP32 Feather **does not** interact directly with the d
 The reason for this is that the PHP webserver acts as a gateway to provide security and additional functionality.
 Ultimately this is to protect the data in the database.
 
+## Join Github Classroom
+
+Join the classroom via the supplied link.
+
+Clone and Open the project.
+
+Open PIO Home. Click on Libraries.
+
+![Untitled](Untitled20.png)
+
+Search for and install the following libraries:
+
+- **Adafruit BusIO**by Adafruit
+- **Adafruit ST7735 and ST7789 Library** by Adafruit
+- **RTCLib** by Adafruit
+- **Adafruit Motor Shield V2 Library** by Adafruit
+- **Adafruit ADT7410 Library** by Adafruit
+
+For each library, choose the project and click Add.
+
+![Untitled](Untitled21.png)
+
+![Untitled](Untitled22.png)
+
+Connect the Adafruit board to the computer via USB and upload the code to the board.
+
+> You may need to change the function to “upload” instead of build.
+>
+{style="note"}
+
+![upload.gif](upload.gif)
+
+In the terminal window, you will see the code compiling and then uploading to the board.
+
+![uploading.gif](uploading.gif)
+
+The onboard red LED will quickly flash to indicate the code and uploading is working.
+
 ## PHPStorm Configuration
 
 > The exact interface may be different due to changes in the UI of the software.
@@ -522,8 +560,6 @@ $row = $query->fetch();
 ```
 
 ![Untitled](Untitled10.png)
-    
----
 
 When this code is executed, `$row` will contain the record as an array and each field (or column) will be stored in
 the different elements in order.
@@ -531,8 +567,6 @@ the different elements in order.
 So, in this specific case, the fields will equate to these **indexes**.
 
 ![Untitled](Untitled11.png)
-    
----
 
 At this stage, the username is correct and valid, but the system still needs to confirm the password, which is hashed
 in the database. Luckily PHP has a helper function to compare a password in plain text with the hashed password. This
@@ -609,7 +643,13 @@ The final line of code for the log out process should be to redirect the browser
 header("Location:index.php");
 ```
 
-## Template Update
+## Wiring Diagram
+
+The starting wiring diagram, shown below, is included in the repository - `esp32.ckt`.
+
+![esp32.png](esp32.png)
+
+### Template Update
 
 Open `template.php` as a few changes need to be made due to a change in the project.
 
@@ -652,9 +692,9 @@ You may use additional hardware for your specific implementation. This may inclu
 
 ![Modules](modules.jpg)
 
-Processing Input and Output
+## Processing Input and Output
 
-## Simple Input → Output
+### Simple Input → Output
 
 In this example, you’ll be shown how to code a simple circuit to read a button press and turn an LED on.
 
@@ -663,86 +703,39 @@ In this example, you’ll be shown how to code a simple circuit to read a button
 
     </aside>
 
-## Button Press → LED
+### Button Press → LED
 
-### Reading Button Press
+#### Reading Button Press
 
-### Turning the LED on and off
+#### Turning the LED on and off
 
-## Additional Modules
+### Additional Modules
 
-### Temperature
+#### Temperature
 
-### DC Motor/s
+#### DC Motor/s
 
-### Real Time Clock (RTC)
+#### Real Time Clock (RTC)
 
-### LCD Screen
+#### LCD Screen
 
-### E-Paper / E-Ink Display
-
-Wiring Diagram
-
-## ESP32 Feather Wiring Diagram
-
-The starting wiring diagram, shown below, is included in the repository - `esp32.ckt`.
-
-![esp32.png](esp32.png)
-
-Clone Project
-
-## Join Github Classroom
-
-Join the classroom via the supplied link.
-
-Clone and Open the project.
-
-Open PIO Home. Click on Libraries.
-
-![Untitled](Untitled20.png)
-
-Search for and install the following libraries:
-
-- ****Adafruit BusIO****by Adafruit
-- ****Adafruit ST7735 and ST7789 Library**** by Adafruit
-- ************RTCLib************ by Adafruit
-- ****Adafruit Motor Shield V2 Library****by Adafruit
-- ****Adafruit ADT7410 Library****by Adafruit
-
-For each library, choose the project and click Add.
-
-![Untitled](Untitled21.png)
-
-![Untitled](Untitled22.png)
-
-Connect the Adafruit board to the computer via USB and upload the code to the board.
-
-‼️ You may need to change the function to “upload” instead of build.
-
-![upload.gif](upload.gif)
-
-In the terminal window, you will see the code compiling and then uploading to the board.
-
-![uploading.gif](uploading.gif)
-
-The onboard red LED will quickly flash to indicate the code and uploading is working.
-
-Network Access
+#### E-Paper / E-Ink Display
 
 ## Network Access
 
-## sensitiveInformation.h
+### sensitiveInformation.h
 
 First, open `sensitiveInformation.h` and confirm that the Settings are correct.
 
 The Host, SSID and password should be configured for the classroom’s RoboRange network.
 
-  <code-block lang="c++" collapsible="true" collapsed-title="sensitiveinformation.c">
-    const char* host = "RMS";
-    const char* ssid = "RoboRange";       // Wifi Network Name
-    const char* password = "Password01";  // Wifi Password
+```C++
+const char* host = "RMS";
+const char* ssid = "RoboRange";       // Wifi Network Name
+const char* password = "Password01";  // Wifi Password
+```
 
-</code-block>
+{collapsible="true" collapsed-title="Sensitive Information"}
 
 The serverURL variable should be set to the subject specific URL.
 
@@ -770,13 +763,11 @@ At this end of the process, your `sensitiveInformation.h` file should appear sim
 
 ![Untitled](Untitled23.png)
 
-$$
-\utilde {\color{black} \fcolorbox{darkorange}{darkorange} {Commit and Push to Github}}
-$$
+<include from="reusableContent.topic" element-id="commitPush"/>
 
-## Connecting to the network
+### Connecting to the network
 
-Add the following additional include statements at the top of your code, *****after***** `#include <Arduino.h>`
+Add the following additional include statements at the top of your code, **after** `#include <Arduino.h>`
 
 ```C++
 #include "WiFi.h"
@@ -809,14 +800,18 @@ while (!Serial) {
 
 ![Untitled](Untitled25.png)
 
-## Event Logging to the Database
+## Data Logging
+
+This section focuses on programming the ESP32 to upload data to the PHP server.
+
+### Event Logging to the Database
 
 Instead of logging events locally (to a SD card or similar), the Arduino can log events to a remote server through the
 PHP server.
 
 Open `main.cpp` and add the following function near the top of the code.
 
-> It needs to be stored ******after****** the include statements and  *****prior***** to `setup()`
+> It needs to be stored **after** the include statements and  **prior** to `setup()`
 >
 {style="tip"}
 
@@ -866,6 +861,8 @@ void logEvent(String eventData)
 }
 ```
 
+{collapsible="true" collapsed-title="logEvent()"}
+
 Add two events that are logged. The first in `setup()` to indicate the system has initialised. The second include in
 the main `loop()` as a test post.
 
@@ -879,26 +876,22 @@ Upload the code to the Adafruit ESP32 Feather and check the database to ensure t
 
 ![Untitled](Untitled28.png)
 
-$$
-\utilde {\color{black} \fcolorbox{darkorange}{darkorange} {Commit and Push to Github}}
-$$
+<include from="reusableContent.topic" element-id="commitPush"/>
 
-Sensor Data Logging to the Database
+### Sensor Data Logging
 
-## Sensor Data Logging
-
-‼️ This process is extremely similar to Event Logging performed previously. The difference in this process is:
-
-- A different URL
-- More dynamic data (sensor data)
-- More security issues
-- Formatting the data into a JSON format.
+> This process is extremely similar to Event Logging performed previously. The difference in this process is:
+> - A different URL
+> - More dynamic data (sensor data)
+> - More security issues
+> - Formatting the data into a JSON format.
+    {style="note"}
 
 ![Untitled](Untitled29.png)
 
 [https://www.w3schools.com/js/js_json_intro.asp](https://www.w3schools.com/js/js_json_intro.asp)
 
-## Temperature Sensor
+#### Temperature Sensor
 
 Add the following to the include block of code at the very top of your `main.cpp`.
 
@@ -937,8 +930,6 @@ float getTemperature()
   return temperatureValue;
 }
 ```
-
-   
 
 To complete this process, the code needs to be updated to include a new function - `dataTransfer()` - which will take
 sensor data from any source (temperature, button etc) and upload it to the server.
@@ -1008,6 +999,8 @@ String dataTransfer(String apiKeyValue, String userName, String moduleName, Stri
 }
 ```
 
+{collapsible="true" collapsed-title="dataTransfer()"}
+
 Call `dataTransfer()` with the results from the getTemperature function.
 
 ![Untitled](Untitled34.png)
@@ -1016,9 +1009,9 @@ Call `dataTransfer()` with the results from the getTemperature function.
 dataTransfer(apiKeyValue, userName, "Temperature", String(getTemperature()));
 ```
 
-# Reading Data From The Server
+## Reading Data From The Server
 
-## Database Information
+### Database Information
 
 The project up to this point involves uploading data from the ESP32 to the PHP server and then stored in the database.
 
@@ -1043,7 +1036,7 @@ to storing the password in the database.
 
 ![moduleCommands.png](moduleCommands.png)
 
-# PHP Site
+## PHP Site
 
 PHP is a **server side** scripting language. This means that PHP code runs on the server (not the client/browser) and
 delivers the necessary code to the client to display.
@@ -1058,7 +1051,7 @@ PHP was created in 1994, so in terms of Programming Languages it is quite old, b
 
 PHP is used by itself but is also the main language in many other frameworks available, such as Wordpress and Laravel.
 
-## Bootstrap
+### Bootstrap
 
 [Download Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/download/) and unzip the folder.
 
@@ -1066,7 +1059,7 @@ Copy the CSS and JS folder into the project.
 
 ![Untitled](Untitled35.png)
 
-## Site Configuration
+### Site Configuration
 
 Create a new php file in the project, named `config.php`.
 
@@ -1103,7 +1096,9 @@ if (!$errorCaught) {
 ?>
 ```
 
-## Site Template
+{collapsible="true" collapsed-title="config.php"}
+
+### Site Template
 
 Create a new file `template.php`.
 
@@ -1170,7 +1165,9 @@ function sanitise_data($data)
 ?>
 ```
 
-## Registering Modules
+{collapsible="true" collapsed-title="template.php"}
+
+### Registering Modules
 
 Create a new PHP file - `moduleRegister.php` - and replace the contents with the code shown.
 
@@ -1241,7 +1238,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 ```
 
-## Testing
+{collapsible="true" collapsed-title="registerModule.php"}
+
+## Register an ESP32 Module
 
 Load the page in the browser and it should appear similar to the one shown. Enter some data and press submit.
 
@@ -1338,58 +1337,49 @@ const char *command = doc["command"];
 Serial.print("Command: ");
 Serial.print(command);
 ```
+{collapsible="true" collapsed-title="Payload"}
 
-$$
-\utilde {\color{black} \fcolorbox{darkorange}{darkorange} {Commit and Push to Github}}
-$$
 
-- Code Refactoring
+<include from="reusableContent.topic" element-id="commitPush"/>
 
-  # Code Refactoring
-    
-  ---
+## Code Refactoring
 
-  ***
-  ***********************************************What is code refactoring?**********************************************
-  ****
+> Refactoring is making changes to the internal structure of code without changing its external behavior. This can make
+the code easier to read, understand, maintain, and extend. 
+> 
+> Here are some examples of refactoring:
+> - Rename a variable to make its meaning clearer.
+> - Move a block of code to a separate method so that it can be reused.
+> - Split a large method into smaller methods so that it is easier to understand. 
+> - Replace a complex expression with a simpler one.
+{style="note"}
 
-  Refactoring is making changes to the internal structure of code without changing its external behavior. This can make
-  the code easier to read, understand, maintain, and extend.
+Refactoring is a good practice to follow when you are developing code. It can help to improve the quality of your code
+and make it easier to work with in the future.
 
-  Here are some examples of refactoring:
+Here are some tips for refactoring code:
 
-    - Rename a variable to make its meaning clearer.
-    - Move a block of code to a separate method so that it can be reused.
-    - Split a large method into smaller methods so that it is easier to understand.
-    - Replace a complex expression with a simpler one.
+- Start small. Don't try to refactor too much code at once.
+- Test your code after each change.
+- Get feedback from other developers.
 
-  Refactoring is a good practice to follow when you are developing code. It can help to improve the quality of your code
-  and make it easier to work with in the future.
+Refactoring is an ongoing process. As your code changes, you should periodically refactor it to keep it up to date.
 
-  Here are some tips for refactoring code:
+### Code Changes
 
-    - Start small. Don't try to refactor too much code at once.
-    - Test your code after each change.
-    - Get feedback from other developers.
+To allow the project to scale up, and add functionality easily, it’s time to move the temperature and LED
+functionality into it’s own function and have the loop() call it.
 
-  Refactoring is an ongoing process. As your code changes, you should periodically refactor it to keep it up to date.
+To easily do this, rename the loop function to `temperatureAndLED()` and then create a new `loop()` that calls it.
 
-  ***********Generated by Google Bard.***********
-    
-  ---
+![Untitled](Untitled45.png)
 
-  To allow the project to scale up, and add functionality easily, it’s time to move the temperature and LED
-  functionality into it’s own function and have the loop() call it.
+Add a short delay into `loop()`. This will give the ESP32 a regular amount of time where it is idle, allowing new code
+to be uploaded to it.
 
-  To easily do this, rename the loop function to `temperatureAndLED()` and then create a new `loop()` that calls it.
-
-  ![Untitled](Untitled45.png)
-
-  Add a short delay into `loop()`. This will give the ESP32 a regular amount of time where it is idle, allowing new code
-  to be uploaded to it.
-
-  ‼️ A rule of thumb is to always add a short delay in the loop function. Otherwise the Arduino/ESP may be too ‘busy’ to
-  allow the IDE to upload new code.
+> A rule of thumb is to **always** add a short delay in the loop function. Otherwise the Arduino/ESP may be too ‘busy’ to
+allow the IDE to upload new code.
+{style="tip"}
 
 ![Untitled](Untitled46.png)
 
@@ -1401,7 +1391,7 @@ $$
 >
 {style="note"}
 
-[https://youtu.be/rPDmzrNgSn4](https://youtu.be/rPDmzrNgSn4)
+<video src="https://youtu.be/rPDmzrNgSn4"/>
 
 ### Step 1: Define function
 
@@ -1430,7 +1420,6 @@ Open `platformio.ini` and add the following libraries to the end of the list.
 ![Untitled](Untitled49.png)
 
 ```C++
-
 adafruit/Adafruit ST7735 and ST7789 Library@^1.10.3
 adafruit/Adafruit seesaw Library@^1.7.3
 adafruit/Adafruit GFX Library@^1.11.7
@@ -1438,7 +1427,7 @@ adafruit/Adafruit SSD1306@^2.5.7
 adafruit/Adafruit Motor Shield V2 Library@^1.1.1
 ```
 
-Step 3: Collect Input
+### Step 3: Collect Input
 
 ### Step 4: Send Data to the Server and Receive Response
 
