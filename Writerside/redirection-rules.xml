@@ -26,4 +26,8 @@
         <description>Created after removal of "This is the first topic" from Help Instance</description>
         <accepts>Default-topic.html</accepts>
     </rule>
+    <rule id="13b8e87e">
+        <description>Created after removal of "ESP32 Feather Project" from Help Instance</description>
+        <accepts>ESP32-Feather-Project.html</accepts>
+    </rule>
 </rules>
