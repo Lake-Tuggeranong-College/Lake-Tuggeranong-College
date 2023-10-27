@@ -178,7 +178,6 @@ You're shown a number of aspects to the process:
 
 The code used in this video is:
 
-TitleScene.gd
 
 ```python
 extends Control
@@ -193,16 +192,17 @@ func _on_Button_pressed(scene_to_load):
     print(scene_to_load)
     get_tree().change_scene(scene_to_load)
 ```
+{collapsible="true" collapsed-title="TitleScene.gd"}
 
-ButtonScript.gd
 
 ```python
 extends Button
 
 export(String) var scene_to_load
 ```
+{collapsible="true" collapsed-title="ButtonScript.gd"}
 
-MainGame.gd
+
 
 ```python
 extends Control
@@ -216,6 +216,7 @@ func _on_Button_Pressed(scene_to_load):
     print(scene_to_load)
     get_tree().change_scene(scene_to_load)
 ```
+{collapsible="true" collapsed-title="MainGame.gd"}
 
 ## Gameplay
 
