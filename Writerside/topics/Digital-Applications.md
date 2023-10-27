@@ -135,31 +135,31 @@ Semester 1, Year 11
 
 Click on the 2D Scene option under Create Root Node.
 
-![Screen Shot 2022-08-05 at 10.31.31 am.png](Screen_Shot_2022-08-05_at_10.31.31_am.png)
+![Screen Shot 2022-08-05 at 10.31.31 am.png](fpsRootNode.png)
 
 Rename the Node “Main Menu”
 
-![Screen Shot 2022-08-05 at 10.32.19 am.png](Screen_Shot_2022-08-05_at_10.32.19_am.png)
+![Screen Shot 2022-08-05 at 10.32.19 am.png](fpsMainMenuNode.png)
 
 Right Click on the Main Menu Node and choose “Create Child Node” and add a Button.
 
-![Screen Shot 2022-08-05 at 10.33.06 am.png](Screen_Shot_2022-08-05_at_10.33.06_am.png)
+![Screen Shot 2022-08-05 at 10.33.06 am.png](fpsButtonNode.png)
 
 Set the Text of the button to “Play” or whatever you want.
 
-![Screen Shot 2022-08-05 at 10.33.34 am.png](Screen_Shot_2022-08-05_at_10.33.34_am.png)
+![Screen Shot 2022-08-05 at 10.33.34 am.png](fpsButtonPlacement.png)
 
 Right click on the Button node and choose Attach Script. Change the name of the script to `SceneChange.gd` as this may be used in different circumstances.
 
-![Screen Shot 2022-08-05 at 10.35.42 am.png](Screen_Shot_2022-08-05_at_10.35.42_am.png)
+![Screen Shot 2022-08-05 at 10.35.42 am.png](fpsButtonScript.png)
 
 With the button selected, change to the Node tab and double click the `pressed()` signal.
 
-![Screen Shot 2022-08-05 at 10.34.23 am.png](Screen_Shot_2022-08-05_at_10.34.23_am.png)
+![Screen Shot 2022-08-05 at 10.34.23 am.png](fpsButtonSignals.png)
 
 Select the Button in the list and click Connect.
 
-![Screen Shot 2022-08-05 at 10.37.22 am.png](Screen_Shot_2022-08-05_at_10.37.22_am.png)
+![Screen Shot 2022-08-05 at 10.37.22 am.png](fpsButtonSignalFunction.png)
 
 Save the Scene as `MainMenu.tscn`.
 
@@ -169,11 +169,11 @@ Save the Scene as `MainMenu.tscn`.
 
 Choose Scene→New Scene. And Choose 3D Scene as the root Node.
 
-![Screen Shot 2022-08-05 at 10.43.46 am.png](Screen_Shot_2022-08-05_at_10.43.46_am.png)
+![Screen Shot 2022-08-05 at 10.43.46 am.png](fpsRootNode3d.png)
 
 Rename the scene node appropriate for your game.
 
-![Screen Shot 2022-08-05 at 10.45.38 am.png](Screen_Shot_2022-08-05_at_10.45.38_am.png)
+![Screen Shot 2022-08-05 at 10.45.38 am.png](fps3DWorld.png)
 
 Save the scene, naming it appropriate to your game.
 
@@ -213,11 +213,11 @@ Open the Main Menu scene.
 
 Right Click on the game scene you just saved in the FileSystem tab and choose Copy Path.
 
-![Screen Shot 2022-08-05 at 10.50.17 am.png](Screen_Shot_2022-08-05_at_10.50.17_am.png)
+![Screen Shot 2022-08-05 at 10.50.17 am.png](fpsCopyPath.png)
 
 Paste that Path into the `Scene To Load` field for the Button created earlier.
 
-![Screen Shot 2022-08-05 at 10.51.13 am.png](Screen_Shot_2022-08-05_at_10.51.13_am.png)
+![Screen Shot 2022-08-05 at 10.51.13 am.png](fpsButtonSceneToLoad.png)
 
 ### Run the Game
 
@@ -227,7 +227,7 @@ If the Main Menu Scene is open, you can just choose Select Current.
 
 If you have another scene open, choose Select, and then double click on the `MainMenu.tscn`.
 
-![Screen Shot 2022-08-05 at 10.54.49 am.png](Screen_Shot_2022-08-05_at_10.54.49_am.png)
+![Screen Shot 2022-08-05 at 10.54.49 am.png](fpsConfirm.png)
 
 
 
@@ -249,35 +249,35 @@ To start with, the player will need to walk on something, so the first step is t
 
 Right Click on the Game scene and choose Add Child Node. Search for Mesh Instance.
 
-![Screen Shot 2022-08-05 at 11.05.03 am.png](Screen_Shot_2022-08-05_at_11.05.03_am.png)
+![Screen Shot 2022-08-05 at 11.05.03 am.png](fpsMeshInstanceCreate.png)
 
 Rename the node “Floor”or “Ground” or whatever is appropriate.
 
-![Screen Shot 2022-08-05 at 11.05.53 am.png](Screen_Shot_2022-08-05_at_11.05.53_am.png)
+![Screen Shot 2022-08-05 at 11.05.53 am.png](fpsFloorNode.png)
 
 In the Inspector, look for the Mesh attribute. int he dropdown box, choose `New PlaneMesh`. 
 
 At this stage, the mesh is there, but the player (created later) will fall straight through it.
 
-![Screen Shot 2022-08-05 at 11.07.29 am.png](Screen_Shot_2022-08-05_at_11.07.29_am.png)
+![Screen Shot 2022-08-05 at 11.07.29 am.png](fpsFloorPlaneMesh.png)
 
 With the mesh selected, go to the Mesh Menu and choose Create Trimesh Static Body.
 
-![Screen Shot 2022-08-05 at 11.10.35 am.png](Screen_Shot_2022-08-05_at_11.10.35_am.png)
+![Screen Shot 2022-08-05 at 11.10.35 am.png](fpsCreateTrimeshStaticBody.png)
 
 This updates the mesh to include 2 child nodes.
 
-![Screen Shot 2022-08-05 at 11.11.38 am.png](Screen_Shot_2022-08-05_at_11.11.38_am.png)
+![Screen Shot 2022-08-05 at 11.11.38 am.png](fpsFloorCollisionShape.png)
 
 Currently the floor is quite small in size. The player object that will be created later will be quite significantly larger, so the relative scale will need to be addressed.
 
 Edit the mesh.
 
-![Screen Shot 2022-08-05 at 1.04.34 pm.png](Screen_Shot_2022-08-05_at_1.04.34_pm.png)
+![Screen Shot 2022-08-05 at 1.04.34 pm.png](fpsNewMesh.png)
 
 Set the x and y size values to something larger. In this case, 20 has been used. This may need to be modified at a later date.
 
-![Screen Shot 2022-08-05 at 1.05.48 pm.png](Screen_Shot_2022-08-05_at_1.05.48_pm.png)
+![Screen Shot 2022-08-05 at 1.05.48 pm.png](fpsPlaneMesh.png)
 
 ### Texture the floor
 
@@ -291,7 +291,7 @@ Find an image to suit the environment appropriate for the game.
 > TIP: When googling, add the word “seamless” to your image searches. This means that the edges of the image align with the opposite side, meaning that when the image is tiled on a mesh, no edging will be visible.
 {style="note"}
 
-![Screen Shot 2022-08-05 at 11.16.12 am.png](Screen_Shot_2022-08-05_at_11.16.12_am.png)
+![Screen Shot 2022-08-05 at 11.16.12 am.png](fpsTextureFolder.png)
 
 In the inspector, expand out the Material dropdown.
 
@@ -311,7 +311,7 @@ In the menu that appears, expand `Albedo`.
 
 Drag the texture from the FileSystem tab to the Texture option under Albedo. The texture on the plane has been updated.
 
-![2022-08-05 11-24-51.2022-08-05 11_25_46.gif](2022-08-05_11-24-51.2022-08-05_11_25_46.gif)
+![2022-08-05 11-24-51.2022-08-05 11_25_46.gif](textureSet.gif)
 
 
 > This is the same process to texture any of your other assets, unless they’ve been textured prior to importing.
@@ -321,7 +321,7 @@ The texture can be ‘tiled’ instead of stretched, by editting the x and y val
 
 Choose values that suit the needs of the game and the desired effect.
 
-![Screen Shot 2022-08-05 at 1.09.05 pm.png](Screen_Shot_2022-08-05_at_1.09.05_pm.png)
+![Screen Shot 2022-08-05 at 1.09.05 pm.png](fpsFloorScale.png)
 
 ### Add Lighting
 
@@ -404,7 +404,7 @@ Add a Camera child node to the Player node.
 
 Set the Environment attribute to the `default_env.tres` already created in the project.
 
-![2022-08-05 12-50-55.2022-08-05 12_51_22.gif](2022-08-05_12-50-55.2022-08-05_12_51_22.gif)
+![2022-08-05 12-50-55.2022-08-05 12_51_22.gif](fpsEnvironmentSet.gif)
 
 Set this camera to be the ‘main’ camera by setting the Current attribute to True.
 
@@ -443,19 +443,19 @@ Add the following actions and set the keys and mouse inputs as directed.
 > Pay close attention to the spelling and capitalisation. These will be linked to in the script later.
 {style="note"}
 
-![Screen Shot 2022-08-05 at 1.25.04 pm.png](Screen_Shot_2022-08-05_at_1.25.04_pm.png)
+![Screen Shot 2022-08-05 at 1.25.04 pm.png](fpsInputMap.png)
 
 ### Mouse Look
 
 Open `Player.tscn`. Right click on the root node and attach a script. Leave the settings as they are, and click Create.
 
-![Screen Shot 2022-08-05 at 1.30.19 pm.png](Screen_Shot_2022-08-05_at_1.30.19_pm.png)
+![Screen Shot 2022-08-05 at 1.30.19 pm.png](fpsPlayerScriptCreate.png)
 
 Clear out the commented code, and add some variables which will be used later in the script.
 
 These variables defines how fast the player moves and how jumping and gravity impact the players movement.
 
-![Screen Shot 2022-08-05 at 1.33.52 pm.png](Screen_Shot_2022-08-05_at_1.33.52_pm.png)
+![Screen Shot 2022-08-05 at 1.33.52 pm.png](fpsPlayerScriptVariables.png)
 
 ```
 extends KinematicBody
@@ -472,7 +472,7 @@ func _ready():
 
 Add other variables. These variables define the players movement and camera movement limitations.
 
-![Screen Shot 2022-08-05 at 1.43.29 pm.png](Screen_Shot_2022-08-05_at_1.43.29_pm.png)
+![Screen Shot 2022-08-05 at 1.43.29 pm.png](fpsPlayerScriptVariablesCamera.png)
 
 ```
 # cam look
@@ -490,7 +490,7 @@ onready var camera = get_node("Camera")		# "attach" the camera to access from sc
 
 Add the function to detect mouse movement.
 
-![Screen Shot 2022-08-05 at 1.45.25 pm.png](Screen_Shot_2022-08-05_at_1.45.25_pm.png)
+![Screen Shot 2022-08-05 at 1.45.25 pm.png](fpsInputFunction.png)
 
 ```
 # called when an input is detected
@@ -502,7 +502,7 @@ func _input (event):
 
 Add the function to rotate the camera to match the mouse movements.
 
-![Screen Shot 2022-08-05 at 1.49.14 pm.png](Screen_Shot_2022-08-05_at_1.49.14_pm.png)
+![Screen Shot 2022-08-05 at 1.49.14 pm.png](fpsProcessFunction.png)
 
 ```
 # called every frame
@@ -521,13 +521,13 @@ func _process (delta):
 
 At this stage, you can run the game to test the mouse movement. Run the project, click the button on the main menu to play the game, and you should be able to look around your environment.
 
-![2022-08-05 13-50-38.2022-08-05 13_52_09.gif](2022-08-05_13-50-38.2022-08-05_13_52_09.gif)
+![2022-08-05 13-50-38.2022-08-05 13_52_09.gif](fpsEnvironmentMouseLook.gif)
 
 ### Player Movement
 
 Add the `_physics_process` function for player movement. This function can go at the bottom of the `Player.gd` script.
 
-![Screen Shot 2022-08-05 at 2.22.17 pm.png](Screen_Shot_2022-08-05_at_2.22.17_pm.png)
+![Screen Shot 2022-08-05 at 2.22.17 pm.png](fpsPhysicsProcessFunction.png)
 
 ```
 # called every physics step
@@ -654,19 +654,19 @@ Save the Scene.
 
 Open the scene that you wish to edit, and drag the `tscn` file you just saved into the position you wish to to be in.
 
-![2022-08-25 14-05-07.2022-08-25 14_06_16.gif](2022-08-25_14-05-07.2022-08-25_14_06_16.gif)
+![2022-08-25 14-05-07.2022-08-25 14_06_16.gif](fpsWallPosition.gif)
 
 You can duplicate the node and place the duplicates in position.
 
 Save the Scene once completed.
 
-![2022-08-25 14-06-53.2022-08-25 14_09_36.gif](2022-08-25_14-06-53.2022-08-25_14_09_36.gif)
+![2022-08-25 14-06-53.2022-08-25 14_09_36.gif](fpsWallDuplicate.gif)
 
 To edit the master, for instance by applying a texture, open the `tscn` file you saved, make changes and save. 
 
 Once you save the `tscn` file, the instances are automatically updated in the other scene.
 
-![2022-08-25 14-13-03.2022-08-25 14_17_41.gif](2022-08-25_14-13-03.2022-08-25_14_17_41.gif)
+![2022-08-25 14-13-03.2022-08-25 14_17_41.gif](fpsWallTextureDemo.gif)
 
 
 
@@ -1111,7 +1111,7 @@ Unlike the player’s health, which is a global variable, each enemy (or any oth
 
 > The object taking damage will need to have a Collision Shape configured as a direct child of the root node.
 >
-> ![Screen Shot 2022-10-06 at 10.02.18 pm.png](CollisionShapeDirectChild.png)
+> ![Screen Shot 2022-10-06 at 10.02.18 pm.png](fpsCollisionShapeDirectChild.png)
 > 
 {style="note"}
 
@@ -1129,7 +1129,7 @@ func take_damage(damage):
 
 Run the game at this stage to test the collision. 
 
-![2022-10-06 23-02-38.2022-10-06 23_04_11.gif](2022-10-06_23-02-38.2022-10-06_23_04_11.gif)
+![2022-10-06 23-02-38.2022-10-06 23_04_11.gif](fpsBulletHitDemo.gif)
 
 
 > You may find it useful to slow the bullets down to properly test, as can be seen in this example.
@@ -1156,7 +1156,7 @@ func take_damage(damage):
 
 Run the project and you should see the object be destroyed as health reaches 0.
 
-![2022-10-06 23-13-27.2022-10-06 23_14_08.gif](2022-10-06_23-13-27.2022-10-06_23_14_08.gif)
+![2022-10-06 23-13-27.2022-10-06 23_14_08.gif](fpsBulletHitDemoDeath.gif)
 
 
 > Remember this process can work for any damageable object in the game - enemies, walls, doors etc.
@@ -1203,7 +1203,7 @@ Click the down arrow next to Material and choose New ShaderMaterial.
 
 Drag the texture file from the file system tab to the Material. The mesh should then be textured with the image.
 
-![2022-08-25 21-25-56.2022-08-25 21_27_22.gif](2022-08-25_21-25-56.2022-08-25_21_27_22.gif)
+![2022-08-25 21-25-56.2022-08-25 21_27_22.gif](fpsLampTexture.gif)
 
 Continue the process until all the meshes in the scene are textured as desired.
 
@@ -1395,7 +1395,7 @@ func _exit_tree():
     Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 ```
 
-![Untitled](exitTree.png)
+![Untitled](fpsExitTree.png)
 
 
 
@@ -1415,30 +1415,30 @@ First, you can choose to create a new input trigger for raycasting. Go to Projec
 > In this example the key `r` has been assigned. You can choose another key or mouse button as required.
 {style="note"}
 > 
-![Untitled](raycastInputMap.png)
+![Untitled](fpsRaycastInputMap.png)
 
 ### Player Object
 
 Open the Player object (`player.tscn`) and create a ****************RayCast**************** child object of the Camera node.
 
-![Untitled](raycastNode.png)
+![Untitled](fpsRaycastNode.png)
 
 With RayCast selected, set the Enabled option to be true in the Inspector. Additionally, get the **********Cast To********** settings to the 0, 0, -10. This will set the ray cast to be set to be in the direction of the camera.
 
 
 > If your player’s camera is configured differently, you may need to change these settings.
 
-![Untitled](raycastSettings.png)
+![Untitled](fpsRaycastSettings.png)
 
 Create a ************************MeshInstance************************ as a child of the Player root node, calling it **HitPoint**.
 
-![Untitled](raycastNode.png)
+![Untitled](fpsRaycastNode.png)
 
 In the inspector, Create a new SphereMesh, and change the radius and height to 0.1 and 0.2 respectively.
 
 Set the colour of the mesh to red (or any other colour) to make it stand out in the game.
 
-![Untitled](enemyRadiusHeight.png)
+![Untitled](fpsEnemyRadiusHeight.png)
 
 Save the `player.tscn` file.
 
@@ -1446,7 +1446,7 @@ Save the `player.tscn` file.
 
 Open `[player.gd](http://player.gd)` and add two new variables at the top of the script to store the raycast and the hitpoint nodes.
 
-![Untitled](raycastHitCode.png)
+![Untitled](fpsRaycastHitCode.png)
 
 ```python
 onready var ray = $Camera/RayCast
@@ -1463,7 +1463,7 @@ If it does collide with a collider, then it will check if that object has a func
 > Using this check for the raycast_collision() allows you to have objects in the game which will be impacted by the raycast (such as enemies) and other objects which don’t react (such as walls).
 {style="note"}
 
-![Untitled](isActionHitRay.png)
+![Untitled](fpsIsActionHitRay.png)
 
 ```python
 if Input.is_action_pressed("ray"):
@@ -1499,13 +1499,13 @@ func raycast_collision():
     print("ray hit")
 ```
 
-![Untitled](raycastHit.png)
+![Untitled](fpsRaycastHit.png)
 
 Save the Wall scene.
 
 When the game is now run, aim at a wall and press the `ray` input. The “ray hit” output should be visible in the Output.
 
-![Untitled](rayHitDemonstration.png)
+![Untitled](fpsRayHitDemonstration.png)
 
 
 <include from="reusableContent.topic" element-id="commitPush"/>
