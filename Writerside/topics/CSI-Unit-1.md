@@ -116,6 +116,12 @@ Semester 1, Year 11
     </tr>
 </table>
 
+## Key Topics
+
+You will study 
+<tooltip term="passwordTip">passwords</tooltip>
+and other things.
+
 ## Course Content
 
 1. Build network
