@@ -125,7 +125,7 @@ Semester 1, Year 11
 
 ## Topics
 
-# Space Invaders Tutorials
+Space Invaders Tutorials
 
 ## Core Game Tutorials
 
