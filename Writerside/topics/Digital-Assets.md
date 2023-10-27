@@ -422,7 +422,7 @@ User data uses the `user://` prefix which points to a different folder which is 
 > to the project. On desktop, the engine stores user files in:
 `~/.local/share/godot/app_userdata/[project_name]` on
 > Linux,`~/Library/Application Support/Godot/app_userdata/[project_name]` on macOS (since Catalina)
-> and `%APPDATA%\Godot\app_userdata\[project_name]` on Windows.
+> and  APPDATA \Godot\app_userdata\[project_name] on Windows.
 [https://docs.godotengine.org/en/stable/tutorials/io/data_paths.html](https://docs.godotengine.org/en/stable/tutorials/io/data_paths.html)
 >
 {style="note"}
