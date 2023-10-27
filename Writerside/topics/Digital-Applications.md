@@ -469,6 +469,8 @@ var gravity = 10.0			# Gravity's strength.
 func _ready():
     pass # Replace with function body.
 ```
+{collapsible="true" collapsed-title="Player.gd"}
+
 
 Add other variables. These variables define the players movement and camera movement limitations.
 
@@ -487,6 +489,8 @@ var mouseDelta : Vector2 = Vector2()			# How much the mouse has moved since last
 # player components
 onready var camera = get_node("Camera")		# "attach" the camera to access from script.
 ```
+{collapsible="true" collapsed-title="Player.gd"}
+
 
 Add the function to detect mouse movement.
 
@@ -499,6 +503,8 @@ func _input (event):
     if event is InputEventMouseMotion:
         mouseDelta = event.relative
 ```
+{collapsible="true" collapsed-title="Player.gd"}
+
 
 Add the function to rotate the camera to match the mouse movements.
 
@@ -518,6 +524,8 @@ func _process (delta):
     # reset the mouse delta vector
     mouseDelta = Vector2()
 ```
+{collapsible="true" collapsed-title="Player.gd"}
+
 
 At this stage, you can run the game to test the mouse movement. Run the project, click the button on the main menu to play the game, and you should be able to look around your environment.
 
@@ -562,6 +570,8 @@ func _physics_process (delta):
     if Input.is_action_pressed("jump") and is_on_floor():
         playerVelocity.y = jumpStrength
 ```
+{collapsible="true" collapsed-title="Player.gd"}
+
 
 Run the game and move around the world.
 
@@ -610,6 +620,8 @@ if Input.is_action_pressed("run"):
     else:
         movementSpeed = 10
 ```
+{collapsible="true" collapsed-title="Player.gd"}
+
 
 
 ## Reusable Assets
@@ -768,6 +780,8 @@ func _process (delta):
     # move the bullet forwards
     translation += global_transform.basis.z * speed * delta
 ```
+{collapsible="true" collapsed-title="Player.gd"}
+
 
 Save the Script.
 
@@ -801,6 +815,8 @@ func destroy ():
     # destroys the bullet
     queue_free()
 ```
+{collapsible="true" collapsed-title="Player.gd"}
+
 
 ### Automatically deleting the bullet
 
@@ -898,6 +914,8 @@ func shoot ():
 
     ammo -= 1
 ```
+{collapsible="true" collapsed-title="shoot()"}
+
 
 Run the game at this stage to test the creation and shooting of bullet instances.
 
@@ -1052,6 +1070,8 @@ var path_node = 0
 var speed = 10
 onready var player = $"../../Player"
 ```
+{collapsible="true" collapsed-title="Enemy.gd"}
+
 
 Add the following code to the enemy script.
 
@@ -1070,6 +1090,8 @@ func move_to(target_pos):
     path = nav.get_simple_path(global_transform.origin, target_pos)
     path_node = 0
 ```
+{collapsible="true" collapsed-title="Enemy.gd"}
+
 
 Select the Timer node and change from the Inspector tab to the Node tab.
 
@@ -1153,6 +1175,8 @@ func take_damage(damage):
     if health <=0:
         queue_free()
 ```
+{collapsible="true" collapsed-title="Take Damage"}
+
 
 Run the project and you should see the object be destroyed as health reaches 0.
 
@@ -1476,6 +1500,8 @@ if Input.is_action_pressed("ray"):
             if collider.get_parent().has_method("raycast_collision"):
                 collider.get_parent().raycast_collision()
 ```
+{collapsible="true" collapsed-title="Player.gd"}
+
 
 <include from="reusableContent.topic" element-id="commitPush"/>
 
