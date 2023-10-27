@@ -588,7 +588,7 @@ Run the game or scene and you should be able to ‘see’ through the cameras �
 
 ### Player Run Functionality
 
-To implement a simple run functionality, `[Player.gd](http://Player.gd)` can be updated to modify `movementSpeed` based on whether the shift key is held down or not.
+To implement a simple run functionality, `Player.gd` can be updated to modify `movementSpeed` based on whether the shift key is held down or not.
 
 First, add a new Input into the Project Settings → Input Map page.
 
@@ -596,7 +596,7 @@ Then add the shift key to that map.
 
 ![Screen Shot 2022-10-17 at 10.03.27 am.png](Screen_Shot_2022-10-17_at_10.03.27_am.png)
 
-Open `[Player.gd](http://Player.gd)` and find the `_physics_process(delta)` function. Add the following if statement to set `movementSpeed` to change based on the button press.
+Open `Player.gd` and find the `_physics_process(delta)` function. Add the following if statement to set `movementSpeed` to change based on the button press.
 
 
 > The exact speed values can be modified based on the requirements of the game.
@@ -847,7 +847,7 @@ In 3d mode, move `bulletSpawn` to be in front of the camera.
 
 ![Screen Shot 2022-10-06 at 11.00.35 pm.png](Screen_Shot_2022-10-06_at_11.00.35_pm.png)
 
-Open `[Player.gd](http://Player.gd)` and add the code to preload the bullet and configure the spawn point.
+Open `Player.gd)` and add the code to preload the bullet and configure the spawn point.
 
 `onready` is a keyword which creates the variable once the scene has been fully loaded.
 
@@ -1444,7 +1444,7 @@ Save the `player.tscn` file.
 
 ## Player.gd script
 
-Open `[player.gd](http://player.gd)` and add two new variables at the top of the script to store the raycast and the hitpoint nodes.
+Open `Player.gd)` and add two new variables at the top of the script to store the raycast and the hitpoint nodes.
 
 ![Untitled](fpsRaycastHitCode.png)
 
