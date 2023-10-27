@@ -1119,6 +1119,7 @@ Unlike the player’s health, which is a global variable, each enemy (or any oth
 > The object taking damage will need to have a Collision Shape configured as a direct child of the root node.
 >
 > ![Screen Shot 2022-10-06 at 10.02.18 pm.png](CollisionShapeDirectChild.png)
+> 
 {style="note"}
 
 
