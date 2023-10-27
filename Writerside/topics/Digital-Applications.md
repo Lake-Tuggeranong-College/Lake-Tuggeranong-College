@@ -453,7 +453,7 @@ Open `Player.tscn`. Right click on the root node and attach a script. Leave the 
 
 Clear out the commented code, and add some variables which will be used later in the script.
 
-These variables defines how fast the player moves and how jumping and gravity impact the players movement.
+These variables define how fast the player moves and how jumping and gravity impact the players movement.
 
 ![Screen Shot 2022-08-05 at 1.33.52 pm.png](fpsPlayerScriptVariables.png)
 
