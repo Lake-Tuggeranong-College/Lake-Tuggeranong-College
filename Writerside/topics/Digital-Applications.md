@@ -125,7 +125,7 @@ Semester 1, Year 11
 
 ## Topics
 
-# FPS Tutorials
+## FPS Tutorials
 
 
 
@@ -346,8 +346,6 @@ You may wish to add walls, or fences.
 At this stage, keep it simple and get a good example of your first scene. 
 
 Similar to the Main Menu, the environment can be further developed at a later stage of the development process.
-
-- First Person Player Scene
 
 
 ## First Person Player Scene
@@ -613,8 +611,6 @@ if Input.is_action_pressed("run"):
         movementSpeed = 10
 ```
 
-- Reusable Assets
-
 
 ## Reusable Assets
 
@@ -828,7 +824,6 @@ Select Connect.
 
 Save the Bullet Scene.
 
-- Shooting Bullets
 
 
 ### Shooting Bullet Instances
@@ -1104,8 +1099,6 @@ Save the Main Game scene.
 
 Run the Game and your enemy should stalk you.
 
-- Objects/Enemies Taking Damage
-
 
 ## Objects / Enemies Taking Damage
 
@@ -1169,7 +1162,6 @@ Run the project and you should see the object be destroyed as health reaches 0.
 > Remember this process can work for any damageable object in the game - enemies, walls, doors etc.
 {style="note"}
 
-- Simple Texturing of a Mesh
 
 
 ## Simple Texturing of a mesh
@@ -1214,8 +1206,6 @@ Drag the texture file from the file system tab to the Material. The mesh should 
 ![2022-08-25 21-25-56.2022-08-25 21_27_22.gif](2022-08-25_21-25-56.2022-08-25_21_27_22.gif)
 
 Continue the process until all the meshes in the scene are textured as desired.
-
-- Game Mechanic - Points
 
 
 ## Points Mechanic
@@ -1308,8 +1298,6 @@ Every frame refresh, this code will take the current_score value and update the 
 $Camera/playerScore.text = str(Global.current_score)
 ```
 
-- Game Mechanic - Player Health
-
 
 ## Player Health
 
@@ -1383,7 +1371,7 @@ if Global.player_health <= 0:
 
 <include from="reusableContent.topic" element-id="commitPush"/>
 
-- Hiding the mouse Pointer
+
 
 
 ## Hiding the Mouse Pointer
@@ -1409,7 +1397,6 @@ func _exit_tree():
 
 ![Untitled](exitTree.png)
 
-- Raycasting
 
 
 ## Raycasting
@@ -1451,7 +1438,7 @@ In the inspector, Create a new SphereMesh, and change the radius and height to 0
 
 Set the colour of the mesh to red (or any other colour) to make it stand out in the game.
 
-![Untitled](Untitled 6.png)
+![Untitled](enemyRadiusHeight.png)
 
 Save the `player.tscn` file.
 
@@ -1459,7 +1446,7 @@ Save the `player.tscn` file.
 
 Open `[player.gd](http://player.gd)` and add two new variables at the top of the script to store the raycast and the hitpoint nodes.
 
-![Untitled](Untitled 7.png)
+![Untitled](raycastHitCode.png)
 
 ```python
 onready var ray = $Camera/RayCast
@@ -1476,7 +1463,7 @@ If it does collide with a collider, then it will check if that object has a func
 > Using this check for the raycast_collision() allows you to have objects in the game which will be impacted by the raycast (such as enemies) and other objects which don’t react (such as walls).
 {style="note"}
 
-![Untitled](Untitled 8.png)
+![Untitled](isActionHitRay.png)
 
 ```python
 if Input.is_action_pressed("ray"):
@@ -1503,7 +1490,7 @@ For objects to be detected by raycasts in this implementation there ********must
 
 Objects can be quickly edited to add a CSG shape, such as CSGBox enabled for collisions. For example, the wall objects can be modified to include this.
 
-![Untitled](Untitled 9.png)
+![Untitled](wallExample.png)
 
 Attach a script to the Wall root node. Include the function and at this stage simply output that the raycast has been detected.
 
@@ -1512,13 +1499,13 @@ func raycast_collision():
     print("ray hit")
 ```
 
-![Untitled](Untitled 10.png)
+![Untitled](raycastHit.png)
 
 Save the Wall scene.
 
 When the game is now run, aim at a wall and press the `ray` input. The “ray hit” output should be visible in the Output.
 
-![Untitled](Untitled 11.png)
+![Untitled](rayHitDemonstration.png)
 
 
 <include from="reusableContent.topic" element-id="commitPush"/>
@@ -1527,14 +1514,12 @@ Any other objects in the game can react to raycasts but following the same proce
 
 The `raycast_collision()` can delete the object, add points etc - whatever you need the object to do when it is “shot”.
 
-- Win Conditions
 
 
 ## Win Condition/s
 
 TBA
 
-- Lose Conditions
 
 
 ## Lose Condition/s
