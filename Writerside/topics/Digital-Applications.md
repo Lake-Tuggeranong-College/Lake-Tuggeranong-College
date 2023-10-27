@@ -1415,24 +1415,24 @@ First, you can choose to create a new input trigger for raycasting. Go to Projec
 > In this example the key `r` has been assigned. You can choose another key or mouse button as required.
 {style="note"}
 > 
-![Untitled](Untitled 2.png)
+![Untitled](raycastInputMap.png)
 
 ### Player Object
 
 Open the Player object (`player.tscn`) and create a ****************RayCast**************** child object of the Camera node.
 
-![Untitled](Untitled 3.png)
+![Untitled](raycastNode.png)
 
 With RayCast selected, set the Enabled option to be true in the Inspector. Additionally, get the **********Cast To********** settings to the 0, 0, -10. This will set the ray cast to be set to be in the direction of the camera.
 
 
 > If your player’s camera is configured differently, you may need to change these settings.
 
-![Untitled](Untitled 4.png)
+![Untitled](raycastSettings.png)
 
 Create a ************************MeshInstance************************ as a child of the Player root node, calling it **HitPoint**.
 
-![Untitled](Untitled 5.png)
+![Untitled](raycastNode.png)
 
 In the inspector, Create a new SphereMesh, and change the radius and height to 0.1 and 0.2 respectively.
 
