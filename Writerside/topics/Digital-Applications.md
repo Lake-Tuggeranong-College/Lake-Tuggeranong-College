@@ -863,7 +863,7 @@ In 3d mode, move `bulletSpawn` to be in front of the camera.
 
 ![Screen Shot 2022-10-06 at 11.00.35 pm.png](Screen_Shot_2022-10-06_at_11.00.35_pm.png)
 
-Open `Player.gd)` and add the code to preload the bullet and configure the spawn point.
+Open `Player.gd` and add the code to preload the bullet and configure the spawn point.
 
 `onready` is a keyword which creates the variable once the scene has been fully loaded.
 
@@ -1468,7 +1468,7 @@ Save the `player.tscn` file.
 
 ## Player.gd script
 
-Open `Player.gd)` and add two new variables at the top of the script to store the raycast and the hitpoint nodes.
+Open `Player.gd` and add two new variables at the top of the script to store the raycast and the hitpoint nodes.
 
 ![Untitled](fpsRaycastHitCode.png)
 
