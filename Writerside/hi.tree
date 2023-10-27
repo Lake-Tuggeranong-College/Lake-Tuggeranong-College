@@ -20,10 +20,7 @@
         <toc-element topic="Independent-Project.topic"/>
     </toc-element>
     <toc-element topic="ISD.topic">
-        <toc-element topic="Digital-Assets.topic"/>
-        <toc-element topic="Dig.topic"/>
-        <toc-element topic="Digital-Solutions.topic"/>
-        <toc-element topic="Independent-Project-ISD.topic"/>
+        <toc-element topic="Digital-Assets.md"/>
     </toc-element>
     <toc-element topic="WebsiteDevelopment.topic">
         <toc-element topic="PHP-Semester-1.topic"/>

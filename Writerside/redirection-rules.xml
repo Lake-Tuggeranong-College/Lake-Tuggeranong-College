@@ -34,4 +34,20 @@
         <description>Created after removal of "Robotics and Mechatronics" from Help Instance</description>
         <accepts>Robotics-and-Mechatronics.html</accepts>
     </rule>
+    <rule id="4a8f8a0">
+        <description>Created after removal of "Digital Assets" from Help Instance</description>
+        <accepts>Digital-Assets.html</accepts>
+    </rule>
+    <rule id="66cf60d4">
+        <description>Created after removal of "Digital Applications" from Help Instance</description>
+        <accepts>Dig.html</accepts>
+    </rule>
+    <rule id="45385376">
+        <description>Created after removal of "Digital Solutions" from Help Instance</description>
+        <accepts>Digital-Solutions.html</accepts>
+    </rule>
+    <rule id="18c86fe5">
+        <description>Created after removal of "Independent Project" from Help Instance</description>
+        <accepts>Independent-Project-ISD.html</accepts>
+    </rule>
 </rules>
