@@ -193,7 +193,7 @@ Right-click on the button and Attach a Script. Call this script `SceneChange.gd`
 
 ![Screen Shot 2022-08-15 at 10.35.33 am.png](Screen_Shot_2022-08-15_at_10.35.33_am.png)
 
-With the button selected, click on the Node tab, next to the Inspector, and double click on the `pressed(`) signal.
+With the button selected, click on the Node tab, next to the Inspector, and double-click on the `pressed(`) signal.
 
 ![Screen Shot 2022-08-15 at 10.36.02 am.png](Screen_Shot_2022-08-15_at_10.36.02_am.png)
 
@@ -249,11 +249,11 @@ The Main menu developed can be continued in the future at any stage of the devel
 
 To start with, the player will need to walk on something, so the first step is to create a `MeshInstance` which will be the floor of the room where the player starts.
 
-Right Click on the Game scene and choose Add Child Node. Search for Mesh Instance.
+Right-Click on the Game scene and choose Add Child Node. Search for Mesh Instance.
 
 ![Screen Shot 2022-08-05 at 11.05.03 am.png](fpsMeshInstanceCreate.png)
 
-Rename the node “Floor”or “Ground” or whatever is appropriate.
+Rename the node “Floor” or “Ground” or whatever is appropriate.
 
 ![Screen Shot 2022-08-05 at 11.05.53 am.png](fpsFloorNode.png)
 
@@ -282,7 +282,6 @@ Set the x and y size values to something larger. In this case, 20 has been used.
 ![Screen Shot 2022-08-05 at 1.05.48 pm.png](fpsPlaneMesh.png)
 
 ### Texture the floor
-
 
 > A Texture is simply an image that’s applied to a mesh.
 {style="note"}
