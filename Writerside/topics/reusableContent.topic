@@ -102,7 +102,6 @@
 
     <snippet id="commitPush">
 
-
         <note>Commit and push to Github!</note>
 
 
