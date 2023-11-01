@@ -161,7 +161,9 @@ Select the Button in the list and click Connect.
 
 ![Screen Shot 2022-08-05 at 10.37.22 am.png](fpsButtonSignalFunction.png)
 
-Save the Scene as `MainMenu.tscn`.
+Save the 
+<tooltip term="sceneTip">Scene</tooltip> 
+as `MainMenu.tscn`.
 
 <include from="reusableContent.topic" element-id="commitPush"/>
 
@@ -269,7 +271,7 @@ This updates the mesh to include 2 child nodes.
 
 ![Screen Shot 2022-08-05 at 11.11.38 am.png](fpsFloorCollisionShape.png)
 
-Currently the floor is quite small in size. The player object that will be created later will be quite significantly larger, so the relative scale will need to be addressed.
+Currently, the floor is quite small. The player object that will be created later will be quite significantly larger, so the relative scale will need to be addressed.
 
 Edit the mesh.
 
