@@ -257,7 +257,7 @@ Rename the node “Floor”or “Ground” or whatever is appropriate.
 
 ![Screen Shot 2022-08-05 at 11.05.53 am.png](fpsFloorNode.png)
 
-In the Inspector, look for the Mesh attribute. int he dropdown box, choose `New PlaneMesh`. 
+In the Inspector, look for the Mesh attribute. In the dropdown box, choose `New PlaneMesh`. 
 
 At this stage, the mesh is there, but the player (created later) will fall straight through it.
 
