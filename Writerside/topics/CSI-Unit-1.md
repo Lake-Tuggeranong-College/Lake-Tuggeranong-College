@@ -4,6 +4,7 @@ Semester 1, Year 11
 
 ## Schedule
 
+Click here for the [Schedule](Schedule.md).
 
 ## Key Topics
 
