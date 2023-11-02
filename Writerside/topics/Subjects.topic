@@ -38,7 +38,7 @@
         <!--    Add several topics that are less important or are relevant only for advanced/experienced users.    -->
         <secondary>
             <title>Online / Remote</title>
-            <a href="ISD.topic" type="development" summary="AKA - GamesDev. Godot">Interactive Software Development</a>
+            <a href="Remote-Learning.topic" type="world" summary="Remote Learning">Remote Learning</a>
         </secondary>
 
         <!--    Optionally add additional cards and links to topics that are not in this section but may be relevant.    -->

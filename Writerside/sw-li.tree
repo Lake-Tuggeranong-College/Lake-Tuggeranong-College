@@ -24,6 +24,7 @@
         <toc-element topic="Application-of-Robotics.topic"/>
         <toc-element topic="Independent-Project.topic"/>
     </toc-element>
+    <toc-element topic="Remote-Learning.topic"/>
     <toc-element topic="Reference.topic">
         <toc-element topic="reusableExample.topic"/>
         <toc-element topic="reusableContent.topic"/>
