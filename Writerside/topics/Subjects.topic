@@ -16,24 +16,22 @@
                 For other groups, try to keep the number between 2 and 6, but you can add more if necessary.-->
 
     <section-starting-page>
-        <title>Subjects</title>
+        <title>Subject Website - LTC IT</title>
         <description>
             These are the subjects available.
         </description>
 
         <!--    Add up to 2 topics that you want to promote. Use the "type" attribute to select an icon.    -->
         <spotlight>
-            <a href="Common.topic" type="start" summary="Topics shared across units">Common Topics</a>
-            <a href="Common.topic" type="start" summary="Topics shared across units">Common Topics</a>
-
+            <a href="https://classroom.google.com" type="start" summary="Google Classroom">Google Classroom</a>
+            <a href="https://student-profiles.ed.act.edu.au/" type="account" summary="BSSS Student Profile">BSSS Student Profile </a>
         </spotlight>
 
         <!--    Add several topics that are most important for this section.    -->
         <primary>
             <title>Subjects</title>
-            <a href="Robotics.topic" type="computer" summary="AKA - Programming. Arduino">Robotics + Mechatronics</a>
+            <a href="Cyber-Systems-ICT.topic" type="computer" summary="Networking and Programming">Cyber Systems</a>
             <a href="ISD.topic" type="development" summary="AKA - GamesDev. Godot">Interactive Software Development</a>
-            <a href="WebsiteDevelopment.topic" type="world" summary="AKA - WebDev. PHP or Python/Flask">Website Development</a>
         </primary>
 
         <!--    Add several topics that are less important or are relevant only for advanced/experienced users.    -->
@@ -41,7 +39,6 @@
             <title>Subjects</title>
             <a href="Robotics.topic" type="computer" summary="AKA - Programming. Arduino">Robotics + Mechatronics</a>
             <a href="ISD.topic" type="development" summary="AKA - GamesDev. Godot">Interactive Software Development</a>
-            <a href="WebsiteDevelopment.topic" type="world" summary="AKA - WebDev. PHP or Python/Flask">Website Development</a>
         </secondary>
 
         <!--    Optionally add additional cards and links to topics that are not in this section but may be relevant.    -->

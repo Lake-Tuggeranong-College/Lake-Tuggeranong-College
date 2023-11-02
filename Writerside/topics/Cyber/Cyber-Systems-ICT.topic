@@ -13,7 +13,7 @@
         </description>
         <!--    Add up to 2 topics that you want to promote. Use the "type" attribute to select an icon.    -->
         <spotlight>
-            <a href="CSI-Unit-1.md" type="key" summary="Topics shared across units">Year 11 Unit</a>
+            <a href="Cyber-Systems-1.topic" type="key" summary="Topics shared across units">Year 11 Unit</a>
             <a href="CSI-Unit-3.md" type="lock" summary="Topics shared across units">Year 12 Unit</a>
 
         </spotlight>
@@ -21,7 +21,7 @@
         <!--    Add several topics that are most important for this section.    -->
         <primary>
             <title>Year 11 Subjects</title>
-            <a href="CSI-Unit-1.md" type="start" summary="Unit 1.">Unit 1</a>
+            <a href="Cyber-Systems-1.topic" type="start" summary="Unit 1.">Unit 1</a>
             <a href="CSI-Unit-2.md" type="idea" summary="Unit 2.">Unit 2</a>
 
 

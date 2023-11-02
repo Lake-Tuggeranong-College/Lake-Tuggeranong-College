@@ -50,4 +50,12 @@
         <description>Created after removal of "Independent Project" from Help Instance</description>
         <accepts>Independent-Project-ISD.html</accepts>
     </rule>
+    <rule id="69e22731">
+        <description>Created after removal of "WebsiteDevelopment" from Subject Websiite - LTC IT</description>
+        <accepts>WebsiteDevelopment.html</accepts>
+    </rule>
+    <rule id="2644774">
+        <description>Created after removal of "Cyber Systems ICT Unit 1" from Subject Websiite - LTC IT</description>
+        <accepts>CSI-Unit-1.html</accepts>
+    </rule>
 </rules>
