@@ -29,15 +29,14 @@
 
         <!--    Add several topics that are most important for this section.    -->
         <primary>
-            <title>Subjects</title>
+            <title>Face to Face</title>
             <a href="Cyber-Systems-ICT.topic" type="computer" summary="Networking and Programming">Cyber Systems</a>
             <a href="ISD.topic" type="development" summary="AKA - GamesDev. Godot">Interactive Software Development</a>
         </primary>
 
         <!--    Add several topics that are less important or are relevant only for advanced/experienced users.    -->
         <secondary>
-            <title>Subjects</title>
-            <a href="Robotics.topic" type="computer" summary="AKA - Programming. Arduino">Robotics + Mechatronics</a>
+            <title>Online / Remote</title>
             <a href="ISD.topic" type="development" summary="AKA - GamesDev. Godot">Interactive Software Development</a>
         </secondary>
 
