@@ -4,7 +4,7 @@ Semester 1, Year 11
 
 ## Schedule
 
-Click here for the [Schedule](Schedule.md).
+Click here for the [Schedule](CyberSystemsUnit1Schedule.md).
 
 ## Key Topics
 
@@ -14,7 +14,3 @@ and other things.
 
 ## Course Content
 
-1. Build network
-2. Program ESP32s
-3. ...
-4. Profit

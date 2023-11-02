@@ -8,9 +8,11 @@
 
     <toc-element topic="Subjects.topic"/>
     <toc-element topic="Cyber-Systems-ICT.topic">
+        <toc-element topic="Cyber-Systems-1.topic">
+            <toc-element topic="CyberSystemsUnit1Schedule.md"/>
+            <toc-element topic="CyberSystemsUnit1CourseContent.md"/>
+        </toc-element>
         <toc-element topic="CSI-Unit-1.md">
-            <toc-element topic="Schedule.md"/>
-            <toc-element topic="Topics.md"/>
         </toc-element>
         <toc-element topic="CSI-Unit-2.md"/>
         <toc-element topic="CSI-Unit-3.md"/>
