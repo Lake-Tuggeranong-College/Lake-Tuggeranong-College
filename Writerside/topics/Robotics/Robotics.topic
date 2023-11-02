@@ -14,17 +14,17 @@
         </description>
         <!--    Add up to 2 topics that you want to promote. Use the "type" attribute to select an icon.    -->
         <spotlight>
-            <a href="Robotics-Mechatronics.md" type="key" summary="Topics shared across units">Year 11 Unit</a>
+            <a href="Application-of-Robotics.topic" type="key" summary="Topics shared across units">Year 11 Unit</a>
             <a href="Independent-Project.topic" type="lock" summary="Topics shared across units">Year 12 Unit</a>
 
         </spotlight>
 
         <!--    Add several topics that are most important for this section.    -->
         <primary>
-            <title>Year 11 Subjects</title>
-            <a href="Building-Programming-Circuits.topic" type="start" summary="Unit 1.">Building and Programming Circuits</a>
-            <a href="Robotics-Mechatronics.md" type="idea" summary="Unit 2.">Robotics Mechatronics</a>
+            <title>Year 12 Subjects</title>
 
+            <a href="Application-of-Robotics.topic" type="bug" summary="Unit 3.">Application of Robotics</a>
+            <a href="Independent-Project.topic" type="presentation" summary="Unit 4.">Independent Project</a>
 
         </primary>
 
