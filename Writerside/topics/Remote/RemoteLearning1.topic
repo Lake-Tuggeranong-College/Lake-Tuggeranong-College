@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="Remote Learning Unit 1" id="RemoteLearning1">
+
+<!--    A section combines multiple topics dedicated to a specific subject.
+            Add a starting page to provide an overview of the topics in the section.
+            Start with two topics you want to promote in the <spotlight> group,
+            several important topics in the <primary> group (for example, where to start),
+            several less important topics in the <secondary> group (for example, more advanced topics),
+            and optionally add any other relevant topics in the <misc> group as cards and lists of links
+            (maybe related topics from other sections).
+            Only the spotlight section is limited to two topics.
+            For other groups, try to keep the number between 2 and 6, but you can add more if necessary.-->
+
+    <section-starting-page>
+        <title>Cyber Systems Unit 1</title>
+        <description>
+           Welcome to the front page for Semester 1 of Cyber Systems!
+        </description>
+
+        <!--    Add up to 2 topics that you want to promote. Use the "type" attribute to select an icon.    -->
+        <spotlight>
+            <a href="CyberSystemsUnit1Schedule.md" type="account" summary="Calendar of work">Schedule</a>
+            <a href="CyberSystemsUnit1CourseContent.md" type="search" summary="Find all the information regarding topics and work required.">Course Content</a>
+        </spotlight>
+
+        <!--    Add several topics that are most important for this section.    -->
+        <primary>
+            <title>Assessments</title>
+            <a href="http://classroom.google.com" summary="Assessment 1" type="documents">Assessment 1</a>
+            <a href="http://classroom.google.com" summary="Assessment 2" type="documents">Assessment 2</a>
+            <a href="http://classroom.google.com" summary="Assessment 3" type="documents">Assessment 2</a>
+
+        </primary>
+
+        <!--    Add several topics that are less important or are relevant only for advanced/experienced users.    -->
+        <secondary>
+            <title>Additional Resources</title>
+            <a href="http://classroom.google.com" summary="Unit Outline" type="check-list">Unit Outline</a>
+        </secondary>
+
+
+    </section-starting-page>
+
+</topic>
