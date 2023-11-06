@@ -4,3 +4,9 @@
 2. Program ESP32s
 3. ...
 4. Profit
+
+## Software Installation {id="CSI-1-SoftwareInstallation"}
+
+Install Wireshark
+
+Install Packet Tracer
