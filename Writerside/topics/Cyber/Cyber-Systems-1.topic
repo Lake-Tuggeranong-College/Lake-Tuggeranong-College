@@ -39,7 +39,8 @@
         <!--    Add several topics that are less important or are relevant only for advanced/experienced users.    -->
         <secondary>
             <title>Additional Resources</title>
-            <a href="http://classroom.google.com" summary="Unit Outline" type="check-list">Unit Outline</a>
+            <a href="http://classroom.google.com" summary="Unit Outline" type="documents">Unit Outline</a>
+            <a href="Cyber-Systems-ICT-Unit-1-VET-Competencies.md" summary="VET Competencies" type="check-list">VET Competencies</a>
         </secondary>
 
 
