@@ -1,8 +1,8 @@
 # Cyber Systems, ICT Unit 1 VET Competencies
 
-The following Competencies are associated with this unit
+The following Competencies are associated with this unit.
 
-## Certificate II in Applied Digital Technologies
+## ICT20120 - Certificate II in Applied Digital Technologies
 
 [//]: # (Done in HTML to allow for a header column)
 <table style="both">
@@ -50,7 +50,7 @@ The following Competencies are associated with this unit
     </tr>
 </table>
 
-## Certificate III in Information Technology
+## ICT30120 - Certificate III in Information Technology
 
 <table style="both">
     <tr>
