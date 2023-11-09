@@ -26,8 +26,11 @@
         <toc-element topic="Independent-Project.topic"/>
     </toc-element>
     <toc-element topic="Remote-Learning.topic">
-        <toc-element topic="RemoteLearning1.topic"/>
-        <toc-element topic="RemoteLearning2.topic"/>
+        <toc-element topic="RemoteLearningICTUnit1.topic">
+            <toc-element topic="RemoteLearning-ICT-Unit-1-VET-Competencies.md"/>
+            <toc-element topic="RemoteLearningICTUnit1CourseContent.md"/>
+            <toc-element topic="RemoteLearningICTUnit1Schedule.md"/>
+        </toc-element>
     </toc-element>
     <toc-element topic="Reference.topic">
         <toc-element topic="reusableExample.topic"/>

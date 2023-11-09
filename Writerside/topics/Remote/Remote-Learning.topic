@@ -3,7 +3,7 @@
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
 <topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
-       title="Remote Learning" id="Remote-Learning">
+       title="Remote Learning, ICT" id="Remote-Learning">
 
 <!--    A section combines multiple topics dedicated to a specific subject.
             Add a starting page to provide an overview of the topics in the section.
@@ -23,7 +23,7 @@
 
         <!--    Add up to 2 topics that you want to promote. Use the "type" attribute to select an icon.    -->
         <spotlight>
-            <a href="RemoteLearning1.topic" type="account" summary="This overrides the card summary of the topic">Custom card title</a>
+            <a href="RemoteLearningICT.topic.topic" type="account" summary="This overrides the card summary of the topic">Custom card title</a>
             <a href="RemoteLearning2.topic" type="search" summary="This overrides the card summary of the topic">Another custom title</a>
         </spotlight>
 

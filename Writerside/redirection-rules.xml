@@ -58,4 +58,16 @@
         <description>Created after removal of "Cyber Systems ICT Unit 1" from Subject Websiite - LTC IT</description>
         <accepts>CSI-Unit-1.html</accepts>
     </rule>
+    <rule id="467edf24">
+        <description>Created after removal of "Remote Learning Unit 1" from Subject Websiite - LTC IT</description>
+        <accepts>RemoteLearning1.html</accepts>
+    </rule>
+    <rule id="1e716398">
+        <description>Created after removal of "Remote Learning Unit 2" from Subject Websiite - LTC IT
+            Help IDs that are no longer available in build after removal:
+
+            RemoteLearning]2
+        </description>
+        <accepts>RemoteLearning2.html</accepts>
+    </rule>
 </rules>
