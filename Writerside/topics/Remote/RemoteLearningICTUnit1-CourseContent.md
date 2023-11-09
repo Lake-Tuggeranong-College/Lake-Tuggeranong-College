@@ -19,7 +19,7 @@ When logging in, choose Students and then Sign in with Google. Use your schoolsn
 
 This course introduces you to software development with a focus on Arduino as the environment - the language, IDE and platform.
 
-## Course Introduction {id="Remote-1-CourseOverview"}
+## Software Development Introduction {id="Remote-1-SoftwareDevelopmentIntroduction"}
 
 This will be general skills for programming. Not dependant on language, just the concepts.
 Specific implementations of these topics, in specific languages and software will be demonstrated in the necessary courses.
