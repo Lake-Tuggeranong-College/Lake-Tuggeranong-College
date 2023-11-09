@@ -7,10 +7,7 @@
 
 ## Software Requirements {id="CSI-1-SoftwareRequirements"}
 
-The following pieces of software are required for this unit. Install them if they are not currently installed on your device.
-
-- Wireshark
-- Packet Tracer
+There are no requirement to install software for this semester.
 
 ## Subject Overview {id="CSI-1-SubjectOverview"}
 

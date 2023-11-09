@@ -3,7 +3,7 @@
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
 <topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
-       title="Remote Learning, ICT Unit 1" id="RemoteLearningICTUnit1" help-id="RemoteLearningICTUnit1">
+       title="Remote Learning, ICT Unit 1" id="RemoteLearningICTUnit1">
 
 <!--    A section combines multiple topics dedicated to a specific subject.
             Add a starting page to provide an overview of the topics in the section.
@@ -18,7 +18,7 @@
     <section-starting-page>
         <title>Remote Learning, ICT Unit 1</title>
         <description>
-           Welcome to the front page for Semester 1 of Cyber Systems!
+           Welcome to the Unit 1 for Remote Learning, ICT. The focus for this unit is Programming and Electronics.
         </description>
 
         <!--    Add up to 2 topics that you want to promote. Use the "type" attribute to select an icon.    -->
