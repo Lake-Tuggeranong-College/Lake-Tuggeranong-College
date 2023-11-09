@@ -1,4 +1,4 @@
-# Remote Learning, ICT Unit 2 Schedule
+# Remote Learning, ICT Unit 1 Schedule
 
 
 [//]: # (Done in HTML to allow for a header column)
