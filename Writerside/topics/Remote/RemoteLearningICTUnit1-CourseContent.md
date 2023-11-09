@@ -202,7 +202,7 @@ Interpreted languages can allow for more flexible programming, however tend to e
 
 > These are broad pros and cons and not representative of all languages.
 > 
-{id="note"}
+{style="note"}
 
 ### Input, Processing, Output
 
@@ -230,3 +230,89 @@ Here is a template you can use to create your IPO Charts.
 
 [IPO Chart Template](https://docs.google.com/document/d/15Z3BKzqbFT7EnutHYzFpX6Hff8vbE91ow20xJkksAIc/edit?usp=drivesdk)
 
+### Arduino Implementation
+
+> Be aware - The term "Arduino" can refer to either;
+> 1. The Arduino programming language, 
+> 2. The Arduino IDE, or 
+> 3. The Arduino board.
+>
+{style="note"}
+    
+### Arduino Sketches
+
+> Arduino Code is referred to as Sketches.
+>
+{style="note"}
+
+Each Arduino sketch needs to have the same basic structure.
+
+**At a minimum**, the sketch needs to have the setup() and loop() functions.
+
+![Structure of an Arduino Sketch example with code](Structure_of_an_Arduino_Sketch_example_with_code.png)
+
+### Practical Exercises
+
+In this initial stage, you'll be using [TinkerCAD](https://www.tinkercad.com/) to virtually program Arduino Uno board.
+
+![TinkerCAD Front Page](tinkerCADFrontPage.png)
+
+Click the link to join the Class for this subject.
+
+[Classroom login | Tinkercad](https://www.tinkercad.com/joinclass/QM5M8HWQJSG6)
+
+Sign into Tinkercad with Google, using your school credentials.
+
+![Join The Classroom](tinkerCADJoinClassroom.png)
+
+Click on the first activity - “1 Blink”.
+
+Choose `Circuit` from the `Create new design` menu.
+
+![Select Circuits](tinkerCADSelectCircuit.png)
+
+Change the Basics components menu to Starters Arduino. Find `Blink` in that list.
+
+![TinkerCAD Blink Example](tinkerCADBlink.png)
+
+Drag the Blink module to the editing area
+
+![TinkerCAD Blink Circuit](tinkerCADBlinkCircuit.png)
+
+Click on the Code button, and change the code type to Text.
+
+Here you will see the "Hello World" code for Arduino, also referred to as Blink. At this stage, don't worry too much about the specific code - you'll learn that later. Just notice how the code is written, the syntax and the functions used - `setup()` and `loop()`.
+
+![Code View](tinkerCADCode.png)
+
+You can start the code running by using the Start Simulation button.
+
+You should see the LED flashing on and off every second.
+
+Congratulations - you've (potentially) written your first Arduino Sketch!
+
+![Start Simulation](tinkerCADStartSimulation.gif)
+
+### Extension
+
+1. Goal: Update the code to flash on and off every half a second. 
+    
+    What part of the code would you need to change? 
+    
+2. Change the LED to be on pin 10. 
+    
+    What needs/needed to be changed?
+    
+
+### Review
+
+1. How were the first computers programmed?
+2. Where did the name "bug" originate?
+3. What is this "Hello World" you speak of?
+4. In plain language, What is the difference between interpreted and compiled code?
+    1. Expand on your explanation by adding technical details.
+5. What is the best programming language to learn? Why?
+6. What does the term “Arduino” refer to?
+7. How does the Arduino communicate between the computer and itself?
+8. What do you use to display data sent from the Arduino?
+9. What types of pins does an Arduino Uno have?
