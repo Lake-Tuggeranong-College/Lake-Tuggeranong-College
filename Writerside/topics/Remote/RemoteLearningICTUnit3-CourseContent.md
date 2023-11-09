@@ -1,4 +1,4 @@
-# Remote Learning, ICT Unit 2 Course Content
+# Remote Learning, ICT Unit 3 Course Content
 
 1. Build network
 2. Program ESP32s

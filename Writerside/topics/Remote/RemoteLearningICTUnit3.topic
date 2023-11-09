@@ -3,7 +3,7 @@
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
 <topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
-       title="Remote Learning, ICT" id="Remote-Learning">
+       title="Remote Learning, ICT Unit 3" id="RemoteLearningICTUnit1" help-id="RemoteLearningICT">
 
 <!--    A section combines multiple topics dedicated to a specific subject.
             Add a starting page to provide an overview of the topics in the section.
@@ -16,33 +16,33 @@
             For other groups, try to keep the number between 2 and 6, but you can add more if necessary.-->
 
     <section-starting-page>
-        <title>Section starting page title</title>
+        <title>Cyber Systems Unit 1</title>
         <description>
-            Add an introductory paragraph: explain what this section is about in 2-3 short sentences.
+           Welcome to the front page for Semester 1 of Cyber Systems!
         </description>
 
         <!--    Add up to 2 topics that you want to promote. Use the "type" attribute to select an icon.    -->
         <spotlight>
-            <a href="RemoteLearningICTUnit1.topic" type="account" summary="This overrides the card summary of the topic">Custom card title</a>
-            <a href="RemoteLearningICTUnit2.topic" type="search" summary="This overrides the card summary of the topic">Another custom title</a>
+            <a href="CyberSystemsUnit1Schedule.md" type="account" summary="Calendar of work">Schedule</a>
+            <a href="CyberSystemsUnit1CourseContent.md" type="search" summary="Find all the information regarding topics and work required.">Course Content</a>
         </spotlight>
 
         <!--    Add several topics that are most important for this section.    -->
         <primary>
-            <title>Even Years</title>
-            <a href="RemoteLearningICTUnit1.topic" type="start" summary="Unit 1.">Unit 1</a>
-            <a href="RemoteLearningICTUnit2.topic" type="idea" summary="Unit 2.">Unit 2</a>
-
+            <title>Assessments</title>
+            <a href="http://classroom.google.com" summary="Assessment 1" type="documents">Assessment 1</a>
+            <a href="http://classroom.google.com" summary="Assessment 2" type="documents">Assessment 2</a>
+            <a href="http://classroom.google.com" summary="Assessment 3" type="documents">Assessment 2</a>
 
         </primary>
 
+        <!--    Add several topics that are less important or are relevant only for advanced/experienced users.    -->
         <secondary>
-            <title>Odd Years</title>
-
-            <a href="RemoteLearningICTUnit3.topic" type="bug" summary="Unit 3.">Unit 3</a>
-            <a href="RemoteLearningICTUnit4.topic" type="presentation" summary="Unit 4.">Unit 4</a>
-
+            <title>Additional Resources</title>
+            <a href="http://classroom.google.com" summary="Unit Outline" type="documents">Unit Outline</a>
+            <a href="Cyber-Systems-ICT-Unit-1-VET-Competencies.md" summary="VET Competencies" type="check-list">VET Competencies</a>
         </secondary>
+
 
     </section-starting-page>
 
