@@ -3,7 +3,7 @@
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
 <topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
-       title="Cyber Systems, ICT Unit 1" id="Cyber-Systems-1">
+       title="Cyber Systems, ICT Unit 1" id="CSI1" help-id="Cyber-Systems-1">
 
 <!--    A section combines multiple topics dedicated to a specific subject.
             Add a starting page to provide an overview of the topics in the section.
@@ -23,8 +23,8 @@
 
         <!--    Add up to 2 topics that you want to promote. Use the "type" attribute to select an icon.    -->
         <spotlight>
-            <a href="CyberSystemsUnit1Schedule.md" type="account" summary="Calendar of work">Schedule</a>
-            <a href="CyberSystemsUnit1CourseContent.md" type="search" summary="Find all the information regarding topics and work required.">Course Content</a>
+            <a href="CSI1-Schedule.md" type="account" summary="Calendar of work">Schedule</a>
+            <a href="CSI1-Content.md" type="search" summary="Find all the information regarding topics and work required.">Course Content</a>
         </spotlight>
 
         <!--    Add several topics that are most important for this section.    -->
@@ -40,7 +40,7 @@
         <secondary>
             <title>Additional Resources</title>
             <a href="http://classroom.google.com" summary="Unit Outline" type="documents">Unit Outline</a>
-            <a href="Cyber-Systems-ICT-Unit-1-VET-Competencies.md" summary="VET Competencies" type="check-list">VET Competencies</a>
+            <a href="CSI1-Vet.md" summary="VET Competencies" type="check-list">VET Competencies</a>
         </secondary>
 
 

@@ -1,4 +1,4 @@
-# Cyber Systems, ICT Unit 1 VET Competencies
+# VET Competencies
 
 The following Competencies are associated with this unit.
 
