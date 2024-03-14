@@ -6,14 +6,17 @@
        title="reusableContent" id="reusableContent">
 
 
+    <p>This page exists to have some common blocks that can be reused throughout the site. Ordinarily, you don't need to view this page directly. </p>
+    <p>---</p>
+
+
+
     <snippet id="contactdetails">
 
         <table style="none">
             <tr>
                 <td><img src="avatar.png" alt="Avatar"></img></td>
                 <td>Ryan Cather</td>
-            </tr>
-            <tr>
                 <td>
                     <format style="bold">Email</format>
                     <a href="mailto:ryan.cather@ed.act.edu.au">ryan.cather@ed.act.edu.au</a></td>
@@ -50,16 +53,16 @@
                     </tr>
                     <tr>
                         <td> E</td>
-                        <td> The submission barely covers the base requirements of the topic. |</td>
+                        <td> The submission barely covers the base requirements of the topic.</td>
                     </tr>
                     <tr>
                         <td> D</td>
-                        <td> The submission doesn’t cover all of the base requirements of the topic. |</td>
+                        <td> The submission doesn’t cover all the base requirements of the topic.</td>
                     </tr>
                     <tr>
                         <td> C</td>
                         <td> The submission covers the base requirements of the topic. For example, submits the
-                            in-class tasks. |
+                            in-class tasks.
                         </td>
                     </tr>
                     <tr>
@@ -67,15 +70,14 @@
                         <td> The submission includes the base requirements and also includes an analysis of the
                             topic.
                             This analysis could include an in-depth explanation of how the topic functions,
-                            including
-                            correct technical terminology. |
+                            including correct technical terminology.
                         </td>
                     </tr>
                     <tr>
                         <td> A</td>
                         <td> All of the above, and a critical analysis - evaluating the approach taken, offering
                             other
-                            potential solutions, using research, and weighing the pros and cons of each approach. |
+                            potential solutions, using research, and weighing the pros and cons of each approach.
                         </td>
                     </tr>
                 </table>
