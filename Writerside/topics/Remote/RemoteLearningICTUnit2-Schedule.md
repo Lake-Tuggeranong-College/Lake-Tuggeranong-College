@@ -11,7 +11,7 @@
     </tr>
     <tr>
         <td>1</td>
-        <td><ul><li><a href="CyberSystemsUnit1CourseContent.md#CSI-1-SoftwareRequirements">Software Installation</a></li><li><a href="CyberSystemsUnit1CourseContent.md#CSI-1-SubjectOverview">Subject Overview</a></li></ul></td>
+        <td><ul><li><a href="CSI1-Content.md#CSI-1-SoftwareRequirements">Software Installation</a></li><li><a href="CSI1-Content.md#CSI-1-SubjectOverview">Subject Overview</a></li></ul></td>
         <td></td>
         <td>Read the Unit Outline!</td>
     </tr>

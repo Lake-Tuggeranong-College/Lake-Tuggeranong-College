@@ -30,7 +30,7 @@
         <!--    Add several topics that are most important for this section.    -->
         <primary>
             <title>Face to Face</title>
-            <a href="Cyber-Systems-ICT.topic" type="computer" summary="Networking and Programming">Cyber Systems</a>
+            <a href="CSI.topic" type="computer" summary="Networking and Programming">Cyber Systems</a>
             <a href="ISD.topic" type="development" summary="AKA - GamesDev. Godot">Interactive Software Development</a>
             <a href="Robotics.topic" type="branch" summary="Robotics and Mechatronics">Robotics and Mechatronics</a>
         </primary>

@@ -139,3 +139,5 @@
 </table>
 
 (*) To be Confirmed
+
+ <include from="reusableContent.topic" element-id="contactdetails"/>

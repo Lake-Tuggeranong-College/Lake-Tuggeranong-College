@@ -120,6 +120,7 @@
         </table>
     </chapter>
 
+    <include from="reusableContent.topic" element-id="contactdetails"/>
 
     <chapter title="Topics" id="topics">
 
