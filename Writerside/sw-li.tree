@@ -48,8 +48,8 @@
         </toc-element>
     </toc-element>
     <toc-element topic="Reference.topic" hidden="true">
-        <toc-element topic="reusableExample.topic"/>
-        <toc-element topic="reusableContent.topic"/>
-        <toc-element topic="Common.topic"/>
+        <toc-element topic="reusableExample.topic" hidden="true"/>
+        <toc-element topic="reusableContent.topic" hidden="true"/>
+        <toc-element topic="Common.topic" hidden="true"/>
     </toc-element>
 </instance-profile>
