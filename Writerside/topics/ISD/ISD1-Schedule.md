@@ -1,7 +1,5 @@
 # Schedule
 
-Semester 1, Year 11
-
 [//]: # (Done in HTML to allow for a header column)
 <table style="both">
     <tr>
