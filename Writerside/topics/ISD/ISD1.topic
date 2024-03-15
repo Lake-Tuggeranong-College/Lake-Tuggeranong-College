@@ -16,9 +16,10 @@
             For other groups, try to keep the number between 2 and 6, but you can add more if necessary.-->
 
     <section-starting-page>
-        <title>ISD Unit 1</title>
+        <title>Space Invaders!</title>
+
         <description>
-           Welcome to the front page for Semester 1 of ISD!
+          Interactive Sofware Development, Digital Technologies - Digital Assets.
         </description>
 
         <!--    Add up to 2 topics that you want to promote. Use the "type" attribute to select an icon.    -->
