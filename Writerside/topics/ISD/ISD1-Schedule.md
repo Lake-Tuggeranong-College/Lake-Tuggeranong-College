@@ -1,4 +1,4 @@
-# ISD Unit 1
+# Schedule
 
 Semester 1, Year 11
 
@@ -13,7 +13,7 @@ Semester 1, Year 11
     </tr>
     <tr>
         <td>1</td>
-        <td></td>
+        <td><ul><li><a href="ISD1-Content.md#ISD1-ProjectRequirements">Project Requirements</a></li><li><a href="CSI1-Content.md#CSI-1-SubjectOverview">Subject Overview</a></li></ul></td>
         <td></td>
     </tr>
     <tr>
@@ -54,7 +54,7 @@ Semester 1, Year 11
     <tr>
         <td>9</td>
         <td></td>
-        <td><strong>Exam 'Week'</strong></td>
+        <td><strong>Cross Line Exams Wednesday & Thursday </strong></td>
     </tr>
     <tr>
         <td>10</td>
@@ -62,12 +62,12 @@ Semester 1, Year 11
         <td></td>
     </tr>
     <tr>
-        <td colspan="3">School Holidays!</td>
-    </tr>
-    <tr>
         <td>11</td>
         <td></td>
         <td></td>
+    </tr>
+    <tr>
+        <td colspan="3">School Holidays!</td>
     </tr>
     <tr>
         <td>12</td>
@@ -107,10 +107,17 @@ Semester 1, Year 11
     <tr>
         <td>19</td>
         <td></td>
-        <td></td>
+        <td><strong><p>Cross Line Exams Mon-Wed. </p>
+        <p>Year 12 AST Trial Thu-Fri.</p>
+        </strong></td>
     </tr>
     <tr>
         <td>20</td>
+        <td></td>
+        <td></td>
+    </tr>
+   <tr>
+        <td>21</td>
         <td></td>
         <td></td>
     </tr>

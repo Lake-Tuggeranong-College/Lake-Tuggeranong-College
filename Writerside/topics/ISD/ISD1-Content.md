@@ -2,7 +2,7 @@
 
 ## Core Game Tutorials
 
-### Project Configuration
+### Project Configuration {id="ISD1-ProjectRequirements"}
 <video src="https://youtu.be/MyH6Ddp60qg"/>
 
 

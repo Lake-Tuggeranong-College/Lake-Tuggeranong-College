@@ -70,4 +70,8 @@
         </description>
         <accepts>RemoteLearning2.html</accepts>
     </rule>
+    <rule id="2fee698">
+        <description>Created after removal of "VET Competencies" from Subject Websiite - LTC IT</description>
+        <accepts>ISD1-Vet.html</accepts>
+    </rule>
 </rules>
