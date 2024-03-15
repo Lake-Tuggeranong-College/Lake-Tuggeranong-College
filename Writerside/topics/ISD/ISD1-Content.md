@@ -26,7 +26,7 @@ In this video, you'll see how to configure the project window size and colour as
 
 You'll see how to add images into the scene as well as a label, with a brief introduction on how to layout these items.
 
-<video src="https://youtu.be/CBA3sxDbgog"/>"
+<video src="https://youtu.be/CBA3sxDbgog"/>
 
 #### Main Menu Buttons
 
@@ -37,7 +37,7 @@ the title font, and then change the font of all the buttons to a new font.
 
 ### Main Menu Buttons Functionality
 
-<video src="https://youtu.be/QH_5xVreQ-w"/>"
+<video src="https://youtu.be/QH_5xVreQ-w"/>
 
 In this video, you're shown one way of changing between scenes.
 
@@ -101,7 +101,7 @@ This video shows the process of designing and coding the fundamental gameplay of
 
 ### Border Containment
 
-<video src="https://youtu.be/ef0R6-4viOA"/>"
+<video src="https://youtu.be/ef0R6-4viOA"/>
 
 In this video, you're shown how to create (invisible) borders on the left and right of the screen using Area2D nodes,
 and assigning them groups.
@@ -113,7 +113,7 @@ Finally, you're shown the code to restrict the player to the playing area betwee
 
 ### Global Variables & Bullets
 
-<video src="https://youtu.be/cYXn_vcRRTk"/>"
+<video src="https://youtu.be/cYXn_vcRRTk"/>
 
 In this video you're shown how to create global variables. Global Variables can be accessed (used) by any script
 throughout the entire project, from any script. This can be used to keep track of many variables needed throughout the
@@ -147,7 +147,7 @@ func _physics_process(delta):
 
 ### Enemy Group Movement
 
-<video src="https://youtu.be/Hav91wHl3JA"/>"
+<video src="https://youtu.be/Hav91wHl3JA"/>
 
 In this video, you're shown how to group the enemy instances together and script them to "bounce" off the sides of the
 game window when the first collision occurs.
@@ -168,7 +168,7 @@ func _physics_process(delta):
 
 ### Enemies Firing
 
-<video src="https://youtu.be/9XiSX3SM428"/>"
+<video src="https://youtu.be/9XiSX3SM428"/>
 
 In this first video, you're shown the configuration of the enemy bullets, and walked through the changes that need to be
 made to the `global.gd`, `enemy.gd` scripts and the creation of the `enemy-bullets.gd` script.
@@ -245,7 +245,7 @@ var enemyBulletInstanceCount = 0
 
 ### Quit Game Application
 
-<video src="https://youtu.be/eNWupsu4DWI"/>"
+<video src="https://youtu.be/eNWupsu4DWI"/>
 
 This video shows how to modify the main menu to include a quit button. With a bonus debugging session at the end!
 
@@ -255,7 +255,7 @@ This video shows how to modify the main menu to include a quit button. With a bo
 
 ## Audio
 
-<video src="https://youtu.be/wKs7a6RBfaw"/>"
+<video src="https://youtu.be/wKs7a6RBfaw"/>
 
 In this video you're shown how to add background music in a scene and also "event-based" music - in this case, adding
 sound to the firing of bullets.
@@ -651,7 +651,7 @@ Create the Main Menu Interface.
 
 #### **Part 1 - Menu Setup**
 
-<video src="https://youtu.be/DyaKLWr502M"/>"
+<video src="https://youtu.be/DyaKLWr502M"/>
 
 In this video, you'll see how to configure the project window size and colour as well as start the layout of the menu.
 
@@ -659,7 +659,7 @@ You'll see how to add images into the scene as well as a label, with a brief int
 
 #### **Part 2**
 
-<video src="https://youtu.be/CBA3sxDbgog"/>"
+<video src="https://youtu.be/CBA3sxDbgog"/>
 
 In this video, you'll create the "AppInfo" section of the title screen, including the version number, developer and high
 score information.
@@ -669,14 +669,14 @@ on screen.
 
 #### **Part 3**
 
-<video src="https://youtu.be/PxyPHJmNflI"/>"
+<video src="https://youtu.be/PxyPHJmNflI"/>
 
 This video focuses on the Buttons the title scene. You'll see how to create the buttons, and modify the fonts to match
 the title font, and then change the font of all the buttons to a new font.
 
 ### Buttons Functionality
 
-<video src="https://youtu.be/QH_5xVreQ-w"/>"
+<video src="https://youtu.be/QH_5xVreQ-w"/>
 
 Code - TitleScene.gd
 
