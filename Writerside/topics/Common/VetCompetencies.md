@@ -1,6 +1,11 @@
 # VET Competencies
 
-The following Competencies are associated with this unit.
+Whilst studying the various IT courses offered at LTC, you will have the opportunity to also earn VET competencies towards the following Certificates.
+
+1. Certificate II in Applied Digital Technologies
+2. Certificate III in Information Technology
+
+The competencies avaiable are listed below.
 
 ## ICT20120 - Certificate II in Applied Digital Technologies
 
