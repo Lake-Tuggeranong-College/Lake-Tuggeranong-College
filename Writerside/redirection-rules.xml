@@ -74,4 +74,8 @@
         <description>Created after removal of "VET Competencies" from Subject Websiite - LTC IT</description>
         <accepts>ISD1-Vet.html</accepts>
     </rule>
+    <rule id="91b7772">
+        <description>Created after removal of "SharedCalendar" from Subject Websiite - LTC IT</description>
+        <accepts>SharedCalendar.html</accepts>
+    </rule>
 </rules>
