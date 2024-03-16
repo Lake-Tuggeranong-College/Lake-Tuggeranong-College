@@ -139,3 +139,5 @@
         <td><include from="sharedCalendar.topic" element-id="week21"/></td>
     </tr>
 </table>
+
+<include from="reusableContent.topic" element-id="contactdetails"/>
