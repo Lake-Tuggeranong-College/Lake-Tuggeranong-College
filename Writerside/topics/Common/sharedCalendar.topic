@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="Shared Calendar" id="sharedCalendar" help-id="calendar">
+
+
+    <snippet id="week1">
+       Week 1 School Event
+    </snippet>
+
+    <snippet id="week2">
+        Week 2 School Event
+    </snippet>
+
+    <snippet id="week3">
+        Week 3 School Event
+    </snippet>
+
+    <snippet id="week4">
+        Week 4 School Event
+    </snippet>
+
+    <snippet id="week5">
+        Week 5 School Event
+    </snippet>
+
+    <snippet id="week6">
+        Week 6 School Event
+    </snippet>
+
+    <snippet id="week7">
+        Week 7 School Event
+    </snippet>
+
+    <snippet id="week8">
+        Week 8 School Event
+    </snippet>
+
+    <snippet id="week9">
+        <p>Cross Line Exams Wednesday and Thursday</p>
+    </snippet>
+
+    <snippet id="week10">
+        Week 10 School Event
+    </snippet>
+
+    <snippet id="week11">
+        Week 11 School Event
+    </snippet>
+
+    <snippet id="week12">
+        Week 12 School Event
+    </snippet>
+
+    <snippet id="week13">
+        Week 13 School Event
+    </snippet>
+
+    <snippet id="week14">
+        Week 14 School Event
+    </snippet>
+
+    <snippet id="week15">
+        Week 15 School Event
+    </snippet>
+
+    <snippet id="week16">
+        Week 16 School Event
+    </snippet>
+
+    <snippet id="week17">
+        Week 17 School Event
+    </snippet>
+
+    <snippet id="week18">
+        Week 18 School Event
+    </snippet>
+
+    <snippet id="week19">
+        <p>Cross Line Exams Mon-Wed. Year 12 AST Trial Thu-Fri.</p>
+    </snippet>
+
+    <snippet id="week20">
+        Week 20 School Event
+    </snippet>
+
+    <snippet id="week21">
+        Week 21 School Event
+    </snippet>
+</topic>
