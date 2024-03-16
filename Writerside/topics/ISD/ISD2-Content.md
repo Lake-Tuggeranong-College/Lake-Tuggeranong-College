@@ -106,13 +106,16 @@ Press the play button to run the game. If this is the first time the project has
 
 If the Main Menu Scene is open, you can just choose Select Current.
 
-If you have another scene open, choose Select, and then double click on the `MainMenu.tscn`.
+If you have another scene open, choose Select, and then double-click on the `MainMenu.tscn`.
 
 ![Screen Shot 2022-08-05 at 10.54.49 am.png](Screen_Shot_2022-08-05_at_10.54.49_am.png)
 
-> If this starting scene needs to be changed later, this can be set in the Project Settings.
-> ![Screen Shot 2022-08-05 at 10.55.43 am.png](Screen_Shot_2022-08-05_at_10.55.43_am.png)
-{style="note"}
+
+<procedure title="Changing Starting Scene" collapsible="true">
+    <step>Changing the Starting Scene can be set in the Project Settings</step>
+    <step><img src="Screen_Shot_2022-08-05_at_10.55.43_am.png">Screen_Shot_2022-08-05_at_10.55.43_am.png</img>
+</step>
+</procedure>
 
 
 ### Continue developing the Main Menu
