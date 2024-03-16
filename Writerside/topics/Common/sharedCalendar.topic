@@ -7,35 +7,35 @@
 
 
     <snippet id="week1">
-       Week 1 School Event
+       <p>Week 1 School Event</p>
     </snippet>
 
     <snippet id="week2">
-        Week 2 School Event
+        <p>Week 2 School Event</p>
     </snippet>
 
     <snippet id="week3">
-        Week 3 School Event
+        <p>Week 3 School Event</p>
     </snippet>
 
     <snippet id="week4">
-        Week 4 School Event
+        <p>Week 4 School Event</p>
     </snippet>
 
     <snippet id="week5">
-        Week 5 School Event
+        <p>Week 5 School Event</p>
     </snippet>
 
     <snippet id="week6">
-        Week 6 School Event
+        <p>Week 6 School Event</p>
     </snippet>
 
     <snippet id="week7">
-        Week 7 School Event
+        <p>Week 7 School Event</p>
     </snippet>
 
     <snippet id="week8">
-        Week 8 School Event
+        <p>Week 8 School Event</p>
     </snippet>
 
     <snippet id="week9">
@@ -43,39 +43,39 @@
     </snippet>
 
     <snippet id="week10">
-        Week 10 School Event
+        <p>Week 10 School Event</p>
     </snippet>
 
     <snippet id="week11">
-        Week 11 School Event
+        <p>Week 11 School Event</p>
     </snippet>
 
     <snippet id="week12">
-        Week 12 School Event
+        <p>Week 12 School Event</p>
     </snippet>
 
     <snippet id="week13">
-        Week 13 School Event
+        <p>Week 13 School Event</p>
     </snippet>
 
     <snippet id="week14">
-        Week 14 School Event
+        <p> Week 14 School Event</p>
     </snippet>
 
     <snippet id="week15">
-        Week 15 School Event
+        <p>Week 15 School Event</p>
     </snippet>
 
     <snippet id="week16">
-        Week 16 School Event
+        <p>Week 16 School Event</p>
     </snippet>
 
     <snippet id="week17">
-        Week 17 School Event
+        <p>Week 17 School Event</p>
     </snippet>
 
     <snippet id="week18">
-        Week 18 School Event
+        <p>Week 18 School Event</p>
     </snippet>
 
     <snippet id="week19">
@@ -83,10 +83,10 @@
     </snippet>
 
     <snippet id="week20">
-        Week 20 School Event
+        <p>Week 20 School Event</p>
     </snippet>
 
     <snippet id="week21">
-        Week 21 School Event
+        <p>Week 21 School Event</p>
     </snippet>
 </topic>
