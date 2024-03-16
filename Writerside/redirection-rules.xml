@@ -78,4 +78,12 @@
         <description>Created after removal of "SharedCalendar" from Subject Websiite - LTC IT</description>
         <accepts>SharedCalendar.html</accepts>
     </rule>
+    <rule id="6f16064">
+        <description>Created after removal of "Overview" from Subject Websiite - LTC IT</description>
+        <accepts>Overview3.html</accepts>
+    </rule>
+    <rule id="525c9486">
+        <description>Created after removal of "Tutorial" from Subject Websiite - LTC IT</description>
+        <accepts>Tutorial.html</accepts>
+    </rule>
 </rules>

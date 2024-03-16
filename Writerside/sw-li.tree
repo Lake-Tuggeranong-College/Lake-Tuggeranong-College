@@ -21,6 +21,10 @@
             <toc-element topic="ISD1-Schedule.md"/>
             <toc-element topic="ISD1-Content.md"/>
         </toc-element>
+        <toc-element topic="ISD2.topic">
+            <toc-element topic="ISD2-Schedule.md"/>
+            <toc-element topic="ISD2-Content.md"/>
+        </toc-element>
     </toc-element>
     <toc-element topic="Robotics.topic">
         <toc-element topic="Application-of-Robotics.topic"/>
@@ -49,6 +53,7 @@
         </toc-element>
     </toc-element>
     <toc-element topic="Common.topic">
+        <toc-element topic="Starter.md"/>
         <toc-element topic="VetCompetencies.md"/>
     </toc-element>
     <toc-element topic="Reference.topic" hidden="true">

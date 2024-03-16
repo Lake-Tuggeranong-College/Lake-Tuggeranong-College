@@ -15,7 +15,7 @@
 
         <table style="none">
             <tr>
-                <td><img src="avatar.png" alt="Avatar"></img></td>
+                <td><img src="avatar.png" alt="Avatar" width="50"/></td>
                 <td>Ryan Cather</td>
                 <td>
                     <format style="bold">Email</format>
