@@ -686,7 +686,9 @@ Also added is the `destroy()` function. This simply deletes the bullet from the 
 
 This has been added in such a way to allow for future modification as required.
 
-![Screen Shot 2022-10-04 at 10.17.09 pm.png](Screen_Shot_2022-10-04_at_10.17.09_pm.png)
+<tabs>
+<tab title="Image"><img src="Screen_Shot_2022-10-04_at_10.17.09_pm.png"/></tab>
+<tab title="Code">
 
 ```
 func _on_Bullet_body_entered(body):
@@ -698,7 +700,20 @@ func destroy ():
     # destroys the bullet
     queue_free()
 ```
-{collapsible="true"}
+
+</tab>
+<tab title="Logic">
+
+```mermaid
+graph LR
+    A[TODO]
+    A -- Yes --> B[TODO]
+    A -- No --> C[TODO]
+```
+</tab>
+</tabs>
+
+
 
 ### Automatically deleting the bullet
 
