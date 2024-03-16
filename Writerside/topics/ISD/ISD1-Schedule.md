@@ -50,7 +50,7 @@
     <tr>
         <td>9</td>
         <td></td>
-        <td><strong>Cross Line Exams Wednesday & Thursday </strong></td>
+        <td><strong>Cross Line Exams Wednesday and Thursday </strong></td>
     </tr>
     <tr>
         <td>10</td>
