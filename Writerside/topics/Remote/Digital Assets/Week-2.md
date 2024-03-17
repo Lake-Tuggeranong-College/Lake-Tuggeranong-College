@@ -19,7 +19,7 @@ In the Google Classroom Assignment, submit the following:
 
 Watch the video/s supplied to understand the topics for this week.
 
-<video src="https://www.youtube.com/watch?v=SvqHV8lKAJ8&ab_channel=RyanCather"/>
+<video src="https://www.youtube.com/watch?v=SvqHV8lKAJ8" />
 
 
 ## Resources
