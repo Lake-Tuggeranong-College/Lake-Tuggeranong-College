@@ -13,31 +13,31 @@ This tutorial is designed to guide you through the process of creating an FPS ga
 
 Click on the 2D Scene option under Create Root Node.
 
-![Screen Shot 2022-08-05 at 10.31.31 am.png](mainMenuCreateScene.png)
+![mainMenuCreateScene.png](mainMenuCreateScene.png)
 
 Rename the Node “Main Menu”
 
-![Screen Shot 2022-08-05 at 10.32.19 am.png](mainMenuRename.png)
+![mainMenuRename.png](mainMenuRename.png)
 
 Right Click on the Main Menu Node and choose “Create Child Node” and add a Button.
 
-![Screen Shot 2022-08-05 at 10.33.06 am.png](mainMenuCreateChild.png)
+![mainMenuCreateChild.png](mainMenuCreateChild.png)
 
 Set the Text of the button to “Play” or whatever you want.
 
-![Screen Shot 2022-08-05 at 10.33.34 am.png](mainMenuPlayButtonText.png)
+![mainMenuPlayButtonText](mainMenuPlayButtonText.png)
 
 Right-click on the Button node and choose Attach Script. Change the name of the script to `SceneChange.gd` as this may be used in different circumstances.
 
-![Screen Shot 2022-08-05 at 10.35.42 am.png](mainMenuAttachScript.png)
+![mainMenuAttachScript](mainMenuAttachScript.png)
 
 With the button selected, change to the Node tab and double click the `pressed()` signal.
 
-![Screen Shot 2022-08-05 at 10.34.23 am.png](Screen_Shot_2022-08-05_at_10.34.23_am.png)
+![mainMenuButtonSignal.png](mainMenuButtonSignal.png)
 
 Select the Button in the list and click Connect.
 
-![Screen Shot 2022-08-05 at 10.37.22 am.png](Screen_Shot_2022-08-05_at_10.37.22_am.png)
+![mainMenuButtonConnect.png](mainMenuButtonConnect.png)
 
 Save the Scene as `MainMenu.tscn`.
 
@@ -47,11 +47,11 @@ Save the Scene as `MainMenu.tscn`.
 
 Choose Scene→New Scene. And Choose 3D Scene as the root Node.
 
-![Screen Shot 2022-08-05 at 10.43.46 am.png](Screen_Shot_2022-08-05_at_10.43.46_am.png)
+![mainMenuCreateGameScene.png](mainMenuCreateGameScene.png)
 
 Rename the scene node appropriate for your game.
 
-![Screen Shot 2022-08-05 at 10.45.38 am.png](Screen_Shot_2022-08-05_at_10.45.38_am.png)
+![mainMenuGameSceneRename.png](mainMenuGameSceneRename.png)
 
 Save the scene, naming it appropriate to your game.
 
@@ -64,25 +64,25 @@ Save the scene, naming it appropriate to your game.
 
 Right click on the Main Menu node and create a child Button node.
 
-![Screen Shot 2022-08-15 at 10.32.09 am.png](Screen_Shot_2022-08-15_at_10.32.09_am.png)
+![mainMenuCreateChildButton.png](mainMenuCreateChildButton.png)
 
 Right-click on the button and Attach a Script. Call this script `SceneChange.gd`. This script will be used for any and all scripts where the button changes scenes.
 
-![Screen Shot 2022-08-15 at 10.35.33 am.png](Screen_Shot_2022-08-15_at_10.35.33_am.png)
+![mainMenuButtonAttachScript.png](mainMenuButtonAttachScript.png)
 
 With the button selected, click on the Node tab, next to the Inspector, and double click on the `pressed(`) signal.
 
-![Screen Shot 2022-08-15 at 10.36.02 am.png](Screen_Shot_2022-08-15_at_10.36.02_am.png)
+![mainMenuButtonAttachSignalPressed.png](mainMenuButtonAttachSignalPressed.png)
 
 Make sure Button is selected in the “Connect To script” section. Leave the Receiver Method as is, and just click connect.
 
-![Screen Shot 2022-08-15 at 10.37.35 am.png](Screen_Shot_2022-08-15_at_10.37.35_am.png)
+![mainMenuButtonAttachSignalPressedConnect.png](mainMenuButtonAttachSignalPressedConnect.png)
 
 At the top of the script after the `extends` line, add `export(String) var scene_to_load.`
 
 Change the `pass` line of code to `get_tree().change_scene(scene_to_load)`.
 
-![Screen Shot 2022-08-15 at 10.39.00 am.png](Screen_Shot_2022-08-15_at_10.39.00_am.png)
+![mainMenuButtonAttachSignalChangeScene.png](mainMenuButtonAttachSignalChangeScene.png)
 
 <include from="reusableContent.topic" element-id="commitPush"/>
 
@@ -93,11 +93,11 @@ Open the Main Menu scene.
 
 Right-Click on the game scene you just saved in the FileSystem tab and choose Copy Path.
 
-![Screen Shot 2022-08-05 at 10.50.17 am.png](Screen_Shot_2022-08-05_at_10.50.17_am.png)
+![mainMenuCopyPath.png](mainMenuCopyPath.png)
 
 Paste that Path into the `Scene To Load` field for the Button created earlier.
 
-![Screen Shot 2022-08-05 at 10.51.13 am.png](Screen_Shot_2022-08-05_at_10.51.13_am.png)
+![Screen Shot 2022-08-05 at 10.51.13 am.png](mainMenuSceneToLoad.png)
 
 
 ### Run the Game
@@ -108,12 +108,12 @@ If the Main Menu Scene is open, you can just choose Select Current.
 
 If you have another scene open, choose Select, and then double-click on the `MainMenu.tscn`.
 
-![Screen Shot 2022-08-05 at 10.54.49 am.png](Screen_Shot_2022-08-05_at_10.54.49_am.png)
+![Screen Shot 2022-08-05 at 10.54.49 am.png](mainMenuRunGame.png)
 
 
 <procedure title="Changing Starting Scene" collapsible="true">
     <step>Changing the Starting Scene can be set in the Project Settings</step>
-    <step><img src="Screen_Shot_2022-08-05_at_10.55.43_am.png">Screen_Shot_2022-08-05_at_10.55.43_am.png</img>
+    <step><img src="mainMenuChangeStartScene.png">mainMenuChangeStartScene.png</img>
 </step>
 </procedure>
 
