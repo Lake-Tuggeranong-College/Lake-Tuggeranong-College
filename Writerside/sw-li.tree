@@ -33,8 +33,11 @@
     <toc-element topic="Remote-Learning.topic">>
         <toc-element topic="RemoteLearningICTUnit1.topic">
             <toc-element topic="RemoteLearningICTUnit1-Schedule.md"/>
-            <toc-element topic="RemoteLearningICTUnit1-CourseContent.md"/>
-            <toc-element topic="RemoteLearningICTUnit1-VETCompetencies.md"/>
+            <toc-element topic="RemoteLearningICTUnit1-CourseContent.md">
+                <toc-element topic="Week-1.md"/>
+                <toc-element topic="Week-2.md"/>
+                <toc-element topic="Week-3.md"/>
+            </toc-element>
         </toc-element>
         <toc-element topic="RemoteLearningICTUnit2.topic">
             <toc-element topic="RemoteLearningICTUnit2-Schedule.md"/>

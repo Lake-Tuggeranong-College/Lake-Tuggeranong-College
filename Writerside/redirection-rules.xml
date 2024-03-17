@@ -86,4 +86,10 @@
         <description>Created after removal of "Tutorial" from Subject Websiite - LTC IT</description>
         <accepts>Tutorial.html</accepts>
     </rule>
+    <rule id="233ecccf">
+        <description>Created after removal of "Remote Learning, ICT Unit 1 VET Competencies" from Subject Websiite - LTC
+            IT
+        </description>
+        <accepts>RemoteLearningICTUnit1-VETCompetencies.html</accepts>
+    </rule>
 </rules>
