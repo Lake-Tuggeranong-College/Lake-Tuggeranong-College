@@ -13,23 +13,23 @@ This tutorial is designed to guide you through the process of creating an FPS ga
 
 Click on the 2D Scene option under Create Root Node.
 
-![Screen Shot 2022-08-05 at 10.31.31 am.png](Screen_Shot_2022-08-05_at_10.31.31_am.png)
+![Screen Shot 2022-08-05 at 10.31.31 am.png](mainMenuCreateScene.png)
 
 Rename the Node “Main Menu”
 
-![Screen Shot 2022-08-05 at 10.32.19 am.png](Screen_Shot_2022-08-05_at_10.32.19_am.png)
+![Screen Shot 2022-08-05 at 10.32.19 am.png](mainMenuRename.png)
 
 Right Click on the Main Menu Node and choose “Create Child Node” and add a Button.
 
-![Screen Shot 2022-08-05 at 10.33.06 am.png](Screen_Shot_2022-08-05_at_10.33.06_am.png)
+![Screen Shot 2022-08-05 at 10.33.06 am.png](mainMenuCreateChild.png)
 
 Set the Text of the button to “Play” or whatever you want.
 
-![Screen Shot 2022-08-05 at 10.33.34 am.png](Screen_Shot_2022-08-05_at_10.33.34_am.png)
+![Screen Shot 2022-08-05 at 10.33.34 am.png](mainMenuPlayButtonText.png)
 
 Right-click on the Button node and choose Attach Script. Change the name of the script to `SceneChange.gd` as this may be used in different circumstances.
 
-![Screen Shot 2022-08-05 at 10.35.42 am.png](Screen_Shot_2022-08-05_at_10.35.42_am.png)
+![Screen Shot 2022-08-05 at 10.35.42 am.png](mainMenuAttachScript.png)
 
 With the button selected, change to the Node tab and double click the `pressed()` signal.
 
