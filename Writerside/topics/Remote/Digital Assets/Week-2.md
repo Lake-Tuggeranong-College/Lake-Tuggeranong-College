@@ -12,22 +12,20 @@ The goals for this topic are:
 
 In the Google Classroom Assignment, submit the following:
 
-- A Google Doc/Slides demonstrating the completion of the practical tasks
+- A Google Doc/Slides demonstrating the completion of the practical tasks.
 - Answer the questions under Theory.
 
 ## Video
 
 Watch the video/s supplied to understand the topics for this week.
 
-[https://www.youtube.com/watch?v=SvqHV8lKAJ8&ab_channel=RyanCather](https://www.youtube.com/watch?v=SvqHV8lKAJ8&ab_channel=RyanCather)
+<video src="https://www.youtube.com/watch?v=SvqHV8lKAJ8&ab_channel=RyanCather"/>
 
----
 
 ## Resources
 
 [https://docs.google.com/presentation/d/1M9pfihh77OqGmxOz0baYZee9ay5-8zJdAkH2uD5z8-I/edit?usp=sharing](https://docs.google.com/presentation/d/1M9pfihh77OqGmxOz0baYZee9ay5-8zJdAkH2uD5z8-I/edit?usp=sharing)
 
----
 
 ## Theory
 
@@ -39,12 +37,12 @@ Watch the video/s supplied to understand the topics for this week.
 
 Python is a popular and powerful programming language used for a wide range of applications. Here's a summary of its key features:
 
-**General-purpose:** It can be used for various tasks, including web development, data science, artificial intelligence, automation, and more.
-**Beginner-friendly:** Its syntax is clear and concise, making it easier to learn compared to other languages.
-**Interpreted:** You don't need to compile code before running it, speeding up development and debugging.
-**Object-oriented:** It supports object-oriented programming concepts like classes and objects, allowing for modular and organized code.
-**Extensive libraries:** It has a rich ecosystem of libraries and frameworks for various tasks, reducing the need to write everything from scratch.
-**Large community:** It boasts a large and active community of users and developers, providing support and resources.
+- **General-purpose:** It can be used for various tasks, including web development, data science, artificial intelligence, automation, and more.
+- **Beginner-friendly:** Its syntax is clear and concise, making it easier to learn compared to other languages.
+- **Interpreted:** You don't need to compile code before running it, speeding up development and debugging.
+- **Object-oriented:** It supports object-oriented programming concepts like classes and objects, allowing for modular and organized code.
+- **Extensive libraries:** It has a rich ecosystem of libraries and frameworks for various tasks, reducing the need to write everything from scratch.
+- **Large community:** It boasts a large and active community of users and developers, providing support and resources.
 
 Here are some specific examples of what Python can be used for:
 
@@ -54,7 +52,8 @@ Here are some specific examples of what Python can be used for:
 - **System administration:** Scripts can be written to manage servers, configure systems, and automate tasks.
 - **Scientific computing:** Libraries like SciPy and Matplotlib facilitate complex mathematical calculations and data visualization.
 
-[https://www.youtube.com/watch?v=bZyeVXRta9w](https://www.youtube.com/watch?v=bZyeVXRta9w)
+<video src="https://www.youtube.com/watch?v=bZyeVXRta9w"/>
+
 
 ### What is Flask?
 
@@ -64,7 +63,8 @@ Flask is part of the categories of the micro-framework. Micro-framework are norm
 
 [https://pymbook.readthedocs.io/en/latest/flask.html](https://www.google.com/url?q=https%3A%2F%2Fpymbook.readthedocs.io%2Fen%2Flatest%2Fflask.html&sa=D&sntz=1&usg=AFQjCNHRcMG2HVbdZtwTK__KjCdMlK1hyA)
 
-[https://www.youtube.com/watch?v=2BbuB8QP1D4](https://www.youtube.com/watch?v=2BbuB8QP1D4)
+<video src="https://www.youtube.com/watch?v=2BbuB8QP1D4"/>
+
 
 ### Theory Questions
 

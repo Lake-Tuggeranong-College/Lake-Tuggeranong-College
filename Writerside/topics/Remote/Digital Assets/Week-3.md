@@ -19,16 +19,17 @@ In the Google Classroom Assignment, submit the following:
 
 Watch the video/s supplied to understand the topics for this week.
 
-This first video focuses on modifications made to files, and then `git commits`. This is an important part of development, particularly on GitHub.
+This first video focuses on modifications made to files, and then `git commit`s. This is an important part of development, particularly on GitHub.
 
-[https://youtu.be/6RduPVA3c2E?si=wbW3A3FMmbobNchu](https://youtu.be/6RduPVA3c2E?si=wbW3A3FMmbobNchu)
+<video src="https://youtu.be/6RduPVA3c2E?si=wbW3A3FMmbobNchu"/>
 
 This video will focus on
 
 - The Flask file structure
-- `base.html` and it’s importance to Flask projects.
+- `base.html` and its importance to Flask projects.
 
-[https://youtu.be/7z648EtAEQc?si=VNXyx1ELk7PhemHL](https://youtu.be/7z648EtAEQc?si=VNXyx1ELk7PhemHL)
+<video src="https://youtu.be/7z648EtAEQc?si=VNXyx1ELk7PhemHL"/>
+
 
 ---
 
@@ -44,7 +45,8 @@ Read/watch the following information.
 
 ### Model View Controller
 
-[https://youtu.be/DUg2SWWK18I?si=gqhHvVMOAFrzkygn](https://youtu.be/DUg2SWWK18I?si=gqhHvVMOAFrzkygn)
+<video src="https://youtu.be/DUg2SWWK18I?si=gqhHvVMOAFrzkygn"/>
+
 
 ![Model view controller.png](Model_view_controller.png)
 
