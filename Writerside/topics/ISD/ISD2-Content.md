@@ -97,7 +97,7 @@ Right-Click on the game scene you just saved in the FileSystem tab and choose Co
 
 Paste that Path into the `Scene To Load` field for the Button created earlier.
 
-![Screen Shot 2022-08-05 at 10.51.13 am.png](mainMenuSceneToLoad.png)
+![mainMenuSceneToLoad.png](mainMenuSceneToLoad.png)
 
 
 ### Run the Game
@@ -108,7 +108,7 @@ If the Main Menu Scene is open, you can just choose Select Current.
 
 If you have another scene open, choose Select, and then double-click on the `MainMenu.tscn`.
 
-![Screen Shot 2022-08-05 at 10.54.49 am.png](mainMenuRunGame.png)
+![mainMenuRunGame.png](mainMenuRunGame.png)
 
 
 <procedure title="Changing Starting Scene" collapsible="true">
@@ -246,32 +246,32 @@ Create the root node as `KinematicBody`. To do this, click on Other Node and sea
 
 Save the scene as `Player.tscn`.
 
-![Screen Shot 2022-08-05 at 12.38.36 pm.png](Screen_Shot_2022-08-05_at_12.38.36_pm.png)
+![playerNewScene.png](playerNewScene.png)
 
 Add a child node—`CollisionShape`.
 
 This will represent the boundaries of the player node in the game. It will be used as the players ‘hit box’ (officially the **collider**) to detect collisions - walls, floors, projectiles etc.
 
-![Screen Shot 2022-08-05 at 12.39.42 pm.png](Screen_Shot_2022-08-05_at_12.39.42_pm.png)
+![playerAddCollisionShape.png](playerAddCollisionShape.png)
 
 With the CollisionShape selected, create a new Capsule Shape.
 
-![Screen Shot 2022-08-05 at 12.40.19 pm.png](Screen_Shot_2022-08-05_at_12.40.19_pm.png)
+![playerNewCapsule.png](playerNewCapsule.png)
 
 Rotate the capsule so it’s vertical (to represent the boundaries of the player).
 
-![Screen Shot 2022-08-05 at 12.41.46 pm.png](Screen_Shot_2022-08-05_at_12.41.46_pm.png)
+![playerVerticalCapsule.png](playerVerticalCapsule.png)
 
 Resize the dimensions of the capsule, but clicking drop down box next to Capsule Shape and choose Edit.
 
-![Screen Shot 2022-08-05 at 12.45.27 pm.png](Screen_Shot_2022-08-05_at_12.45.27_pm.png)
+![playerResizeCapsule.png](playerResizeCapsule.png)
 
 Set the Radius and height to values that suit your game.
 
 > You may find these values need to be modified later to better suit your game.
 > {style="note"}
 
-![Screen Shot 2022-08-05 at 12.46.13 pm.png](Screen_Shot_2022-08-05_at_12.46.13_pm.png)
+![Screen Shot 2022-08-05 at 12.46.13 pm.png](playerSetRadius.png)
 
 ### Camera
 
@@ -279,15 +279,15 @@ The player has been created, however, the player cannot ‘see’ as a camera ha
 
 Add a Camera child node to the Player node.
 
-![Screen Shot 2022-08-05 at 12.49.30 pm.png](Screen_Shot_2022-08-05_at_12.49.30_pm.png)
+![SplayerAddCameraChild.png](playerAddCameraChild.png)
 
 Set the Environment attribute to the `default_env.tres` already created in the project.
 
-![2022-08-05 12-50-55.2022-08-05 12_51_22.gif](2022-08-05_12-50-55.2022-08-05_12_51_22.gif)
+![playerCameraLoadEnv.gif](playerCameraLoadEnv.gif)
 
 Set this camera to be the ‘main’ camera by setting the Current attribute to True.
 
-![Screen Shot 2022-08-05 at 12.54.02 pm.png](Screen_Shot_2022-08-05_at_12.54.02_pm.png)
+![playerCameraMain.png](playerCameraMain.png)
 
 Move the camera up the ‘body’ to appear as if the camera ‘sees’ through the players eyes.
 
@@ -296,7 +296,7 @@ Move the camera up the ‘body’ to appear as if the camera ‘sees’ through 
 
 Only change the `Y` value. This is the vertical value. The coordinate system will be discussed at a later time.
 
-![Screen Shot 2022-08-05 at 12.56.18 pm.png](Screen_Shot_2022-08-05_at_12.56.18_pm.png)
+![playerCameraPosition.png](playerCameraPosition.png)
 
 ### Key Actions
 
@@ -331,19 +331,21 @@ Add the following actions and set the keys and mouse inputs as directed.
 > Pay close attention to the spelling and capitalisation. These will be linked to in the script later.
 > {style="note"}
 
-![Screen Shot 2022-08-05 at 1.25.04 pm.png](Screen_Shot_2022-08-05_at_1.25.04_pm.png)
+![playerKeyMapping.png](playerKeyMapping.png)
 
 ### Mouse Look
 
 Open `Player.tscn`. Right click on the root node and attach a script. Leave the settings as they are, and click Create.
 
-![Screen Shot 2022-08-05 at 1.30.19 pm.png](Screen_Shot_2022-08-05_at_1.30.19_pm.png)
+![playerMouseLook.png](playerMouseLook.png)
 
 Clear out the commented code, and add some variables which will be used later in the script.
 
 These variables define how fast the player moves and how jumping and gravity impact the players movement.
 
-![Screen Shot 2022-08-05 at 1.33.52 pm.png](Screen_Shot_2022-08-05_at_1.33.52_pm.png)
+<tabs>
+<tab title="Image"><img src="playerSpeed.png"/></tab>
+<tab title="Code">
 
 ```
 extends KinematicBody
@@ -357,11 +359,26 @@ var gravity = 10.0			# Gravity's strength.
 func _ready():
     pass # Replace with function body.
 ```
-{collapsible="true"}
+
+</tab>
+<tab title="Logic">
+
+```mermaid
+graph LR
+    A[TODO]
+    A -- Yes --> B[TODO]
+    A -- No --> C[TODO]
+```
+</tab>
+</tabs>
+
+
 
 Add other variables. These variables define the player movement and camera movement limitations.
 
-![Screen Shot 2022-08-05 at 1.43.29 pm.png](Screen_Shot_2022-08-05_at_1.43.29_pm.png)
+<tabs>
+<tab title="Image"><img src="playerVariables.png"/></tab>
+<tab title="Code">
 
 ```
 # cam look
@@ -376,12 +393,26 @@ var mouseDelta : Vector2 = Vector2()			# How much the mouse has moved since last
 # player components
 onready var camera = get_node("Camera")		# "attach" the camera to access from script.
 ```
-{collapsible="true"}
+
+</tab>
+<tab title="Logic">
+
+```mermaid
+graph LR
+    A[TODO]
+    A -- Yes --> B[TODO]
+    A -- No --> C[TODO]
+```
+</tab>
+</tabs>
 
 
 Add the function to detect mouse movement.
 
-![Screen Shot 2022-08-05 at 1.45.25 pm.png](Screen_Shot_2022-08-05_at_1.45.25_pm.png)
+<tabs>
+<tab title="Image"><img src="playerDetectMouseMovement.png"/></tab>
+<tab title="Code">
+
 
 ```
 # called when an input is detected
@@ -390,12 +421,27 @@ func _input (event):
     if event is InputEventMouseMotion:
         mouseDelta = event.relative
 ```
-{collapsible="true"}
+
+</tab>
+<tab title="Logic">
+
+```mermaid
+graph LR
+    A[TODO]
+    A -- Yes --> B[TODO]
+    A -- No --> C[TODO]
+```
+</tab>
+</tabs>
+
 
 
 Add the function to rotate the camera to match the mouse movements.
 
-![Screen Shot 2022-08-05 at 1.49.14 pm.png](Screen_Shot_2022-08-05_at_1.49.14_pm.png)
+<tabs>
+<tab title="Image"><img src="playerMouseRotation.png"/></tab>
+<tab title="Code">
+
 
 ```
 # called every frame
@@ -411,18 +457,29 @@ func _process (delta):
     # reset the mouse delta vector
     mouseDelta = Vector2()
 ```
-{collapsible="true"}
+</tab>
+<tab title="Logic">
 
+```mermaid
+graph LR
+    A[TODO]
+    A -- Yes --> B[TODO]
+    A -- No --> C[TODO]
+```
+</tab>
+</tabs>
 
 At this stage, you can run the game to test the mouse movement. Run the project, click the button on the main menu to play the game, and you should be able to look around your environment.
 
-![2022-08-05 13-50-38.2022-08-05 13_52_09.gif](2022-08-05_13-50-38.2022-08-05_13_52_09.gif)
+![playerMovementExample.gif](playerMovementExample.gif)
 
 ### Player Movement
 
 Add the `_physics_process` function for player movement. This function can go at the bottom of the `Player.gd` script.
 
-![Screen Shot 2022-08-05 at 2.22.17 pm.png](Screen_Shot_2022-08-05_at_2.22.17_pm.png)
+<tabs>
+<tab title="Image"><img src="playerMovementPhysicsProcess.png"/></tab>
+<tab title="Code">
 
 ```
 # called every physics step
@@ -457,7 +514,20 @@ func _physics_process (delta):
     if Input.is_action_pressed("jump") and is_on_floor():
         playerVelocity.y = jumpStrength
 ```
-{collapsible="true"}
+
+</tab>
+<tab title="Logic">
+
+```mermaid
+graph LR
+    A[TODO]
+    A -- Yes --> B[TODO]
+    A -- No --> C[TODO]
+```
+</tab>
+</tabs>
+
+
 
 
 Run the game and move around the world.
@@ -480,7 +550,7 @@ Open the Scene/s that you wish to add the player to.
 
 Drag the player tscn file into the hierarchy.
 
-![Screen Shot 2022-08-23 at 2.00.47 pm.png](Screen_Shot_2022-08-23_at_2.00.47_pm.png)
+![playerAddToScene.png](playerAddToScene.png)
 
 Run the game or scene and you should be able to ‘see’ through the cameras ‘eye’.
 
@@ -492,7 +562,7 @@ First, add a new Input into the Project Settings → Input Map page.
 
 Then add the shift key to that map.
 
-![Screen Shot 2022-10-17 at 10.03.27 am.png](Screen_Shot_2022-10-17_at_10.03.27_am.png)
+![playerRunFunctionality.png](playerRunFunctionality.png)
 
 Open `Player.gd` and find the `_physics_process(delta)` function. Add the following if statement to set `movementSpeed` to change based on the button press.
 
@@ -500,7 +570,9 @@ Open `Player.gd` and find the `_physics_process(delta)` function. Add the follow
 > The exact speed values can be modified based on the requirements of the game.
 > {style="note"}
 
-![Screen Shot 2022-10-17 at 10.11.49 am.png](Screen_Shot_2022-10-17_at_10.11.49_am.png)
+<tabs>
+<tab title="Image"><img src="playerRunAction.png"/></tab>
+<tab title="Code">
 
 ```
 if Input.is_action_pressed("run"):
@@ -508,7 +580,20 @@ if Input.is_action_pressed("run"):
     else:
         movementSpeed = 10
 ```
-{collapsible="true"}
+
+</tab>
+<tab title="Logic">
+
+```mermaid
+graph LR
+    A[is the player currently pressing the 'run' key?]
+    A -- Yes --> B[set movementSpeed to 20]
+    A -- No --> C[set movementSpeed to 10]
+```
+</tab>
+</tabs>
+
+
 
 ## Reusable Assets
 
