@@ -2,10 +2,28 @@
 
 Welcome to this tutorial on building a First-Person Shooter (FPS) game using Godot. 
 
-This tutorial is designed to guide you through the process of creating an FPS game from scratch, providing step-by-step instructions and explanations along the way.  Godot is a powerful, open-source game engine that is highly flexible and customizable, making it an excellent choice for game development. It supports a variety of platforms and offers a unique and intuitive scene system.  In this tutorial, we will cover key aspects of game development such as setting up the player character, implementing movement and shooting mechanics, creating enemies, and designing levels. We will also delve into more advanced topics such as raycasting and scripting.  By the end of this tutorial, you will have a fully functional FPS game that you can further customize and expand upon. Whether you're a seasoned developer or just starting out in game development, this tutorial will provide valuable insights into the process of creating an FPS game in Godot.  Please note that this tutorial is written for Godot v3.5.1. If you're using a different version of Godot, some steps may vary.  Let's get started!
+This tutorial is designed to guide you through the process of creating an FPS game from scratch, providing step-by-step instructions and explanations along the way.
+
+Godot is a powerful, open-source game engine that is highly flexible and customizable, making it an excellent choice for game development. 
+
+It supports a variety of platforms and offers a unique and intuitive scene system.  
+
+In this tutorial, we will cover key aspects of game development such as setting up the player character, implementing movement and shooting mechanics, creating enemies, and designing levels. 
+
+We will also delve into more advanced topics such as raycasting and scripting.  
+
+By the end of this tutorial, you will have a fully functional FPS game that you can further customize and expand upon. 
 
 > These instructions are written for Godot v3.5.1
 > {style="note"}
+
+## Project Configuration
+
+Click on the Following link to accept the assignment through GitHub Classroom.
+
+[https://classroom.github.com/a/twWdTyhT](https://classroom.github.com/a/twWdTyhT)
+
+
 
 ## Main Menu {id="MainMenu"}
 
@@ -592,8 +610,6 @@ graph LR
 ```
 </tab>
 </tabs>
-
-
 
 ## Reusable Assets
 
@@ -1577,9 +1593,6 @@ graph LR
 </tabs>
 
 <include from="reusableContent.topic" element-id="commitPush"></include>
-
-
-
 
 ## Raycasting
 
