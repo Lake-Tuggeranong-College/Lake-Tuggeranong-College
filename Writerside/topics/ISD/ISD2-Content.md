@@ -23,7 +23,7 @@ Click on the Following link to accept the assignment through GitHub Classroom.
 
 [https://classroom.github.com/a/twWdTyhT](https://classroom.github.com/a/twWdTyhT)
 
-
+![configAcceptAssignment.png](configAcceptAssignment.png)
 
 ## Main Menu {id="MainMenu"}
 
