@@ -4,7 +4,7 @@
 
 The goals for this topic are:
 
-- Develop template.html
+- Develop `template.html`
 - Add additional Routes on the server.
 
 
@@ -31,13 +31,14 @@ This video will focus on
 <video src="https://youtu.be/7z648EtAEQc?si=VNXyx1ELk7PhemHL"/>
 
 
----
 
 ## Resources
 
 [https://docs.google.com/presentation/d/1pbr8oCPU-eFApAv402zJ0NRUOYEl250PC8xEDo0x7nk/edit?usp=drive_web](https://docs.google.com/presentation/d/1pbr8oCPU-eFApAv402zJ0NRUOYEl250PC8xEDo0x7nk/edit?usp=drive_web)
 
----
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTRJ12eSTooIgr6Ip8839gBN4DPK2otMvVa2qMDJB2PMdOk2LAUz3ZIyunZgD0xN5lgW7FWzq7ppVAd/embed?start=true&loop=true&delayms=3000" frameborder="0" width="1440" height="839" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+https://docs.google.com/presentation/d/e/2PACX-1vTRJ12eSTooIgr6Ip8839gBN4DPK2otMvVa2qMDJB2PMdOk2LAUz3ZIyunZgD0xN5lgW7FWzq7ppVAd/pub?start=false&loop=false&delayms=3000
 
 ## Theory
 
