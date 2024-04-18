@@ -29,7 +29,7 @@ Watch the video/s supplied to understand the topics for this week.
 
 ## Theory
 
-### Python Programming Langauge
+### Python Programming Language
 
 
 > Google Bard wrote this next section: [https://g.co/bard/share/910af69eda65](https://g.co/bard/share/910af69eda65)
