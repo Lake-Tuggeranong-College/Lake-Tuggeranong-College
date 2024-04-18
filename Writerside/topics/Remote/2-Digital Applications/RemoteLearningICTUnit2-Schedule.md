@@ -11,13 +11,13 @@
     </tr>
     <tr>
         <td>1</td>
-        <td></td>
+        <td><a href="WebDevS2-Week-1.md">Week 1</a></td>
         <td></td>
         <td><include from="sharedCalendar-2024S2.topic" element-id="week1"/></td>
     </tr>
     <tr>
         <td>2</td>
-        <td></td>
+        <td><a href="WebDevS2-Week-2.md">Week 2</a></td>
         <td></td>
         <td><include from="sharedCalendar-2024S2.topic" element-id="week2"/></td>
     </tr>
