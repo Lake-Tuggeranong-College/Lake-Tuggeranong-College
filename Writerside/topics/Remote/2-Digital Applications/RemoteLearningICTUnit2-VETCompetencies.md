@@ -1,4 +1,4 @@
-# Remote Learning, ICT Unit 2 VET Competencies
+# VET Competencies
 
 The following Competencies are associated with this unit.
 

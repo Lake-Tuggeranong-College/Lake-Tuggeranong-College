@@ -3,7 +3,7 @@
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
 <topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
-       title="Shared Calendar" id="sharedCalendar" help-id="calendar">
+       title="2024S2-Shared Calendar" id="sharedCalendar-2024S2" help-id="calendar;sharedCalendar">
 
 
     <snippet id="week1">
@@ -87,7 +87,4 @@
         <p>Week 20 School Event</p>
     </snippet>
 
-    <snippet id="week21">
-        <p>Week 21 School Event</p>
-    </snippet>
 </topic>

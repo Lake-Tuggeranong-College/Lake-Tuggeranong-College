@@ -1,5 +1,6 @@
 # Schedule
 
+
 [//]: # (Done in HTML to allow for a header column)
 <table style="both">
     <tr>
@@ -10,7 +11,7 @@
     </tr>
     <tr>
         <td>1</td>
-        <td><ul><li><a href="ISD1-Content.md#ISD1-ProjectRequirements">Project Requirements</a></li><li><a href="CSI1-Content.md#CSI-1-SubjectOverview">Subject Overview</a></li></ul></td>
+        <td></td>
         <td></td>
         <td><include from="sharedCalendar-2024S2.topic" element-id="week1"/></td>
     </tr>
@@ -69,13 +70,13 @@
         <td><include from="sharedCalendar-2024S2.topic" element-id="week10"/></td>
     </tr>
     <tr>
+        <td colspan="4">School Holidays!</td>
+    </tr>
+    <tr>
         <td>11</td>
         <td></td>
         <td></td>
         <td><include from="sharedCalendar-2024S2.topic" element-id="week11"/></td>
-    </tr>
-    <tr>
-        <td colspan="4">School Holidays!</td>
     </tr>
     <tr>
         <td>12</td>
@@ -132,12 +133,6 @@
         <td></td>
         <td><include from="sharedCalendar-2024S2.topic" element-id="week20"/></td>
     </tr>
-   <tr>
-        <td>21</td>
-        <td></td>
-        <td></td>
-        <td><include from="sharedCalendar-2024S2.topic" element-id="week21"/></td>
-    </tr>
 </table>
 
-<include from="reusableContent.topic" element-id="contactdetails"/>
+(*) To be Confirmed

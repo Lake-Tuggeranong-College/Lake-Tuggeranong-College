@@ -16,15 +16,15 @@
             For other groups, try to keep the number between 2 and 6, but you can add more if necessary.-->
 
     <section-starting-page>
-        <title>Remote Learning, ICT Unit 2</title>
+        <title>Website Development Remote Learning, ICT - Unit 2</title>
         <description>
-           Welcome to the front page for Semester 2 of Cyber Systems!
+           Welcome to the front page for Semester 2 of Website Development
         </description>
 
         <!--    Add up to 2 topics that you want to promote. Use the "type" attribute to select an icon.    -->
         <spotlight>
-            <a href="CSI1-Schedule.md" type="account" summary="Calendar of work">Schedule</a>
-            <a href="CSI1-Content.md" type="search" summary="Find all the information regarding topics and work required.">Course Content</a>
+            <a href="RemoteLearningICTUnit2-Schedule.md" type="account" summary="Calendar of work">Schedule</a>
+            <a href="RemoteLearningICTUnit2-CourseContent.md" type="search" summary="Find all the information regarding topics and work required.">Course Content</a>
         </spotlight>
 
         <!--    Add several topics that are most important for this section.    -->

@@ -12,26 +12,26 @@
     <tr>
         <td>1</td>
         <td>
-            <a href="Week-1.md">Week 1</a>
+            <a href="WebDevS1-Week-1.md">Week 1</a>
         </td>
         <td></td>
         <td>Read the Unit Outline!</td>
     </tr>
     <tr>
         <td>2</td>
-        <td><a href="Week-2.md">Week 2</a></td>
+        <td><a href="WebDevS1-Week-2.md">Week 2</a></td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>3</td>
-        <td><a href="Week-3.md">Week 3</a></td>
+        <td><a href="WebDevS1-Week-3.md">Week 3</a></td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>4</td>
-        <td><a href="Week-2.md">Week 2</a></td>
+        <td><a href="WebDevS1-Week-2.md">Week 2</a></td>
         <td></td>
         <td></td>
     </tr>
