@@ -105,7 +105,7 @@
     <tr>
         <td>16</td>
             <td><a href="WebDevS2-Week-16.md">Week 16</a></td>
-        <td></td>
+        <td>Last week of Classes.</td>
         <td><include from="sharedCalendar-2024S2.topic" element-id="week16"/></td>
     </tr>
     <tr>
