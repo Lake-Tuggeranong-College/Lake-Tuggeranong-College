@@ -17,7 +17,7 @@ By the end of this tutorial, you will have a fully functional FPS game that you 
 > These instructions are written for Godot v3.5.1
 > {style="note"}
 
-## Project Configuration
+## Project Configuration {id="ProjectConfiguration"}
 
 Click on the Following link to accept the assignment through GitHub Classroom.
 
