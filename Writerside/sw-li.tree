@@ -78,10 +78,10 @@
         </toc-element>
     </toc-element>
     <toc-element topic="Common.topic">
-        <toc-element topic="Starter.md"/>
         <toc-element topic="VetCompetencies.md"/>
     </toc-element>
     <toc-element topic="Reference.topic" hidden="true">
+        <toc-element topic="Starter.md" hidden="true"/>
         <toc-element topic="sharedCalendar-2024S2.topic" hidden="true"/>
         <toc-element topic="reusableExample.topic" hidden="true"/>
         <toc-element topic="reusableContent.topic" hidden="true"/>
