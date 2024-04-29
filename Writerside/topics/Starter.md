@@ -6,16 +6,15 @@ You can use it as a sandbox to play with Writerside features, and remove it from
 ## Add new topics
 You can create empty topics, or choose a template for different types of content that contains some boilerplate structure to help you get started:
 
-<code-block lang="plantuml">
-@startmindmap
- {...}
-@startmindmap
-* root node
-    * some first level node
-        * second level node
-        * another second level node
-    * another first level node
-@endmindmap
+<code-block lang="mermaid">
+sequenceDiagram
+    Tech writer -->> Developer: Hi, can you check that I've described everything correctly?
+    Developer -->> Junior developer: Hi, can you, please, help our TW with the task?
+    Developer --x Tech writer: Sure, I've asked Garold to take care of this, it will help him to understand the logic better.
+    Junior developer -->> Developer: No problem!
+    Developer --> Tech writer: Adding you both to a group chat 
+    Note right of Developer: Adding to the chat.
+    Tech writer --> Junior developer: Hi, Garold!
 </code-block>
 
 
