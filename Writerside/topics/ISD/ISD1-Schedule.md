@@ -124,7 +124,6 @@
         <td></td>
         <td></td>
         <td><include from="sharedCalendar-2024S2.topic" element-id="week19"/></td>
-        <td></td>
     </tr>
     <tr>
         <td>20</td>
