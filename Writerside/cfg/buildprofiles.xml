@@ -10,5 +10,9 @@
             <noindex-content>true</noindex-content>
         </variables>
     </build-profile>
-
+    <shortcuts>
+        <src>keymap.xml</src>
+        <layout name="Windows" display-name="Windows"/>
+        <layout name="macOS" display-name="macOS"/>
+    </shortcuts>
 </buildprofiles>
