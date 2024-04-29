@@ -6,6 +6,20 @@ You can use it as a sandbox to play with Writerside features, and remove it from
 ## Add new topics
 You can create empty topics, or choose a template for different types of content that contains some boilerplate structure to help you get started:
 
+<code-block lang="plantuml">
+@startmindmap
+ {...}
+@startmindmap
+* root node
+    * some first level node
+        * second level node
+        * another second level node
+    * another first level node
+@endmindmap
+</code-block>
+
+
+
 ![Create new topic options](new_topic_options.png){ width=290 }{border-effect=line}
 
 ## Write content
