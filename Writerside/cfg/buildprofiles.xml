@@ -15,4 +15,12 @@
         <layout name="Windows" display-name="Windows"/>
         <layout name="macOS" display-name="macOS"/>
     </shortcuts>
+
+
+    <footer>
+        <link href="mailto:ryan.cather@ed.act.edu.au">Email</link>
+        <link href="https://discord.gg/R9a6msU">Discord</link>
+        <link href="https://classroom.google.com">Google Classroom</link>
+        <link href="https://classroom.github.com">GitHub Classroom</link>
+    </footer>
 </buildprofiles>
