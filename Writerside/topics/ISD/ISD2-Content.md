@@ -17,4 +17,23 @@ By the end of this tutorial, you will have a fully functional FPS game that you 
 > These instructions are written for Godot v4.2.2
 > {style="note"}
 
-## Project Configuration {id="ProjectConfiguration"}
+## Tutorial Status
+
+| **Tutorial**                                                          | **Status**  |
+|-----------------------------------------------------------------------|-------------|
+| [FPS - Building the Environment](FPS-Environment.md)                  | ✅           |
+| [FPS - First Person Controller](FPS-First-Person-Controller.md)       | ✅           |
+| [FPS - Reusable Assets](FPS-Reusable-Assets.md)                       | ✅           |
+| [FPS - Bullet Implementation](FPS-Bullet-Implementation.md)           | ✅           |
+| [FPS - Shooting Bullet Instances](FPS-Shooting-Bullet-Instances.md)   | ✅           |
+| [FPS - Enemy Pathfinding](FPS-Enemy-Pathfinding.md)                   | ❌           |
+| [FPS - Simple Texturing of a Mesh](FPS-Simple-Texturing-of-a-Mesh.md) | ❌           |
+| [Game Mechanic - Points](Points.md)                                   | ❌           |
+| [Game Mechanic - Player Health](Player-Health.md)                     | ❌           |
+| [Game Mechanic - Objects Taking Damage](FPS-Objects-Taking-Damage.md) | ❌           |
+| [Hiding the Mouse Pointer](FPS - Hiding the Mouse Pointer)            | ❌ - Needed? |
+| [FPS Raycasting](FPS-Raycasting.md)                                   | ❌           |
+| [FPS - Win Conditions](FPS-Win-Conditions.md)                         | ❌           |
+| [FPS - Lose Conditions](FPS-Lose-Conditions.md)                       | ❌           |
+
+
