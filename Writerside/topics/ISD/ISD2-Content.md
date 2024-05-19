@@ -30,8 +30,8 @@ By the end of this tutorial, you will have a fully functional FPS game that you 
 | [FPS - Simple Texturing of a Mesh](FPS-Simple-Texturing-of-a-Mesh.md) | ❌           |
 | [Game Mechanic - Points](Points.md)                                   | ❌           |
 | [Game Mechanic - Player Health](Player-Health.md)                     | ❌           |
-| [Game Mechanic - Objects Taking Damage](Objects-Taking-Damage.md) | ❌           |
-| [Hiding the Mouse Pointer](FPS - Hiding the Mouse Pointer)            | ❌ - Needed? |
+| [Game Mechanic - Objects Taking Damage](Objects-Taking-Damage.md)     | ❌           |
+| [Hiding the Mouse Pointer](Hiding-the-Mouse-Pointer.md)               | ❌ - Needed? |
 | [FPS Raycasting](FPS-Raycasting.md)                                   | ❌           |
 | [FPS - Win Conditions](FPS-Win-Conditions.md)                         | ❌           |
 | [FPS - Lose Conditions](FPS-Lose-Conditions.md)                       | ❌           |
