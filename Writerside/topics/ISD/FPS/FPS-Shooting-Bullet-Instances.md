@@ -10,73 +10,92 @@ First, the code will need to know **where** to create the bullet instances.
 
 Open `Player.tscn` and create a `Node3D` node as a child of the Camera. Name it `bulletSpawn`.  
 
-![Untitled](FPS%20Tutorials%20GDScript%20v4%205d63afa7b5d04273b112b801ad85f4c0/Untitled%2044.png)
+![Untitled](bulletShooting-bulletSpawn.png)
 
 In 3d mode, move `bulletSpawn` to be in front of the camera. 
 
-<aside>
-‼️ It might take some experimentation to make it look correct during game play. You may need to change the position a number of times.
+> It might take some experimentation to make it look correct during game play. You may need to change the position a number of times.
+{style= "tip"}
 
-</aside>
-
-![Untitled](FPS%20Tutorials%20GDScript%20v4%205d63afa7b5d04273b112b801ad85f4c0/Untitled%2045.png)
+![Untitled](bulletShooting-bulletSpawnPosition.png)
 
 Open `Player.gd` and add the code to preload the bullet and configure the spawn point.
 
-<aside>
-‼️ Important - the path to the bullet scene and the bulletSpawn point need to be **exactly** as you’ve defined them in your project. If they are named as something else, your code needs to reflect that.
+> Important - the path to the bullet scene and the bulletSpawn point need to be **exactly** as you’ve defined them in your project. If they are named as something else, your code needs to reflect that.
+{style="warning"}
 
-</aside>
-
-![Untitled](FPS%20Tutorials%20GDScript%20v4%205d63afa7b5d04273b112b801ad85f4c0/Untitled%2046.png)
-
-```
+<tabs>
+<tab title="Screenshot">
+<img src="bulletShooting-PreloadBullet.png" alt="Preload Bullet"/>
+</tab>
+<tab title="Code">
+<code-block>
 var bulletScene = preload("res://Scenes - Other/bullet.tscn")
-var bulletSpawn 
-```
+var bulletSpawn
+</code-block>
 
-```
-    bulletSpawn = get_node("Camera3D/bulletSpawn")
-```
+<code-block>
+bulletSpawn = get_node("Camera3D/bulletSpawn")
+</code-block>
+</tab>
+</tabs>
+
 
 Add a new variable to keep track of the ammunition the player is carrying.
 
 Set the value to something appropriate for your project.
 
-![Untitled](FPS%20Tutorials%20GDScript%20v4%205d63afa7b5d04273b112b801ad85f4c0/Untitled%2047.png)
+<tabs>
+<tab title="Screenshot">
+<img src="bulletShooting-Ammo.png" alt="Bullet Ammo"/>
+</tab>
+<tab title="Code">
 
-```python
+<code-block>
 var ammo : int = 15
-```
+</code-block>
+</tab>
+</tabs>
+
 
 Create a new function - `shoot()`- which will run when the shoot input is detected.
 
-<aside>
-‼️ Change `/Root/Doom` to the name of your root node in the game scene. E.g. `/Root/MainGame`
+> Change `/Root/Doom` to the name of your root node in the game scene. E.g. `/Root/MainGame`
+> ![Untitled](bulletShooting-RootGame.png)
+{style="note"}
 
-![Untitled](FPS%20Tutorials%20GDScript%20v4%205d63afa7b5d04273b112b801ad85f4c0/Untitled%2048.png)
-
-</aside>
-
-![Untitled](FPS%20Tutorials%20GDScript%20v4%205d63afa7b5d04273b112b801ad85f4c0/Untitled%2049.png)
-
-```
+<tabs>
+<tab title="Screenshot">
+<img src="bulletShooting-ScriptShoot.png" alt="Bullet Ammo"/>
+</tab>
+<tab title="Code">
+<code-block>
 func shoot ():
     var bullet = bulletScene.instantiate()
     get_node("/root/Doom").add_child(bullet)
     bullet.global_transform = bulletSpawn.global_transform
     bullet.scale = Vector3(0.1,0.1,0.1)
-
     ammo -= 1
-```
+</code-block>
+</tab>
+</tabs>
 
 Update `_physics_process()` to check to see if the player has pressed the `shoot` input. 
 
-![Untitled](FPS%20Tutorials%20GDScript%20v4%205d63afa7b5d04273b112b801ad85f4c0/Untitled%2050.png)
-
-```python
+<tabs>
+<tab title="Screenshot">
+<img src="bulletShooting-PlayerInput.png" alt="Player Input check"/>
+</tab>
+<tab title="Code">
+<code-block>
 if Input.is_action_just_pressed("player_shoot"):
-        shoot()
-```
+    shoot()
+</code-block>
+</tab>
+</tabs>
+
 
 Run the game at this stage to test the creation and shooting of bullet instances.
+
+
+<include from="reusableContent.topic" element-id="commitPush"/>
