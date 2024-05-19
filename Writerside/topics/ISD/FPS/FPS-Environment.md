@@ -6,7 +6,7 @@ Open `level_one.tscn` in the Game folder.
 
 To start with, the player will need to walk on something, so the first step is to create a `MeshInstance` which will be the floor of the room where the player starts.
 
-Right Click on the Game scene and choose Add Child Node. Search for `MeshInstance3D.`
+Right-Click on the Game scene and choose Add Child Node. Search for `MeshInstance3D.`
 
 ![Create New Node](FPS-Environment-CreateNewNode.png)
 
@@ -37,7 +37,7 @@ This updates the mesh to include 2 child nodes.
 
 ![New Nodes Created](FPS-Environment-TriMeshNewNodes.png)
 
-$\utilde {\color{black} \fcolorbox{darkorange}{darkorange}  {Commit and Push to Github}}$
+ <include from="reusableContent.topic" element-id="commitPush"/>
 
 ## Texture the floor
 
@@ -91,7 +91,7 @@ Choose values that suit the needs of the game and the desired effect. I.e. set t
 
 ## Add Lighting
 
-The scene at this stage is too dark for the player. Right click on the Root Node, choose Add Child Node, search for and add a `DirectionalLight3D`.
+The scene at this stage is too dark for the player. Right-click on the Root Node, choose Add Child Node, search for and add a `DirectionalLight3D`.
 
 ![Create Directional Light](FPS-Environment-DirectionalLight.png)
 
@@ -112,3 +112,5 @@ You may wish to add walls, or fences.
 At this stage, keep it simple and get a good example of your first scene. 
 
 Similar to the Main Menu, the environment can be further developed at a later stage of the development process.
+
+ <include from="reusableContent.topic" element-id="commitPush"/>
