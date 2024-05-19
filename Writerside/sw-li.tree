@@ -98,6 +98,12 @@
     <toc-element topic="Common.topic">
         <toc-element topic="VetCompetencies.md"/>
     </toc-element>
+    <toc-element topic="Assessment-Corner.md">
+        <toc-element topic="Evidence-Guide.md">
+            <toc-element topic="Documentation-Structure-Example.md"/>
+            <toc-element topic="Diagrams.md"/>
+        </toc-element>
+    </toc-element>
     <toc-element topic="Reference.topic" hidden="true">
         <toc-element topic="Starter.md" hidden="true"/>
         <toc-element topic="sharedCalendar-2024S2.topic" hidden="true"/>
