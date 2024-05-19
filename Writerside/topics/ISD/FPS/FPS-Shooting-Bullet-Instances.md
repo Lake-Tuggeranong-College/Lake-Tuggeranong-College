@@ -61,8 +61,9 @@ var ammo : int = 15
 Create a new function - `shoot()`- which will run when the shoot input is detected.
 
 > Change `/Root/Doom` to the name of your root node in the game scene. E.g. `/Root/MainGame`
-> ![Untitled](bulletShooting-RootGame.png)
 {style="note"}
+
+![Untitled](bulletShooting-RootGame.png)
 
 <tabs>
 <tab title="Screenshot">
