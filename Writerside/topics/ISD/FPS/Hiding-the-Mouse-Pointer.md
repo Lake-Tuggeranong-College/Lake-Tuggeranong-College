@@ -2,7 +2,7 @@
 
 Open `Player.gd`.  Update the _ready() function to set the mouse to be hidden.
 
-```arduino
+```
 Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 ```
 
@@ -14,7 +14,7 @@ To reenable the mouse pointer, for instance if the player returns to the main me
 
 This function runs automatically, when the player object is removed from the tree. In other words, when the player instance is removed from the game.
 
-```arduino
+```
 func _exit_tree():
     Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 ```
