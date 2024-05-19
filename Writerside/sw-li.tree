@@ -23,7 +23,24 @@
         </toc-element>
         <toc-element topic="ISD2.topic">
             <toc-element topic="ISD2-Schedule.md"/>
-            <toc-element topic="ISD2-Content.md"/>
+            <toc-element topic="ISD2-Content.md">
+                <toc-element topic="FPS-Environment.md"/>
+                <toc-element topic="FPS-First-Person-Controller.md"/>
+                <toc-element topic="FPS-Reusable-Assets.md"/>
+                <toc-element topic="FPS-Bullet-Implementation.md"/>
+                <toc-element topic="FPS-Shooting-Bullet-Instances.md"/>
+                <toc-element topic="FPS-Enemy-Pathfinding.md"/>
+                <toc-element topic="FPS-Objects-Taking-Damage.md"/>
+                <toc-element topic="FPS-Simple-Texturing-of-a-Mesh.md"/>
+                <toc-element topic="FPS-Game-Mechanics.md">
+                    <toc-element topic="Points.md"/>
+                    <toc-element topic="Player-Health.md"/>
+                </toc-element>
+                <toc-element topic="Hiding-the-Mouse-Pointer.md"/>
+                <toc-element topic="FPS-Raycasting.md"/>
+                <toc-element topic="FPS-Win-Conditions.md"/>
+                <toc-element topic="FPS-Lose-Conditions.md"/>
+            </toc-element>
         </toc-element>
     </toc-element>
     <toc-element topic="Robotics.topic">
