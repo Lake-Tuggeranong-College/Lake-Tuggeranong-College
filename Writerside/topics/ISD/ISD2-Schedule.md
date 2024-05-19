@@ -10,7 +10,7 @@
     </tr>
     <tr>
         <td>1</td>
-        <td><a href="ISD2-Content.md#ProjectConfiguration">Project Configuration</a></td>
+        <td><a href="FPS-Environment.md">Building the Environment</a></td>
         <td></td>
         <td><include from="sharedCalendar-2024S2.topic" element-id="week1"/></td>
     </tr>
