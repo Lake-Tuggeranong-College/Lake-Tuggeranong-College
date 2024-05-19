@@ -1,3 +1,5 @@
 # FPS - Win Conditions
 
-TBA
+
+
+<include from="reusableContent.topic" element-id="commitPush"/>

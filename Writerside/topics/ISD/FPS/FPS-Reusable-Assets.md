@@ -54,3 +54,6 @@ To edit the master, for instance by applying a texture, open the `tscn` file you
 Once you save the `tscn` file, the instances are automatically updated in the other scene.
 
 ![2022-08-25 14-13-03.2022-08-25 14_17_41.gif](reusableAssets-WallUpdated.gif)
+
+
+<include from="reusableContent.topic" element-id="commitPush"/>
