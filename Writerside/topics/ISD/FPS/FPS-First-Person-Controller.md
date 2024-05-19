@@ -1,8 +1,8 @@
 # FPS - First Person Player Scene
 
-As this game is a First Person Shooter, there is no need to create a mesh for the player object, as in game, the player will never see it.
+As this game is a First-Person Shooter, there is no need to create a mesh for the player object, as in game, the player will never see it.
 
-Therefore the player object can be initially created with a simple collider and camera.
+Therefore, the player object can be initially created with a simple collider and camera.
 
 There are two main steps to creating the player:
 
@@ -81,17 +81,17 @@ Find the input’s you wish to set, and click the edit button to set a new butto
 
 You will need to edit/set the following values:
 
-- `ui_left` - A
-- `ui_right` - D
-- `ui_up` - W
-- `ui_down` - S
+- `ui_left` A
+- `ui_right` D
+- `ui_up` W
+- `ui_down` S
 
 ![inputmap-correct.gif](FPS%20Tutorials%20GDScript%20v4%205d63afa7b5d04273b112b801ad85f4c0/inputmap-correct.gif)
 
-Create new inputs for the following actions
+Create new inputs for the following actions:
 
-- `player_shoot` - <Left Mouse Button>
-- `player_jump` - SPACE
+- `player_shoot` Left Mouse Button
+- `player_jump` SPACE
 
 ![inputmap-new.gif](FPS%20Tutorials%20GDScript%20v4%205d63afa7b5d04273b112b801ad85f4c0/inputmap-new.gif)
 
@@ -176,7 +176,7 @@ Open `[Player.gd](http://Player.gd)` and find the `_physics_process(delta)` func
 
 ![Untitled](FPS%20Tutorials%20GDScript%20v4%205d63afa7b5d04273b112b801ad85f4c0/Untitled%2024.png)
 
-```arduino
+```
 if Input.is_action_pressed("player_run"):
         SPEED = 10.0
     else:
