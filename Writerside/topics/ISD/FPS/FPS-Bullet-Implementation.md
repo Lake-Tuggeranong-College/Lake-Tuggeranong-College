@@ -78,7 +78,6 @@ Add two new variables to control how fast the bullet will travel, and how much d
 > These can be set to whatever values are appropriate.
 {style="info"}
 
-
 | Variable | Type    | Description                                                             |
 |----------|---------|-------------------------------------------------------------------------|
 | `speed`  | `float` | How fast the bullet will move through the game.                         |
@@ -138,7 +137,7 @@ This has been added in such a way to allow for future modification as required.
 
 <tabs>
 <tab title="Screenshot">
-<img src="bullet-ScriptDamageDestroy.png" alt="Bullet Damage & Destroy" />
+<img src="bullet-ScriptDamageDestroy.png" alt="Bullet Damage and Destroy" />
 </tab>
 <tab title="Code">
 <code-block>
@@ -146,7 +145,6 @@ func _on_Bullet_body_entered(body):
     if body.has_method("take_damage"):
         body.take_damage(damage)
         destroy()
-
 func destroy():
     queue_free()
 </code-block>
