@@ -4,4 +4,5 @@
     <term name="passwordTip">A password should be secure.</term>
     <term name="nodeTip">Nodes are the fundamental building blocks of games. </term>
     <term name="sceneTip">A scene is composed of a group of nodes organized hierarchically (in tree fashion). </term>
+    <term name="raycast">A raycast is an imaginary line used in game development to detect collisions and interactions between objects. </term>
 </terms>
