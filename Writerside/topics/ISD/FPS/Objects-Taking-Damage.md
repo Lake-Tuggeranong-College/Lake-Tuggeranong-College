@@ -1,4 +1,4 @@
-# FPS - Objects Taking Damage
+# Objects Taking Damage
 
 The bullets and enemy have been created, the bullets fire. Now it’s time to put it together - having the enemies take damage. 
 
