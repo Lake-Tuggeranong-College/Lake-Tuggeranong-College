@@ -46,7 +46,7 @@ Set the Radius and height to values that suit your game.
 
 ## Camera
 
-The player has been created, however the player cannot ‘see’ as a camera has not been added. The camera is what the user sees in game. In a FPS, the mouse is attached to the player object and therefore the camera. When the mouse moves, the camera moves to match.
+The player has been created, however the player cannot ‘see’ as a camera has not been added. The camera is what the user sees in game. In an FPS, the mouse is attached to the player object and therefore the camera. When the mouse moves, the camera moves to match.
 
 Add a `Camera3D` child node to the Player node.
 
@@ -89,9 +89,9 @@ You will need to edit/set the following values:
 
 Create new inputs for the following actions:
 
-| Action         | Key |
-|----------------|-----|
-| `player_shoot` | LMB |
+| Action         | Key   |
+|----------------|-------|
+| `player_shoot` | LMB   |
 | `player_jump`  | SPACE |
 
 
@@ -121,7 +121,7 @@ Add a new `_ready()` function which will hide the mouse pointer and allow the ca
 
 <tabs>
 <tab title="Screenshot">
-<img src="fpc-ScriptMouseCapture.png" />
+<img src="fpc-ScriptMouseCapture.png" alt="Capture the Mouse"/>
 </tab>
 <tab title="Code">
 <code-block>
@@ -135,7 +135,7 @@ Add a new `_input()` function to get the movement of the mouse, and get the rota
 
 <tabs>
 <tab title="Screenshot">
-<img src="fpc-ScriptAddInputFunc.png" />
+<img src="fpc-ScriptAddInputFunc.png" alt="Add input function" />
 </tab>
 <tab title="Code">
 <code-block>
@@ -155,7 +155,7 @@ func _input(event):
 
 Open the Scene/s that you wish to add the player to.
 
-Drag the player tscn file into the hierarchy. Initially this will be `level_one.tscn`.
+Drag the `player.tscn` file into the hierarchy. Initially this will be `level_one.tscn`.
 
 ![Add Player](fpc-AddPlayer.png)
 
@@ -191,7 +191,7 @@ Open `Player.gd` and find the `_physics_process(delta)` function. Add the follow
 
 <tabs>
 <tab title="Screenshot">
-<img src="fpc-SpeedShiftCheck.png" />
+<img src="fpc-SpeedShiftCheck.png" alt="Check if shift is pressed"/>
 </tab>
 <tab title="Code">
 <code-block>
